@@ -1,0 +1,34 @@
+.header-top {
+
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 0;
+  align-items: center;
+
+  &__initial-image {
+    opacity: 1;
+  }
+
+  &__item {
+    display: none;
+    cursor: pointer;
+    &_active {
+      display: block;
+      position: relative;
+      z-index: 999;
+      cursor: pointer;
+    }
+  }
+
+  &__phone {
+    font-family: 'Open Sans';
+    font-size: 32px;
+    text-decoration: none;
+    color: #000;
+  }
+
+  &__lang-icon {
+    font-size: 32px;
+    cursor: pointer;
+  }
+}

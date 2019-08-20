@@ -12,6 +12,7 @@ let gulp = require('gulp'),
     pngquant = require('imagemin-pngquant'),
     rimraf = require('rimraf'),
     browserSync = require("browser-sync"),
+    rep = require('gulp-replace-image-src'),
     reload = browserSync.reload;
 
 
@@ -33,7 +34,7 @@ var path = {
     watch: { //Тут мы укажем, за изменением каких файлов мы хотим наблюдать
         html: 'src/**/*.html',
         js: 'src/js/**/*.js',
-        style: 'src/style/**/*.scss',
+        style: 'src/style/partials/*.scss',
         img: 'src/img/**/*.*',
         fonts: 'src/fonts/**/*.*',
     },
@@ -102,20 +103,30 @@ gulp.task('fonts:build', gulp.series(function(cb) {
     cb();
 }));
 
+gulp.task('replace', function() {
+    gulp.src('*.html')
+        .pipe(rep({
+            prependSrc : '//github.cdn.com/images/',
+            keepOrigin : true
+        }))
+        .pipe(gulp.dest('dist'));
+});
+
 gulp.task('build', gulp.series([
     'html:build',
     'js:build',
     'style:build',
     'fonts:build',
-    'image:build',], function(cb){
+    'image:build',
+'replace'], function(cb){
     cb();
 }));
 
 gulp.task('watch', gulp.series(function(cb){
-        gulp.watch('src/styles/*.css', gulp.series('style:build'));
+        gulp.watch('src/style/**/*.scss', gulp.series('style:build'));
         gulp.watch('src/*.html', gulp.series('html:build'));
         gulp.watch('src/js/**/*.js', gulp.series('js:build'));
-        gulp.watch('src/images/*', gulp.series('image:build'));
+        gulp.watch('src/img/*', gulp.series('image:build'));
         gulp.watch('src/fonts/*', gulp.series('fonts:build'));
     cb();
 }));
