@@ -5,6 +5,14 @@
     position: absolute;
     top: 20px;
 
+    &.not-active {
+      top: 50px;
+    }
+
+    &.active {
+      top: 40px;
+    }
+
     &.not-active .main-menu__line + .main-menu__line {
       margin-top: 7px;
     }

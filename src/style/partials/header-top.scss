@@ -36,8 +36,18 @@
 
   &__lang-text {
     font-size: 32px;
-    margin-left: 10px;
     position: relative;
+    margin-bottom: 5px;
+    cursor: pointer;
+
+    &.active:before {
+      content: '';
+      width: 100%;
+      position: absolute;
+      background-color: #74B9E9;
+      height: 3px;
+      bottom: -3px;
+    }
   }
 
   &__lang-icon {
@@ -45,18 +55,24 @@
     cursor: pointer;
     padding: 20px;
     &:hover {
-      animation: rotateGlobe 1s forwards 1;
+      animation: rotateGlobe 0.7s forwards;
 
       & ~ .tip__globe {
         top: 80px;
         opacity: 1;
-        animation-iteration-count: 1;
       }
     }
   }
 
   &__lang-text-block {
-    display: flex;
+    display: none;
     flex-flow: column wrap;
+    position: absolute;
+    z-index: 99;
+    left: 10px;
+    top: 10px;
+    box-shadow: 0 0 8px 0 rgba(0,0,0,0.1);
+    padding: 10px 15px;
+    background: #fff;
   }
 }
