@@ -21,14 +21,42 @@
   }
 
   &__phone {
-    font-family: 'Open Sans';
     font-size: 32px;
     text-decoration: none;
     color: #000;
   }
 
-  &__lang-icon {
+  &__lang-block {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+
+
+  &__lang-text {
     font-size: 32px;
+    margin-left: 10px;
+    position: relative;
+  }
+
+  &__lang-icon {
+    font-size: 46px;
     cursor: pointer;
+    padding: 20px;
+    &:hover {
+      animation: rotateGlobe 1s forwards 1;
+
+      & ~ .tip__globe {
+        top: 80px;
+        opacity: 1;
+        animation-iteration-count: 1;
+      }
+    }
+  }
+
+  &__lang-text-block {
+    display: flex;
+    flex-flow: column wrap;
   }
 }

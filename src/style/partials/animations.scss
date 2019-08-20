@@ -81,3 +81,14 @@
   }
 }
 
+// rotateGlobe
+
+@keyframes rotateGlobe {
+  0% {
+    transform: rotate3d(1, 0, 0, 0deg);
+  }
+
+  100% {
+    transform: rotate3d(1, 0, 0, 360deg);
+  }
+}
