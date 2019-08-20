@@ -1,7 +1,7 @@
 .header-top {
 
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   padding: 20px 0;
   align-items: center;
 
@@ -32,8 +32,6 @@
     align-items: center;
   }
 
-
-
   &__lang-text {
     font-size: 32px;
     position: relative;
@@ -47,6 +45,17 @@
       background-color: #74B9E9;
       height: 3px;
       bottom: -3px;
+    }
+
+    &:hover:not(.active) {
+      &:before {
+        content: '';
+        width: 100%;
+        position: absolute;
+        background-color: #FAB161;
+        height: 3px;
+        bottom: -3px;
+      }
     }
   }
 

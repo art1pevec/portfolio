@@ -5,12 +5,21 @@
 @import "../../bower_components/font-awesome/scss/font-awesome.scss";
 @import "../../bower_components/slick-carousel/slick/slick.scss";
 @import "../../bower_components/slick-carousel/slick/slick-theme.scss";
+
+@font-face {
+  font-family: 'Raleway-Light';
+  src:url('../../src/fonts/Raleway-Light.ttf');
+}
+
 /*
 * Custom
 */
 @import "partials/app.scss";
+@import "partials/wrapper.scss";
 @import "partials/tips.scss";
 @import "partials/basic.scss";
 @import "partials/header-top.scss";
 @import "partials/main-menu.scss";
 @import "partials/animations.scss";
+@import "partials/main-slider.scss";
+@import "partials/main-screen.scss";
