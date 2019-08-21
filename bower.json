@@ -15,5 +15,8 @@
     "jquery": "^3.4.1",
     "font-awesome": "fontawesome#4.7",
     "slick-carousel": "^1.8.1"
+  },
+  "dependencies": {
+    "owl.carousel": "^2.3.4"
   }
 }

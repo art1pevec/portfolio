@@ -5,6 +5,8 @@
 @import "../../bower_components/font-awesome/scss/font-awesome.scss";
 @import "../../bower_components/slick-carousel/slick/slick.scss";
 @import "../../bower_components/slick-carousel/slick/slick-theme.scss";
+@import "../../bower_components/owl.carousel/src/scss/owl.carousel";
+@import "../../bower_components/owl.carousel/src/scss/owl.theme.default";
 
 @font-face {
   font-family: 'Raleway-Light';
@@ -15,6 +17,7 @@
 * Custom
 */
 @import "partials/app.scss";
+@import "partials/main-screen.scss";
 @import "partials/wrapper.scss";
 @import "partials/tips.scss";
 @import "partials/basic.scss";
@@ -22,4 +25,3 @@
 @import "partials/main-menu.scss";
 @import "partials/animations.scss";
 @import "partials/main-slider.scss";
-@import "partials/main-screen.scss";

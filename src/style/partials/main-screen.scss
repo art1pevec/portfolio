@@ -1,5 +1,39 @@
 .main-screen {
   &__name {
     font-family: Raleway-Light;
+    font-size: 64px;
+    margin: 10px 0;
+    position: relative;
+    font-weight: 500;
+    &:before {
+      content: '';
+      width: 50%;
+      height: 5px;
+      background-color: #fab161;
+      position: absolute;
+      bottom: -15px;
+      left: 5px;
+    }
   }
+
+  &__prof {
+    font-size: 36px;
+  }
+
+  &__img-container {
+    margin: 50px 0;
+  }
+
+  &__title-block {
+    color: #000;
+  }
+
+  &__wrapper-block {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+    margin: 0 auto;
+  }
+
 }
