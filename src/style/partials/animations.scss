@@ -92,3 +92,50 @@
     transform: rotate(360deg);
   }
 }
+
+// main block
+
+.slide-fade-enter-active {
+  transition: all .3s ease;
+}
+.slide-fade-leave-active {
+  transition: all .5s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-enter, .slide-fade-leave-to
+  /* .slide-fade-leave-active below version 2.1.8 */ {
+  transform: translateX(50px);
+  opacity: 0;
+}
+
+/*social icon*/
+
+@keyframes circleCenter {
+  from {}
+  25% {left: 30px; top: 50px;}
+  50% {}
+  to { opacity: 0 }
+}
+
+@keyframes initialCircle {
+  from {left: 30px; top: 50px;}
+  to {}
+}
+
+// left menu
+
+@keyframes leftMenu {
+  from {width: 0}
+  to {width: 300px}
+}
+
+@keyframes leftMenuBack {
+  from {width: 300px}
+  to {width: 0}
+}
+
+@keyframes iconLeftMenu {
+  from {}
+  50% {color: #fff; transform: rotate(-35deg)}
+  75% {color: #000; transform: rotate(20deg)}
+  100% {color: #42b983; transform: rotate(0deg)}
+}

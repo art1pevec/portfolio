@@ -1,0 +1,33 @@
+.left-menu {
+  position: absolute;
+  background: #F9D0A0;
+  color: #fff;
+  width: 0;
+  height: 100%;
+  z-index: 999;
+  padding: 100px 0;
+  display: none;
+
+  &__link-block {
+    margin-left: 20px;
+
+  }
+
+  &__link {
+    font-size: 24px;
+    color: #000;
+    opacity: 0;
+  }
+
+  &__icon {
+    font-size: 32px !important;
+    margin-right: 10px;
+    color: #000;
+    cursor: pointer;
+    position: relative;
+
+    &.active {
+      animation: iconLeftMenu 1s forwards;
+    }
+  }
+}

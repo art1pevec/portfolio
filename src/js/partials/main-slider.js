@@ -1,3 +1,3 @@
-$('.main-slider').slick({
-    arrows: false,
-});
+// $('.main-slider').slick({
+//     arrows: false,
+// });

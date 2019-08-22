@@ -11,6 +11,7 @@
 
     &.active {
       top: 40px;
+      z-index: 2000;
     }
 
     &.not-active .main-menu__line + .main-menu__line {
@@ -25,6 +26,7 @@
 
     &.active .main-menu__line:nth-child(1) {
       animation: ease .7s top forwards;
+      color: #fff;
     }
 
     &.not-active .main-menu__line:nth-child(1) {
@@ -45,6 +47,7 @@
 
     &.active .main-menu__line:nth-child(3) {
       animation: ease .7s bottom forwards;
+      color: #fff;
     }
 
     &.not-active .main-menu__line:nth-child(3) {

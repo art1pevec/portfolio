@@ -1,0 +1,24 @@
+.social-icon {
+  &.not-active .social-icon__circle{
+      animation: initialCircle 0.5s ease-in-out forwards;
+  }
+  position: relative;
+  cursor: pointer;
+  width: 120px;
+  height: 120px;
+
+  &__circle {
+    left: 50px;
+    top: 50px;
+    background-color: #74B9E9;
+    border-radius: 50px;
+    width: 10px;
+    height: 10px;
+    display: block;
+    position: absolute;
+  }
+}
+
+.circle-animation {
+  animation: circleCenter 0.5s ease-in-out forwards;
+}

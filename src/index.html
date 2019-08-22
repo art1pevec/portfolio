@@ -8,7 +8,15 @@
 
 <body>
 
-    <div class="wrapper">
+    <div class="wrapper"  id="app">
+        <!-- LEFT_MENU -->
+
+        <div class="left-menu">
+            <div class="left-menu__link-block">
+                <i class="left-menu__icon fa fa-home"></i><a href="javascript:void(0);" class="left-menu__link">Hello</a>
+            </div>
+        </div>
+
         <!-- HEADER_TOP -->
     <header class="header-top">
         <div class="header-top__menu-block">
@@ -37,29 +45,81 @@
         </div>
     </header>
 
-        <main class="main-block">
+        <main style="position: relative;" class="main-block">
             <div class="main-slider">
-                <div class="main-screen main-slider__item">
-                    <div class="main-screen__wrapper-block">
-                        <div class="main-screen__title-block">
-                            <h1 class="main-screen__name">Бровкин Артем</h1>
-                            <h3 class="main-screen__prof">Веб-разработчик и <br/>дизайнер</h3>
-                            <div class="main-screen__btn-block">
-                                <a href="javascript:void(0);" class="main-screen__btn-portfolio">Портфолио</a>
-                                <a href="javascript:void(0);" class="main-screen__btn-competitions">Компетенции</a>
+                <transition name="slide-fade">
+                    <div v-if="main" class="main-screen main-slider__item">
+                        <div class="main-screen__wrapper-block">
+                            <div class="main-screen__title-block">
+                                <h1 class="main-screen__name">Бровкин Артем</h1>
+                                <h3 class="main-screen__prof">Веб-разработчик и <br/>дизайнер</h3>
+                                <div class="main-screen__btn-block">
+                                    <a href="javascript:void(0);" class="main-screen__btn-portfolio">Портфолио</a>
+                                    <a href="javascript:void(0);" class="main-screen__btn-competitions">Компетенции</a>
+                                </div>
                             </div>
-                        </div>
-                        <div class="main-screen__img-block">
-                            <div class="main-screen__img-container">
-                                <img src="img/photo_gallery.jpg" alt="" class="main-screen__img-item">
+                            <div class="main-screen__img-block">
+                                <div class="main-screen__img-container">
+                                    <img src="img/photo_gallery.jpg" alt="" class="main-screen__img-item">
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="main-slider__item">hello2</div>
-                <div class="main-slider__item">hello3</div>
+                </transition>
+                <transition name="slide-fade">
+                    <div v-if="portfolio" class="main-slider__item">
+                        Портфолио
+                    </div>
+                </transition>
+                <transition name="slide-fade">
+                    <div v-if="competition" class="main-screen main-slider__item">
+                        Компетенции
+                    </div>
+                </transition>
             </div>
         </main>
+
+        <div  style="width: 100px; margin: 0 auto; position: relative;">
+            <transition name="slide-fade">
+                <div v-if="main" style="margin: 10px 0; background-color:#555; position: absolute;" class="block">Main</div>
+            </transition>
+            <transition name="slide-fade">
+                <div v-if="portfolio" style="margin: 10px 0; background-color:#777; position: absolute;" class="block">Portfolio</div>
+            </transition>
+            <transition name="slide-fade">
+                <div v-if="competition" style="margin: 10px 0; background-color:#999; position: absolute;" class="block">Competition</div>
+            </transition>
+
+
+
+
+            <a style="position:absolute; top: 20px" @click="clickMain()" href="javascript:void(0);" class="btn">Главная</a>
+            <a style="position:absolute; top: 50px" @click="clickPortfolio()" href="javascript:void(0);" class="btn">Портфолио</a>
+            <a style="position:absolute; top: 100px" @click="clickCompetition()" href="javascript:void(0);" class="btn">Компетенции</a>
+        </div>
+
+        <footer class="footer">
+            <div class="footer__wrapper">
+                <div class="footer__social-block">
+                    <div class="social-icon not-active">
+                            <span class="social-icon__circle" style="left: 0; top: 20px;"></span>
+                            <span class="social-icon__circle" style="left: 30px; top: 20px;"></span>
+                            <span class="social-icon__circle" style="left: 60px; top: 20px;"></span>
+
+                            <span class="social-icon__circle" style="left: 0; top: 50px;"></span>
+                            <span class="social-icon__circle" style="left: 30px; top: 50px;"></span>
+                            <span class="social-icon__circle" style="left: 60px; top: 50px;"></span>
+
+                            <span class="social-icon__circle" style="left: 0; top: 80px;"></span>
+                            <span class="social-icon__circle" style="left: 30px; top: 80px;"></span>
+                            <span class="social-icon__circle" style="left: 60px; top: 80px;"></span>
+                    </div>
+                </div>
+                <div class="footer__copyright-block">
+                    &copy;
+                </div>
+            </div>
+        </footer>
 
     </div>
 
