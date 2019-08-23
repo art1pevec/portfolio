@@ -8,6 +8,7 @@ $(document).ready(function(){
         if ($('.left-menu').hasClass('active')) {
             $('.left-menu').css('display', 'block')
                 .animate({width: '270px'});
+
         } else {
             $('.left-menu').animate({width: '0px'}, function(){
                 $(this).css('display', 'none');
@@ -19,6 +20,8 @@ $(document).ready(function(){
             //     $('.left-menu__line').removeClass('active');
             //     $('.left-menu__icon').next().removeClass('active');
             }
+
+
 
     });
 
@@ -32,4 +35,6 @@ $(document).ready(function(){
        $(this).toggleClass('active');
        // $(this).next().toggleClass('active');
     });
+
+
 });

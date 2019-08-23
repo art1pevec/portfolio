@@ -4,7 +4,7 @@ new Vue({
         main: true,
         portfolio: false,
         competition: false,
-
+        social_block: false
     },
     methods: {
         clickPortfolio: function() {
@@ -22,5 +22,8 @@ new Vue({
             this.portfolio = false
             this.competition = false
         },
+        clickSocial: function() {
+            this.social_block = true
+        }
     }
 })

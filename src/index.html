@@ -9,6 +9,24 @@
 <body>
 
     <div class="wrapper"  id="app">
+
+        <!-- SOCIAL -->
+        <!--<div class="social-icon__wrapper">-->
+            <!--<div v-if="social_block" class="social-icon__popup">-->
+                <!--<div class="social-icon__popup-block"><i class="social-icon__popup-icon fa fa-vk"></i></div>-->
+                <!--<div class="social-icon__popup-block"><i class="social-icon__popup-icon fa fa-vk"></i></div>-->
+                <!--<div class="social-icon__popup-block"><i class="social-icon__popup-icon fa fa-vk"></i></div>-->
+
+                <!--<div class="social-icon__popup-block"><i class="social-icon__popup-icon fa fa-facebook"></i></div>-->
+                <!--<div class="social-icon__popup-block"><i class="social-icon__popup-icon fa fa-facebook"></i></div>-->
+                <!--<div class="social-icon__popup-block"><i class="social-icon__popup-icon fa fa-facebook"></i></div>-->
+
+                <!--<div class="social-icon__popup-block"><i class="social-icon__popup-icon fa fa-telegram"></i></div>-->
+                <!--<div class="social-icon__popup-block"><i class="social-icon__popup-icon fa fa-telegram"></i></div>-->
+                <!--<div class="social-icon__popup-block"><i class="social-icon__popup-icon fa fa-telegram"></i></div>-->
+            <!--</div>-->
+        <!--</div>-->
+
         <!-- LEFT_MENU -->
 
         <div class="left-menu">
@@ -104,29 +122,10 @@
             </div>
         </main>
 
-        <div  style="width: 100px; margin: 0 auto; position: relative;">
-            <transition name="slide-fade">
-                <div v-if="main" style="margin: 10px 0; background-color:#555; position: absolute;" class="block">Main</div>
-            </transition>
-            <transition name="slide-fade">
-                <div v-if="portfolio" style="margin: 10px 0; background-color:#777; position: absolute;" class="block">Portfolio</div>
-            </transition>
-            <transition name="slide-fade">
-                <div v-if="competition" style="margin: 10px 0; background-color:#999; position: absolute;" class="block">Competition</div>
-            </transition>
-
-
-
-
-            <a style="position:absolute; top: 20px" @click="clickMain()" href="javascript:void(0);" class="btn">Главная</a>
-            <a style="position:absolute; top: 50px" @click="clickPortfolio()" href="javascript:void(0);" class="btn">Портфолио</a>
-            <a style="position:absolute; top: 100px" @click="clickCompetition()" href="javascript:void(0);" class="btn">Компетенции</a>
-        </div>
-
         <footer class="footer">
             <div class="footer__wrapper">
                 <div class="footer__social-block">
-                    <div class="social-icon not-active">
+                    <div @click="clickSocial()" class="social-icon not-active">
                             <span class="social-icon__circle" style="left: 0; top: 20px;"></span>
                             <span class="social-icon__circle" style="left: 30px; top: 20px;"></span>
                             <span class="social-icon__circle" style="left: 60px; top: 20px;"></span>
@@ -140,6 +139,19 @@
                             <span class="social-icon__circle" style="left: 60px; top: 80px;"></span>
                     </div>
                 </div>
+                <!--<div v-if="social_block" class="social-icon__popup">-->
+                    <!--<div class="social-icon__popup-block"><i class="social-icon__popup-icon fa fa-vk"></i></div>-->
+                    <!--<div class="social-icon__popup-block"><i class="social-icon__popup-icon fa fa-vk"></i></div>-->
+                    <!--<div class="social-icon__popup-block"><i class="social-icon__popup-icon fa fa-vk"></i></div>-->
+
+                    <!--<div class="social-icon__popup-block"><i class="social-icon__popup-icon fa fa-facebook"></i></div>-->
+                    <!--<div class="social-icon__popup-block"><i class="social-icon__popup-icon fa fa-facebook"></i></div>-->
+                    <!--<div class="social-icon__popup-block"><i class="social-icon__popup-icon fa fa-facebook"></i></div>-->
+
+                    <!--<div class="social-icon__popup-block"><i class="social-icon__popup-icon fa fa-telegram"></i></div>-->
+                    <!--<div class="social-icon__popup-block"><i class="social-icon__popup-icon fa fa-telegram"></i></div>-->
+                    <!--<div class="social-icon__popup-block"><i class="social-icon__popup-icon fa fa-telegram"></i></div>-->
+                <!--</div>-->
                 <div class="footer__copyright-block">
                     &copy;
                 </div>
