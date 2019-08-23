@@ -137,5 +137,19 @@
   from {}
   50% {color: #fff; transform: rotate(-35deg)}
   75% {color: #000; transform: rotate(20deg)}
-  100% {color: #42b983; transform: rotate(0deg)}
+  100% {transform: rotate(0deg)}
+}
+
+@keyframes lineLeftMenu {
+  from {width: 60%; left: -40px;}
+  50% {width: 100%; left: 0;}
+  75% {}
+  100% {width: 100%; left: 0;}
+}
+
+@keyframes linkLeftMenu {
+  from {top: 20px;}
+  50% {}
+  75% {top: 0; opacity: 1}
+  100% {color: #00A7E1; top: 0; opacity: 1}
 }

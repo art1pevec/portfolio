@@ -12,8 +12,29 @@
         <!-- LEFT_MENU -->
 
         <div class="left-menu">
-            <div class="left-menu__link-block">
-                <i class="left-menu__icon fa fa-home"></i><a href="javascript:void(0);" class="left-menu__link">Hello</a>
+            <div @click="clickMain()" class="left-menu__link-block">
+                <i class="left-menu__icon fa fa-home" :class="{ 'active': main }"></i>
+                <a v-if="main" href="javascript:void(0);" class="left-menu__link" :class="{ 'active': main }">
+                    <span class="left-menu__line" :class="{ 'active': main }"></span>
+                    Главная
+                </a>
+                <span class="left-menu__title" v-else>Главная</span>
+            </div>
+            <div @click="clickPortfolio()" class="left-menu__link-block">
+                <i class="left-menu__icon fa fa-suitcase" :class="{ 'active': portfolio }"></i>
+                <a v-if="portfolio" href="javascript:void(0);" class="left-menu__link" :class="{ 'active': portfolio }">
+                    <span class="left-menu__line" :class="{ 'active': portfolio }"></span>
+                    Портфолио
+                </a>
+                <span class="left-menu__title" v-else >Портфолио</span>
+            </div>
+            <div @click="clickCompetition()" class="left-menu__link-block">
+                <i class="left-menu__icon fa fa-desktop" :class="{ 'active': competition }"></i>
+                <a v-if="competition" href="javascript:void(0);" class="left-menu__link" :class="{ 'active': competition }">
+                    <span class="left-menu__line" :class="{ 'active': competition }"></span>
+                    Компетенции
+                </a>
+                <span class="left-menu__title" v-else>Компетенции</span>
             </div>
         </div>
 
@@ -54,8 +75,8 @@
                                 <h1 class="main-screen__name">Бровкин Артем</h1>
                                 <h3 class="main-screen__prof">Веб-разработчик и <br/>дизайнер</h3>
                                 <div class="main-screen__btn-block">
-                                    <a href="javascript:void(0);" class="main-screen__btn-portfolio">Портфолио</a>
-                                    <a href="javascript:void(0);" class="main-screen__btn-competitions">Компетенции</a>
+                                    <a @click="clickPortfolio()" href="javascript:void(0);" class="main-screen__btn-portfolio">Портфолио</a>
+                                    <a @click="clickCompetition()" href="javascript:void(0);" class="main-screen__btn-competition">Компетенции</a>
                                 </div>
                             </div>
                             <div class="main-screen__img-block">
@@ -68,12 +89,16 @@
                 </transition>
                 <transition name="slide-fade">
                     <div v-if="portfolio" class="main-slider__item">
-                        Портфолио
+                        <div class="main-screen__wrapper-block">
+                            Портфолио
+                        </div>
                     </div>
                 </transition>
                 <transition name="slide-fade">
                     <div v-if="competition" class="main-screen main-slider__item">
-                        Компетенции
+                        <div class="main-screen__wrapper-block">
+                            Компетенции
+                        </div>
                     </div>
                 </transition>
             </div>

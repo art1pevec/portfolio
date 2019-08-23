@@ -65,6 +65,8 @@
     font-size: 46px;
     cursor: pointer;
     padding: 20px;
+    position: relative;
+    z-index: 999;
     &:hover {
       animation: rotateGlobe 0.7s forwards;
 

@@ -36,4 +36,29 @@
     margin: 0 auto;
   }
 
+  &__btn-block {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__btn-portfolio {
+    font-family: Raleway-Regular;
+    background-color: #F4B161;
+    padding: 10px 30px;
+    border-radius: 3px;
+    text-decoration: none;
+    font-size: 28px;
+    color: #fff;
+  }
+
+  &__btn-competition {
+    font-family: Raleway-Regular;
+    background-color: #00A7E1;
+    padding: 10px 30px;
+    border-radius: 3px;
+    text-decoration: none;
+    font-size: 28px;
+    color: #fff;
+  }
+
 }
