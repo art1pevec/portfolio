@@ -5,6 +5,7 @@ new Vue({
         portfolio: false,
         competition: false,
         social_block: false,
+        dateCopy: new Date(),
     },
     methods: {
         clickPortfolio: function() {
@@ -28,7 +29,8 @@ new Vue({
         clickSocialClose: function() {
             $('.social-icon').click();
             this.social_block = false
-        }
+        },
+
     }
 
 })

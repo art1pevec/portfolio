@@ -96,8 +96,30 @@
                 </transition>
                 <transition name="slide-fade">
                     <div v-if="portfolio" class="main-slider__item">
-                        <div class="main-screen__wrapper-block">
-                            Портфолио
+                        <div class="portfolio-screen">
+                            <h2 class="portfolio-screen__title">Портфолио</h2>
+                            <div class="portfolio-screen__block">
+                                <div class="portfolio-screen__item-block">
+                                    <h3 class="portfolio-screen__item-title">Аквакидс <a href="" class="portfolio-screen__item-link"></a></h3>
+                                    <div class="portfolio-screen__item">
+                                        <img src="img/mockup.jpg" alt="" class="portfolio-screen__item-img">
+                                    </div>
+                                </div>
+
+                                <div class="portfolio-screen__item-block">
+                                    <h3 class="portfolio-screen__item-title">Аквакидс <a href="" class="portfolio-screen__item-link"></a></h3>
+                                    <div class="portfolio-screen__item">
+                                        <img src="img/mockup.jpg" alt="" class="portfolio-screen__item-img">
+                                    </div>
+                                </div>
+
+                                <div class="portfolio-screen__item-block">
+                                    <h3 class="portfolio-screen__item-title">Аквакидс <a href="" class="portfolio-screen__item-link"></a></h3>
+                                    <div class="portfolio-screen__item">
+                                        <img src="img/mockup.jpg" alt="" class="portfolio-screen__item-img">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </transition>
@@ -148,7 +170,7 @@
                 </transition>
 
                 <div class="footer__copyright-block">
-                    &copy;
+                    &copy; <a class="footer__copyright-link" href="https://brozabro.ru">brozabro.ru</a> / <span class="footer__copyright-date"> {{dateCopy.getFullYear()}}</span>
                 </div>
             </div>
         </footer>

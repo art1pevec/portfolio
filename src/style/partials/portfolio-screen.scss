@@ -1,0 +1,17 @@
+.portfolio-screen {
+  width: 70%;
+  margin: 0 auto;
+
+  &__title {
+    text-align: center;
+  }
+
+  &__item-img {
+    max-width: 400px;
+  }
+
+  &__block {
+    display: flex;
+    justify-content: space-around;
+  }
+}

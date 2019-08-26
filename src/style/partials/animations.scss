@@ -160,19 +160,19 @@ $color: #E94E3D;
 
 @keyframes border{
   25% {
-    box-shadow: -25px -25px 0 2px transparent, -25px 25px 0 2px #fff, 25px -25px 0 2px #fff, 25px 25px 0 2px #fff,  0 0 2px #E94E3D;
+    box-shadow: -25px -25px 0 2px transparent, -25px 25px 0 2px #fff, 25px -25px 0 2px #fff, 25px 25px 0 2px #fff,  0 0 3px 1px #7EB9E9;
   }
 
   50% {
-    box-shadow: -25px -25px 0 2px transparent, -25px 25px 0 2px transparent, 25px -25px 0 2px #fff, 25px 25px 0 2px #fff,  0 0 2px #E94E3D;
+    box-shadow: -25px -25px 0 2px transparent, -25px 25px 0 2px transparent, 25px -25px 0 2px #fff, 25px 25px 0 2px #fff,  0 0 3px 1px #7EB9E9;
   }
 
   75% {
-     box-shadow: -25px -25px 0 2px transparent, -25px 25px 0 2px transparent, 25px -25px 0 2px #fff, 25px 25px 0 2px transparent,  0 0 2px #E94E3D;
+     box-shadow: -25px -25px 0 2px transparent, -25px 25px 0 2px transparent, 25px -25px 0 2px #fff, 25px 25px 0 2px transparent,  0 0 3px 1px #7EB9E9;
    }
 
   100% {
-    box-shadow: -25px -25px 0 2px transparent, -25px 25px 0 2px transparent, 25px -25px 0 2px transparent, 25px 25px 0 2px transparent,  0 0 2px #E94E3D;
+    box-shadow: -25px -25px 0 2px transparent, -25px 25px 0 2px transparent, 25px -25px 0 2px transparent, 25px 25px 0 2px transparent,  0 0 3px 1px #7EB9E9;
   }
 
 }
