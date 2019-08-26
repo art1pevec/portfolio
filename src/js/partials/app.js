@@ -4,7 +4,7 @@ new Vue({
         main: true,
         portfolio: false,
         competition: false,
-        social_block: false
+        social_block: false,
     },
     methods: {
         clickPortfolio: function() {
@@ -24,6 +24,11 @@ new Vue({
         },
         clickSocial: function() {
             this.social_block = true
+        },
+        clickSocialClose: function() {
+            $('.social-icon').click();
+            this.social_block = false
         }
     }
+
 })

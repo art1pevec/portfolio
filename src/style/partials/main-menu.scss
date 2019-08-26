@@ -66,5 +66,27 @@
     position: relative;
   }
 
+  &__not-main-block {
+    position: relative;
+  }
+
+  &__pipeline {
+    width: 2px;
+    height: 70px;
+    background-color: #000;
+    display: block;
+    position: absolute;
+    left: 80px;
+    top: -35px;
+  }
+
+  &__home {
+    font-size: 36px;
+    position: absolute;
+    left: 110px;
+    top: -15px;
+    cursor: pointer;
+  }
+
 
 }

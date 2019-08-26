@@ -10,23 +10,6 @@
 
     <div class="wrapper"  id="app">
 
-        <!-- SOCIAL -->
-        <!--<div class="social-icon__wrapper">-->
-            <!--<div v-if="social_block" class="social-icon__popup">-->
-                <!--<div class="social-icon__popup-block"><i class="social-icon__popup-icon fa fa-vk"></i></div>-->
-                <!--<div class="social-icon__popup-block"><i class="social-icon__popup-icon fa fa-vk"></i></div>-->
-                <!--<div class="social-icon__popup-block"><i class="social-icon__popup-icon fa fa-vk"></i></div>-->
-
-                <!--<div class="social-icon__popup-block"><i class="social-icon__popup-icon fa fa-facebook"></i></div>-->
-                <!--<div class="social-icon__popup-block"><i class="social-icon__popup-icon fa fa-facebook"></i></div>-->
-                <!--<div class="social-icon__popup-block"><i class="social-icon__popup-icon fa fa-facebook"></i></div>-->
-
-                <!--<div class="social-icon__popup-block"><i class="social-icon__popup-icon fa fa-telegram"></i></div>-->
-                <!--<div class="social-icon__popup-block"><i class="social-icon__popup-icon fa fa-telegram"></i></div>-->
-                <!--<div class="social-icon__popup-block"><i class="social-icon__popup-icon fa fa-telegram"></i></div>-->
-            <!--</div>-->
-        <!--</div>-->
-
         <!-- LEFT_MENU -->
 
         <div class="left-menu">
@@ -64,6 +47,12 @@
                 <span class="main-menu__line"></span>
                 <span class="main-menu__line"></span>
             </div>
+            <transition name="fade">
+                <div v-if="!main" class="main-menu__not-main-block">
+<!--                    <span class="main-menu__pipeline"></span>-->
+                    <i @click="clickMain" class="main-menu__home fa fa-reply"></i>
+                </div>
+            </transition>
         </div>
         <div class="header-top__logo-block">
             <img class="header-top__item_active" src="img/logo.png" alt="">
@@ -139,19 +128,25 @@
                             <span class="social-icon__circle" style="left: 60px; top: 80px;"></span>
                     </div>
                 </div>
-                <!--<div v-if="social_block" class="social-icon__popup">-->
-                    <!--<div class="social-icon__popup-block"><i class="social-icon__popup-icon fa fa-vk"></i></div>-->
-                    <!--<div class="social-icon__popup-block"><i class="social-icon__popup-icon fa fa-vk"></i></div>-->
-                    <!--<div class="social-icon__popup-block"><i class="social-icon__popup-icon fa fa-vk"></i></div>-->
 
-                    <!--<div class="social-icon__popup-block"><i class="social-icon__popup-icon fa fa-facebook"></i></div>-->
-                    <!--<div class="social-icon__popup-block"><i class="social-icon__popup-icon fa fa-facebook"></i></div>-->
-                    <!--<div class="social-icon__popup-block"><i class="social-icon__popup-icon fa fa-facebook"></i></div>-->
+                <transition name="fade">
+                <div v-if="social_block" class="social-icon__popup">
+                    <i @click="clickSocialClose()" class="social-icon__popup-close fa fa-times"></i>
 
-                    <!--<div class="social-icon__popup-block"><i class="social-icon__popup-icon fa fa-telegram"></i></div>-->
-                    <!--<div class="social-icon__popup-block"><i class="social-icon__popup-icon fa fa-telegram"></i></div>-->
-                    <!--<div class="social-icon__popup-block"><i class="social-icon__popup-icon fa fa-telegram"></i></div>-->
-                <!--</div>-->
+                    <a href="javascript:void(0);" class="social-icon__popup-block"><i class="social-icon__popup-icon fa fa-vk"></i></a>
+                    <a href="javascript:void(0);" class="social-icon__popup-block"><i class="social-icon__popup-icon fa fa-vk"></i></a>
+                    <a href="javascript:void(0);" class="social-icon__popup-block"><i class="social-icon__popup-icon fa fa-vk"></i></a>
+
+                    <a href="javascript:void(0);" class="social-icon__popup-block"><i class="social-icon__popup-icon fa fa-facebook"></i></a>
+                    <a href="javascript:void(0);" class="social-icon__popup-block"><i class="social-icon__popup-icon fa fa-facebook"></i></a>
+                    <a href="javascript:void(0);" class="social-icon__popup-block"><i class="social-icon__popup-icon fa fa-facebook"></i></a>
+
+                    <a href="javascript:void(0);" class="social-icon__popup-block"><i class="social-icon__popup-icon fa fa-telegram"></i></a>
+                    <a href="javascript:void(0);" class="social-icon__popup-block"><i class="social-icon__popup-icon fa fa-telegram"></i></a>
+                    <a href="javascript:void(0);" class="social-icon__popup-block"><i class="social-icon__popup-icon fa fa-telegram"></i></a>
+                </div>
+                </transition>
+
                 <div class="footer__copyright-block">
                     &copy;
                 </div>
