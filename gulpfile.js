@@ -105,6 +105,13 @@ gulp.task('fonts:build', gulp.series(function(cb) {
 
 gulp.task('replace', function() {
     gulp.src('*.html')
+
+        .pipe(rep({
+            prependSrc : '//github.cdn.com/images/',
+            keepOrigin : true
+        }))
+        .pipe(gulp.dest('dist'));
+    gulp.src('*.scss')
         .pipe(rep({
             prependSrc : '//github.cdn.com/images/',
             keepOrigin : true

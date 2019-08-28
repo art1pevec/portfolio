@@ -176,3 +176,11 @@ $color: #E94E3D;
   }
 
 }
+
+// main-bg
+
+@keyframes bgMove {
+  from {background-position: 0 0}
+  to {background-position: 4400px 4400px;}
+
+}

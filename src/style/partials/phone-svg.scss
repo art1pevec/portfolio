@@ -1,0 +1,16 @@
+.phone-svg {
+  position: absolute;
+  top: -5px;
+  left: 0;
+  width: 100%;
+  &__line {
+    stroke-dasharray: 100,700;
+    stroke-dashoffset: 335;
+    stroke-width: 1px;
+    fill: transparent;
+    stroke: #7EB9E9;
+    border-bottom: 5px solid black;
+    transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
+  }
+}
+

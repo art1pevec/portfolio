@@ -1,4 +1,9 @@
 .wrapper {
   width: 100vw;
   height: 100vh;
+  background: url(/img/lines-bg.png);
+  background-position: 0 0;
+  background-size: cover;
+  background-repeat: repeat;
+  animation: bgMove 120s linear infinite forwards;
 }

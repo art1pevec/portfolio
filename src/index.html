@@ -58,7 +58,13 @@
             <img class="header-top__item_active" src="img/logo.png" alt="">
         </div>
         <div class="header-top__phone-block">
-            <a href="tel:+79806572472" class="header-top__phone">+ 7 980-657-24-72</a>
+            <a href="tel:+79806572472" class="header-top__phone">
+
+                <svg class="phone-svg">
+                    <rect class="phone-svg__line" height="60" width="100%" />
+                </svg>
+                + 7 980-657-24-72
+            </a>
         </div>
         <div class="header-top__lang-block">
             <i class="header-top__lang-icon fa fa-globe"></i>
@@ -73,7 +79,7 @@
         </div>
     </header>
 
-        <main style="position: relative;" class="main-block">
+        <main class="main-block">
             <div class="main-slider">
                 <transition name="slide-fade">
                     <div v-if="main" class="main-screen main-slider__item">
@@ -125,8 +131,8 @@
                 </transition>
                 <transition name="slide-fade">
                     <div v-if="competition" class="main-screen main-slider__item">
-                        <div class="main-screen__wrapper-block">
-                            Компетенции
+                        <div class="main-screen__wrapper-block competition-screen">
+                            <h2 class="portfolio-screen__title">Компетенции</h2>
                         </div>
                     </div>
                 </transition>
