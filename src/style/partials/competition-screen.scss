@@ -1,4 +1,13 @@
 .competition-screen {
   width: 70%;
   margin: 0 auto;
+
+  &__title {
+    text-align: center;
+  }
+
+  &__block {
+    display: flex;
+    justify-content: space-around;
+  }
 }

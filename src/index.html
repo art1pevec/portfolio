@@ -131,8 +131,13 @@
                 </transition>
                 <transition name="slide-fade">
                     <div v-if="competition" class="main-screen main-slider__item">
-                        <div class="main-screen__wrapper-block competition-screen">
-                            <h2 class="portfolio-screen__title">Компетенции</h2>
+                        <div class="competition-screen">
+                            <h2 class="competition-screen__title">Компетенции</h2>
+                            <div class="competition-screen__block">
+                                <competitions v-for="item in competitions"
+                                      v-bind:item="item"
+                                ></competitions>
+                            </div>
                         </div>
                     </div>
                 </transition>

@@ -1,11 +1,16 @@
-new Vue({
+var main = new Vue({
     el: '#app',
     data: {
-        main: true,
+        main: false,
         portfolio: false,
-        competition: false,
+        competition: true,
         social_block: false,
         dateCopy: new Date(),
+        competitions: [
+            {id: 1, title: 'Hello1', message: 'message1', visible: false},
+            {id: 2, title: 'Hello2', message: 'message2', visible: false},
+            {id: 3, title: 'Hello3', message: 'message3', visible: false}
+        ],
     },
     methods: {
         clickPortfolio: function() {
@@ -34,3 +39,4 @@ new Vue({
     }
 
 })
+
