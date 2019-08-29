@@ -9,12 +9,13 @@
   &__item {
     box-shadow: 0 0 10px 0 rgba(0,0,0,.1);
     background-color: #fff;
-    width: 200px;
+    width: 50%;
     height: auto;
     padding: 20px;
     text-align: left;
     font-size: 24px;
     position: relative;
+    margin: 0 auto;
   }
 
   &__item-title {
@@ -23,17 +24,20 @@
 
   &__item-more {
     position: absolute;
-    width: 200px;
+    width: 70%;
     font-size: 14px;
     background-color: #fff;
     box-shadow: 0 0 10px 0 rgba(0,0,0,.1);
     padding: 20px;
     margin-top: 20px;
     left: 0;
+    z-index: 10;
   }
 
   &__block {
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 50px;
   }
 }
