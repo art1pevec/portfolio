@@ -184,3 +184,22 @@ $color: #E94E3D;
   to {background-position: 4400px 4400px;}
 
 }
+
+// close social
+
+@keyframes animClose {
+  0% {
+    opacity: 0;
+    transform: rotate(30deg);
+  }
+
+  50% {
+    opacity: 0.5;
+    transform: rotate(-20deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: rotate(0);
+  }
+}

@@ -34,8 +34,8 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    grid-gap: 2em;
-    padding: 40px;
+    grid-gap: 30px;
+    padding: 50px;
     z-index: 99999;
     border-radius: 20px;
     box-shadow: 0 0 10px 0 rgba(0,0,0, 0.1);
@@ -72,6 +72,10 @@
     padding: 10px;
     cursor: pointer;
     z-index: 999;
+    transition: .4s all;
+    &:hover {
+      animation: animClose 0.5s ease-in-out forwards;
+    }
   }
 }
 

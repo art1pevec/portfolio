@@ -7,11 +7,14 @@ var main = new Vue({
         social_block: false,
         dateCopy: new Date(),
         competitions: [
-            {id: 1, title: 'Консультация по 1С-Битрикс: Управление сайтом', message: 'Расскажу про возможности CMS, ограничениях, возможных проблемах и путях их решения. Отвечу на интересующие вопросы.', visible: false},
-            {id: 2, title: 'Интеграция вёрстки', message: 'У вас уже есть сверстанные макеты и их надо интегрировать с CMS 1С-Битрикс.', visible: false},
-            {id: 3, title: 'Разработка функционала', message: 'Приступлю к разработке функционала сайта до того как будет готова вёрстка.', visible: false},
-            {id: 4, title: 'Создание сайтов', message: 'Приступлю к разработке функционала сайта до того как будет готова вёрстка.', visible: false},
-            {id: 5, title: 'Разработка технического задания', message: 'Приступлю к разработке функционала сайта до того как будет готова вёрстка.', visible: false}
+            {id: 1, title: 'Поддержка сайтов на 1С-Битрикс', message: 'У вас есть проблема с 1C-Битрикс? Обращайтесь!', visible: true},
+            {id: 2, title: 'Сайт с нуля на Wordpress', message: 'Полный цикл разработки, от создания прототипа сайта, до переноса на Ваш хостинг.', visible: false},
+            {id: 3, title: 'Интеграция дизайна на CMS', message: 'Есть дизайн сайта? Верстка и интеграция любых Ваших задумок.', visible: false},
+            {id: 4, title: 'Создание дизайна сайта', message: '3 этапа. Анализ и прототип, первичная визуализация, завершения проекта. Изи.', visible: false},
+            {id: 5, title: 'Редизайн сайта', message: 'Мир не стоит на месте, каждому бизнесу нужно обновляться и дышать свежо. Сделаю красиво.', visible: false},
+            {id: 6, title: 'Перенос сайта на хостинг', message: 'Хотите поменять хостинг? Тогда вы по адресу!', visible: false},
+            {id: 7, title: 'Современная разработка', message: 'HTML5, CSS3, JS, Vue.js, Gulp4 etc.', visible: false},
+            {id: 8, title: 'Оптимизация сайта Google PageSpeed', message: 'Ваш сайт тормозит и долго прогружает картинки? Есть шанс, что вы захотите доверить это профессионалу!', visible: false}
         ],
     },
     methods: {
@@ -41,4 +44,13 @@ var main = new Vue({
     }
 
 })
+
+// CLOSE DIVS OUTSIDE THE BLOCKS
+
+$(document).mouseup(function (e) {
+    var container = $(".social-icon__popup");
+    if (container.has(e.target).length === 0){
+        main.social_block = false;
+    }
+});
 

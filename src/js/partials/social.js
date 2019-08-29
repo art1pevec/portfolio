@@ -3,8 +3,3 @@ $('.social-icon').click(function(){
     $(this).toggleClass('active');
     $(this).toggleClass('not-active');
 });
-
-// $('.social-icon__popup-close').on('click', function(){
-//     $('.social-icon').toggleClass('not-active');
-//     $('.social-icon').toggleClass('active');
-// });

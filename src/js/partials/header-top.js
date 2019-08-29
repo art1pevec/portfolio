@@ -1,9 +1,8 @@
-$('.header-top__lang-icon').on('click', function(){
-    $('.header-top__lang-text-block').css({display: 'flex'});
+$(document).ready(function(){
+    $('.header-top__lang-icon').on('click', function(){
+        $('.header-top__lang-text-block').css({display: 'flex'});
+    });
 });
-
-
-
 
 $(document).click(function (e){ // событие клика по веб-документу
     var div = $(".header-top__lang-block"); // тут указываем ID элемента

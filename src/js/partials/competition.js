@@ -1,4 +1,4 @@
-var htmlSTring = '<div @click="clickItem" class="competition-screen__item">\
+var htmlSTring = '<div @mouseenter="clickItem" class="competition-screen__item">\
                          <div class="competition-screen__item-title">{{ item.title }}</div>\
                           <transition name="slide-fade">\
                          <div v-if="item.visible" class="competition-screen__item-more">{{ item.message }}</div>\

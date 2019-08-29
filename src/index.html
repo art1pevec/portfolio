@@ -106,24 +106,24 @@
                             <h2 class="portfolio-screen__title">Портфолио</h2>
                             <div class="portfolio-screen__block">
                                 <div class="portfolio-screen__item-block">
-                                    <h3 class="portfolio-screen__item-title">Аквакидс <a href="" class="portfolio-screen__item-link"></a></h3>
-                                    <div class="portfolio-screen__item">
+                                    <h3 class="portfolio-screen__item-title">Аквакидс </h3>
+                                    <a data-fancybox="portfolio" href="img/mockup.jpg" class="portfolio-screen__item">
                                         <img src="img/mockup.jpg" alt="" class="portfolio-screen__item-img">
-                                    </div>
+                                    </a>
                                 </div>
 
                                 <div class="portfolio-screen__item-block">
-                                    <h3 class="portfolio-screen__item-title">Аквакидс <a href="" class="portfolio-screen__item-link"></a></h3>
-                                    <div class="portfolio-screen__item">
+                                    <h3 class="portfolio-screen__item-title">Арена</h3>
+                                    <a data-fancybox="portfolio" href="img/mockup.jpg" class="portfolio-screen__item">
                                         <img src="img/mockup.jpg" alt="" class="portfolio-screen__item-img">
-                                    </div>
+                                    </a>
                                 </div>
 
                                 <div class="portfolio-screen__item-block">
-                                    <h3 class="portfolio-screen__item-title">Аквакидс <a href="" class="portfolio-screen__item-link"></a></h3>
-                                    <div class="portfolio-screen__item">
+                                    <h3 class="portfolio-screen__item-title">Домик76</h3>
+                                    <a data-fancybox="portfolio" href="img/mockup.jpg" class="portfolio-screen__item">
                                         <img src="img/mockup.jpg" alt="" class="portfolio-screen__item-img">
-                                    </div>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -136,6 +136,7 @@
                             <div class="competition-screen__block">
                                 <competitions v-for="item in competitions"
                                       v-bind:item="item"
+                                      v-bind:key="item.id"
                                 ></competitions>
                             </div>
                         </div>
@@ -166,17 +167,15 @@
                 <div v-if="social_block" class="social-icon__popup">
                     <i @click="clickSocialClose()" class="social-icon__popup-close fa fa-times"></i>
 
-                    <a href="javascript:void(0);" class="social-icon__popup-block"><i class="social-icon__popup-icon fa fa-vk"></i></a>
-                    <a href="javascript:void(0);" class="social-icon__popup-block"><i class="social-icon__popup-icon fa fa-vk"></i></a>
-                    <a href="javascript:void(0);" class="social-icon__popup-block"><i class="social-icon__popup-icon fa fa-vk"></i></a>
+                    <a href="https://vk.com/artembrovkin" target="_blank" class="social-icon__popup-block"><i class="social-icon__popup-icon fa fa-vk"></i></a>
+                    <a href="https://www.instagram.com/brovkin_artem/" target="_blank" class="social-icon__popup-block"><i class="social-icon__popup-icon fa fa-instagram"></i></a>
+                    <a href="tg://resolve?domain=<brovkin_artem>" target="_blank" class="social-icon__popup-block"><i class="social-icon__popup-icon fa fa-telegram"></i></a>
 
-                    <a href="javascript:void(0);" class="social-icon__popup-block"><i class="social-icon__popup-icon fa fa-facebook"></i></a>
-                    <a href="javascript:void(0);" class="social-icon__popup-block"><i class="social-icon__popup-icon fa fa-facebook"></i></a>
-                    <a href="javascript:void(0);" class="social-icon__popup-block"><i class="social-icon__popup-icon fa fa-facebook"></i></a>
+                    <a href="https://www.facebook.com/brovkin.artem" target="_blank" class="social-icon__popup-block"><i class="social-icon__popup-icon fa fa-facebook"></i></a>
+                    <a href="https://wa.me/79806572472" target="_blank" class="social-icon__popup-block"><i class="social-icon__popup-icon fa fa-whatsapp"></i></a>
+                    <a href="https://github.com/art1pevec" target="_blank" class="social-icon__popup-block"><i class="social-icon__popup-icon fa fa-github"></i></a>
 
-                    <a href="javascript:void(0);" class="social-icon__popup-block"><i class="social-icon__popup-icon fa fa-telegram"></i></a>
-                    <a href="javascript:void(0);" class="social-icon__popup-block"><i class="social-icon__popup-icon fa fa-telegram"></i></a>
-                    <a href="javascript:void(0);" class="social-icon__popup-block"><i class="social-icon__popup-icon fa fa-telegram"></i></a>
+                    <a href="mailto:brovkin.on@gmail.com" target="_blank" class="social-icon__popup-block"><i class="social-icon__popup-icon fa fa-envelope"></i></a>
                 </div>
                 </transition>
 
