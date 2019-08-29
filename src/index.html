@@ -10,6 +10,27 @@
 
     <div class="wrapper"  id="app">
 
+        <!-- FEEDBACK -->
+
+        <div class="feedback">
+            <div class="feedback__block">
+                <h2 class="feedback__main-title">Свяжитесь со мной</h2>
+                <form action="mail/feedback.php" method="post" class="feedback__form">
+                    <label class="feedback__label">
+                        <input placeholder="Ваше имя" type="text" name="name" class="feedback__input feedback__input-name">
+                    </label>
+                    <label class="feedback__label">
+                        <input placeholder="Ваш телефон" type="text" name="phone" class="feedback__input feedback__input-phone">
+                    </label>
+                    <label class="feedback__label">
+                        <textarea placeholder="Сообщение" type="text" name="textarea" class="feedback__input feedback__input-textarea"></textarea>
+                    </label>
+
+                    <input class="feedback__submit-btn" type="submit" value="Отправить">
+                </form>
+            </div>
+        </div>
+
         <!-- LEFT_MENU -->
 
         <div class="left-menu">
@@ -65,6 +86,9 @@
                 </svg>
                 + 7 980-657-24-72
             </a>
+        </div>
+        <div class="header-top__mail-block">
+            <i class="header-top__envelope fa fa-envelope-o"></i>
         </div>
         <div class="header-top__lang-block">
             <i class="header-top__lang-icon fa fa-globe"></i>

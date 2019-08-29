@@ -7,6 +7,10 @@
   width: 80%;
   margin: 0 auto;
 
+  &__logo-block {
+    margin-left: 50px;
+  }
+
   &__initial-image {
     opacity: 1;
   }
@@ -96,5 +100,16 @@
     box-shadow: 0 0 8px 0 rgba(0,0,0,0.1);
     padding: 10px 15px;
     background: #fff;
+  }
+
+  &__mail-block {
+    position: relative;
+  }
+
+  &__envelope {
+    font-size: 32px;
+    position: absolute;
+    top: -15px;
+    cursor: pointer;
   }
 }
