@@ -16,6 +16,19 @@ var main = new Vue({
             {id: 7, title: 'Современная разработка', message: 'HTML5, CSS3, JS, Vue.js, Gulp4 etc.', visible: false},
             {id: 8, title: 'Оптимизация сайта Google PageSpeed', message: 'Ваш сайт тормозит и долго прогружает картинки? Есть шанс, что вы захотите доверить это профессионалу!', visible: false}
         ],
+        localeRu: true,
+        localeEn: false,
+        localeFr: false,
+        locale: ''
+    },
+    mounted: function() {
+        if(localStorage.locale) {
+
+            this.locale = localStorage.locale;
+        }
+    },
+    watch:{
+
     },
     methods: {
         clickPortfolio: function() {
@@ -41,7 +54,29 @@ var main = new Vue({
             this.social_block = false
         },
 
-    }
+        clickLocaleRu: function() {
+            this.localeFr = false
+            this.localeEn = false
+            this.localeRu = true
+        },
+
+        clickLocaleEn: function() {
+            this.localeFr = false
+            this.localeRu = false
+            this.localeEn = true
+        },
+
+        clickLocaleFr: function() {
+            this.localeEn = false
+            this.localeRu = false
+            this.localeFr = true
+        }
+
+
+    },
+
+
+
 
 })
 

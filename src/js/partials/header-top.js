@@ -12,6 +12,13 @@ $(document).ready(function(){
     $('.header-top__envelope').on('click', function(){
         $('.feedback').css({display: 'flex'});
     });
+
+    $(document).mouseup(function (e) {
+        var container = $(".feedback");
+        if (container.has(e.target).length === 0){
+            $('.feedback').css({display: 'none'});
+        }
+    });
 });
 
 $(document).click(function (e){ // событие клика по веб-документу

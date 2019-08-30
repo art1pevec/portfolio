@@ -14,7 +14,9 @@
 
         <div class="feedback">
             <div class="feedback__block">
-                <h2 class="feedback__main-title">Свяжитесь со мной</h2>
+                <h2 class="feedback__main-title" v-if="localeRu">Свяжитесь со мной</h2>
+                <h2 class="feedback__main-title" v-if="localeEn">Contact me</h2>
+                <h2 class="feedback__main-title" v-if="localeFr">Свяжитесь со мной</h2>
                 <form action="mail/feedback.php" method="post" class="feedback__form">
                     <label class="feedback__label">
                         <input placeholder="Ваше имя" type="text" name="name" class="feedback__input feedback__input-name">
@@ -38,9 +40,15 @@
                 <i class="left-menu__icon fa fa-home" :class="{ 'active': main }"></i>
                 <a v-if="main" href="javascript:void(0);" class="left-menu__link" :class="{ 'active': main }">
                     <span class="left-menu__line" :class="{ 'active': main }"></span>
-                    Главная
+                    <span v-if="localeRu">Главная</span>
+                    <span v-if="localeEn">Main</span>
+                    <span v-if="localeFr">Maine</span>
                 </a>
-                <span class="left-menu__title" v-else>Главная</span>
+                <span class="left-menu__title" v-else>
+                    <span v-if="localeRu">Главная</span>
+                    <span v-if="localeEn">Main</span>
+                    <span v-if="localeFr">Maine</span>
+                </span>
             </div>
             <div @click="clickPortfolio()" class="left-menu__link-block">
                 <i class="left-menu__icon fa fa-suitcase" :class="{ 'active': portfolio }"></i>
@@ -93,9 +101,9 @@
         <div class="header-top__lang-block">
             <i class="header-top__lang-icon fa fa-globe"></i>
             <div class="header-top__lang-text-block">
-                <span class="header-top__lang-text active">Ru</span>
-                <span class="header-top__lang-text">En</span>
-                <span class="header-top__lang-text">Fr</span>
+                <span @click="clickLocaleRu()" class="header-top__lang-text" :class="{'active': localeRu}">Ru</span>
+                <span @click="clickLocaleEn()" class="header-top__lang-text" :class="{'active': localeEn}">En</span>
+                <span @click="clickLocaleFr()" class="header-top__lang-text" :class="{'active': localeFr}">Fr</span>
             </div>
             <div class="tip tip__globe">
                 Switch language
