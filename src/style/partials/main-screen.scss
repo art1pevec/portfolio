@@ -38,7 +38,6 @@
 
   &__btn-block {
     display: flex;
-    justify-content: space-between;
   }
 
   &__btn-portfolio {
@@ -50,6 +49,7 @@
     font-size: 28px;
     position: relative;
     color: #fff;
+    margin-right: 20px;
     transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
 
     &:hover {

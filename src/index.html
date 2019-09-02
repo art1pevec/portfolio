@@ -16,10 +16,12 @@
             <div class="feedback__block">
                 <h2 class="feedback__main-title" v-if="localeRu">Свяжитесь со мной</h2>
                 <h2 class="feedback__main-title" v-if="localeEn">Contact me</h2>
-                <h2 class="feedback__main-title" v-if="localeFr">Свяжитесь со мной</h2>
+                <h2 class="feedback__main-title" v-if="localeFr">Contactez-moi</h2>
                 <form action="mail/feedback.php" method="post" class="feedback__form">
                     <label class="feedback__label">
-                        <input placeholder="Ваше имя" type="text" name="name" class="feedback__input feedback__input-name">
+                        <input v-if="localeRu" placeholder="Ваше имя" type="text" name="name" class="feedback__input feedback__input-name">
+                        <input v-if="localeEn" placeholder="Your name" type="text" name="name" class="feedback__input feedback__input-name">
+                        <input v-if="localeFr" placeholder="Votre nome" type="text" name="name" class="feedback__input feedback__input-name">
                     </label>
                     <label class="feedback__label">
                         <input placeholder="Ваш телефон" type="text" name="phone" class="feedback__input feedback__input-phone">
@@ -42,29 +44,41 @@
                     <span class="left-menu__line" :class="{ 'active': main }"></span>
                     <span v-if="localeRu">Главная</span>
                     <span v-if="localeEn">Main</span>
-                    <span v-if="localeFr">Maine</span>
+                    <span v-if="localeFr">Page d’acceuil</span>
                 </a>
                 <span class="left-menu__title" v-else>
                     <span v-if="localeRu">Главная</span>
                     <span v-if="localeEn">Main</span>
-                    <span v-if="localeFr">Maine</span>
+                    <span v-if="localeFr">Page d’acceuil</span>
                 </span>
             </div>
             <div @click="clickPortfolio()" class="left-menu__link-block">
                 <i class="left-menu__icon fa fa-suitcase" :class="{ 'active': portfolio }"></i>
                 <a v-if="portfolio" href="javascript:void(0);" class="left-menu__link" :class="{ 'active': portfolio }">
                     <span class="left-menu__line" :class="{ 'active': portfolio }"></span>
-                    Портфолио
+                    <span v-if="localeRu">Портфолио</span>
+                    <span v-if="localeEn">Portfolio</span>
+                    <span v-if="localeFr">Portefeuille</span>
                 </a>
-                <span class="left-menu__title" v-else >Портфолио</span>
+                <span class="left-menu__title" v-else >
+                    <span v-if="localeRu">Портфолио</span>
+                    <span v-if="localeEn">Portfolio</span>
+                    <span v-if="localeFr">Portefeuille</span>
+                </span>
             </div>
             <div @click="clickCompetition()" class="left-menu__link-block">
                 <i class="left-menu__icon fa fa-desktop" :class="{ 'active': competition }"></i>
                 <a v-if="competition" href="javascript:void(0);" class="left-menu__link" :class="{ 'active': competition }">
                     <span class="left-menu__line" :class="{ 'active': competition }"></span>
-                    Компетенции
+                    <span v-if="localeRu">Компетенции</span>
+                    <span v-if="localeEn">Competitions</span>
+                    <span v-if="localeFr">Compétences</span>
                 </a>
-                <span class="left-menu__title" v-else>Компетенции</span>
+                <span class="left-menu__title" v-else>
+                    <span v-if="localeRu">Компетенции</span>
+                    <span v-if="localeEn">Competitions</span>
+                    <span v-if="localeFr">Compétences</span>
+                </span>
             </div>
         </div>
 
@@ -117,11 +131,27 @@
                     <div v-if="main" class="main-screen main-slider__item">
                         <div class="main-screen__wrapper-block">
                             <div class="main-screen__title-block">
-                                <h1 class="main-screen__name">Бровкин Артем</h1>
-                                <h3 class="main-screen__prof">Веб-разработчик и <br/>дизайнер</h3>
+                                <h1 class="main-screen__name">
+                                    <span v-if="localeRu">Бровкин Артем</span>
+                                    <span v-if="localeEn">Brovkin Artem</span>
+                                    <span v-if="localeFr">Brovkin Artem</span>
+                                </h1>
+                                <h3 class="main-screen__prof">
+                                    <span v-if="localeRu">Веб-разработчик и <br/>дизайнер</span>
+                                    <span v-if="localeEn">Web-developer and <br/>designer</span>
+                                    <span v-if="localeFr">Web-developer et <br/>designer</span>
+                                </h3>
                                 <div class="main-screen__btn-block">
-                                    <a @click="clickPortfolio()" href="javascript:void(0);" class="main-screen__btn-portfolio">Портфолио</a>
-                                    <a @click="clickCompetition()" href="javascript:void(0);" class="main-screen__btn-competition">Компетенции</a>
+                                    <a @click="clickPortfolio()" href="javascript:void(0);" class="main-screen__btn-portfolio">
+                                        <span v-if="localeRu">Портфолио</span>
+                                        <span v-if="localeEn">Portfolio</span>
+                                        <span v-if="localeFr">Portefeuille</span>
+                                    </a>
+                                    <a @click="clickCompetition()" href="javascript:void(0);" class="main-screen__btn-competition">
+                                        <span v-if="localeRu">Компетенции</span>
+                                        <span v-if="localeEn">Competitions</span>
+                                        <span v-if="localeFr">Compétences</span>
+                                    </a>
                                 </div>
                             </div>
                             <div class="main-screen__img-block">
@@ -135,7 +165,11 @@
                 <transition name="slide-fade">
                     <div v-if="portfolio" class="main-slider__item">
                         <div class="portfolio-screen">
-                            <h2 class="portfolio-screen__title">Портфолио</h2>
+                            <h2 class="portfolio-screen__title">
+                                <span v-if="localeRu">Портфолио</span>
+                                <span v-if="localeEn">Portfolio</span>
+                                <span v-if="localeFr">Portefeuille</span>
+                            </h2>
                             <div class="portfolio-screen__block">
                                 <div class="portfolio-screen__item-block">
                                     <h3 class="portfolio-screen__item-title">Аквакидс </h3>
@@ -164,12 +198,30 @@
                 <transition name="slide-fade">
                     <div v-if="competition" class="main-screen main-slider__item">
                         <div class="competition-screen">
-                            <h2 class="competition-screen__title">Компетенции</h2>
+                            <h2 class="competition-screen__title">
+                                <span v-if="localeRu">Компетенции</span>
+                                <span v-if="localeEn">Competitions</span>
+                                <span v-if="localeFr">Compétences</span>
+                            </h2>
                             <div class="competition-screen__block">
-                                <competitions v-for="item in competitions"
-                                      v-bind:item="item"
-                                      v-bind:key="item.id"
-                                ></competitions>
+                                <template v-if="localeRu">
+                                    <competitions v-for="item in competitions"
+                                          v-bind:item="item"
+                                          v-bind:key="item.id"
+                                    ></competitions>
+                                </template>
+                                <template v-if="localeEn">
+                                    <competitions v-for="item in competitionsEn"
+                                                  v-bind:item="item"
+                                                  v-bind:key="item.id"
+                                    ></competitions>
+                                </template>
+                                <template v-if="localeFr">
+                                    <competitions v-for="item in competitionsFr"
+                                                  v-bind:item="item"
+                                                  v-bind:key="item.id"
+                                    ></competitions>
+                                </template>
                             </div>
                         </div>
                     </div>

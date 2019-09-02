@@ -16,19 +16,54 @@ var main = new Vue({
             {id: 7, title: 'Современная разработка', message: 'HTML5, CSS3, JS, Vue.js, Gulp4 etc.', visible: false},
             {id: 8, title: 'Оптимизация сайта Google PageSpeed', message: 'Ваш сайт тормозит и долго прогружает картинки? Есть шанс, что вы захотите доверить это профессионалу!', visible: false}
         ],
+        competitionsEn: [
+            {id: 1, title: 'Hello', message: 'У вас есть проблема с 1C-Битрикс? Обращайтесь!', visible: true},
+            {id: 2, title: 'Сайт с нуля на Wordpress', message: 'Полный цикл разработки, от создания прототипа сайта, до переноса на Ваш хостинг.', visible: false},
+            {id: 3, title: 'Интеграция дизайна на CMS', message: 'Есть дизайн сайта? Верстка и интеграция любых Ваших задумок.', visible: false},
+            {id: 4, title: 'Создание дизайна сайта', message: '3 этапа. Анализ и прототип, первичная визуализация, завершения проекта. Изи.', visible: false},
+            {id: 5, title: 'Редизайн сайта', message: 'Мир не стоит на месте, каждому бизнесу нужно обновляться и дышать свежо. Сделаю красиво.', visible: false},
+            {id: 6, title: 'Перенос сайта на хостинг', message: 'Хотите поменять хостинг? Тогда вы по адресу!', visible: false},
+            {id: 7, title: 'Современная разработка', message: 'HTML5, CSS3, JS, Vue.js, Gulp4 etc.', visible: false},
+            {id: 8, title: 'Оптимизация сайта Google PageSpeed', message: 'Ваш сайт тормозит и долго прогружает картинки? Есть шанс, что вы захотите доверить это профессионалу!', visible: false}
+        ],
+        competitionsFr: [
+            {id: 1, title: 'Soutien des sites 1C-Bitrix', message: 'У вас есть проблема с 1C-Битрикс? Обращайтесь!', visible: true},
+            {id: 2, title: 'Сайт с нуля на Wordpress', message: 'Полный цикл разработки, от создания прототипа сайта, до переноса на Ваш хостинг.', visible: false},
+            {id: 3, title: 'Intégration du design sur le CMS', message: 'Есть дизайн сайта? Верстка и интеграция любых Ваших задумок.', visible: false},
+            {id: 4, title: 'Création du design de site web', message: '3 этапа. Анализ и прототип, первичная визуализация, завершения проекта. Изи.', visible: false},
+            {id: 5, title: 'Redesign du site web', message: 'Мир не стоит на месте, каждому бизнесу нужно обновляться и дышать свежо. Сделаю красиво.', visible: false},
+            {id: 6, title: 'Migration du site sur hosting', message: 'Хотите поменять хостинг? Тогда вы по адресу!', visible: false},
+            {id: 7, title: 'Développement moderne', message: 'HTML5, CSS3, JS, Vue.js, Gulp4 etc.', visible: false},
+            {id: 8, title: 'Optimisation d’un site Internet Google PageSpeed', message: 'Ваш сайт тормозит и долго прогружает картинки? Есть шанс, что вы захотите доверить это профессионалу!', visible: false}
+        ],
         localeRu: true,
         localeEn: false,
         localeFr: false,
         locale: ''
     },
     mounted: function() {
-        if(localStorage.locale) {
 
-            this.locale = localStorage.locale;
+        if(localStorage.LocaleRu) {
+
+            this.localeEn = false;
+            this.localeFr = false;
+            this.localeRu = true;
         }
-    },
-    watch:{
 
+        if(localStorage.LocaleEn) {
+
+            this.localeRu = false;
+            this.localeFr = false;
+            this.localeEn = true;
+        }
+
+        if(localStorage.LocaleFr) {
+
+            this.localeRu = false;
+            this.localeEn = false;
+            this.localeFr = true;
+        }
+        console.log(localStorage);
     },
     methods: {
         clickPortfolio: function() {
@@ -58,18 +93,27 @@ var main = new Vue({
             this.localeFr = false
             this.localeEn = false
             this.localeRu = true
+            localStorage.removeItem('LocaleEn')
+            localStorage.removeItem('LocaleFr')
+            localStorage.setItem('LocaleRu', true);
         },
 
         clickLocaleEn: function() {
             this.localeFr = false
             this.localeRu = false
             this.localeEn = true
+            localStorage.removeItem('LocaleRu')
+            localStorage.removeItem('LocaleFr')
+            localStorage.setItem('LocaleEn', true);
         },
 
         clickLocaleFr: function() {
             this.localeEn = false
             this.localeRu = false
             this.localeFr = true
+            localStorage.removeItem('LocaleRu')
+            localStorage.removeItem('LocaleEn')
+            localStorage.setItem('LocaleFr', true);
         }
 
 
