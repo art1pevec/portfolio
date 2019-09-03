@@ -24,6 +24,21 @@
     margin: 50px 0;
   }
 
+  &__img-item {
+    background-image: url('/img/iphone.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 540px;
+    width: 270px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 20px;
+    position: relative;
+  }
+
   &__title-block {
     color: #000;
   }
@@ -125,6 +140,28 @@
       bottom: auto;
       height: 100%;
     }
+  }
+
+  &__date {
+    position: absolute;
+    top: 120px;
+
+    &-time {
+      position: relative;
+    }
+
+    &-dots {
+      position: absolute;
+      left: 50px;
+      top: -5px;
+      animation: dotsBlink 1.5s infinite 1s;
+    }
+  }
+
+  &__date-time {
+    font-family: SFUI;
+    font-size: 56px;
+    color: #fff;
   }
 
 }

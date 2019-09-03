@@ -1,11 +1,13 @@
 var main = new Vue({
     el: '#app',
     data: {
-        main: false,
+        main: true,
         portfolio: false,
-        competition: true,
+        competition: false,
         social_block: false,
         dateCopy: new Date(),
+        currentTime: 1,
+        nowTime: new Date(),
         competitions: [
             {id: 1, title: 'Поддержка сайтов на 1С-Битрикс', message: 'У вас есть проблема с 1C-Битрикс? Обращайтесь!', visible: true},
             {id: 2, title: 'Сайт с нуля на Wordpress', message: 'Полный цикл разработки, от создания прототипа сайта, до переноса на Ваш хостинг.', visible: false},
@@ -41,7 +43,35 @@ var main = new Vue({
         localeFr: false,
         locale: ''
     },
+
+    computed: {
+
+        getTimeMinutes: function() {
+                var minutes = '';
+                if (this.nowTime.getMinutes() < 10) {
+                    minutes = '0' + this.nowTime.getMinutes()
+                }
+                minutes = this.nowTime.getMinutes()
+
+
+            return minutes;
+        },
+
+        getTimeHours: function() {
+            return this.nowTime.getHours();
+        }
+    },
+
+    updated: function(){
+            var typed = new Typed('.main-screen__img-text', {
+                stringsElement: '.typed-strings',
+                typeSpeed: 30,
+                loop: true,
+            });
+    },
+
     mounted: function() {
+
 
         if(localStorage.LocaleRu) {
 
@@ -65,7 +95,9 @@ var main = new Vue({
         }
         console.log(localStorage);
     },
+
     methods: {
+
         clickPortfolio: function() {
             this.main = false
             this.competition = false
@@ -80,6 +112,7 @@ var main = new Vue({
             this.main = true
             this.portfolio = false
             this.competition = false
+
         },
         clickSocial: function() {
             this.social_block = true
@@ -114,15 +147,14 @@ var main = new Vue({
             localStorage.removeItem('LocaleRu')
             localStorage.removeItem('LocaleEn')
             localStorage.setItem('LocaleFr', true);
-        }
+        },
 
 
     },
 
-
-
-
 })
+
+
 
 // CLOSE DIVS OUTSIDE THE BLOCKS
 

@@ -203,3 +203,9 @@ $color: #E94E3D;
     transform: rotate(0);
   }
 }
+
+// time dots
+
+@keyframes dotsBlink {
+  50% { opacity: 0; }
+}

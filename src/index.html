@@ -156,7 +156,22 @@
                             </div>
                             <div class="main-screen__img-block">
                                 <div class="main-screen__img-container">
-                                    <img src="img/photo_gallery.jpg" alt="" class="main-screen__img-item">
+                                    <div class="main-screen__img-item">
+                                        <div class="main-screen__date">
+                                            <div class="main-screen__date-time">
+                                                {{getTimeHours}} <span class="main-screen__date-dots">:</span> {{getTimeMinutes}}
+                                            </div>
+                                        </div>
+                                        <div v-if="localeRu" class="typed-strings">
+                                            <span>Typed.js is a <strong>jQuery</strong> plugin.</span>
+                                            <p>It <em>types</em> out sentences.</p>
+                                            <p>And then deletes them.</p>
+                                            <p>Try it out!</p>
+                                        </div>
+                                        <div class="main-screen__img-text">
+
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
