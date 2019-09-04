@@ -159,14 +159,11 @@
                                     <div class="main-screen__img-item">
                                         <div class="main-screen__date">
                                             <div class="main-screen__date-time">
-                                                {{getTimeHours}} <span class="main-screen__date-dots">:</span> {{getTimeMinutes}}
+                                                <span>{{getTimeHours}}<span class="main-screen__date-dots">:</span><span>{{getTimeMinutes}}</span></span>
                                             </div>
                                         </div>
-                                        <div v-if="localeRu" class="typed-strings">
-                                            <span>Typed.js is a <strong>jQuery</strong> plugin.</span>
-                                            <p>It <em>types</em> out sentences.</p>
-                                            <p>And then deletes them.</p>
-                                            <p>Try it out!</p>
+                                        <div class="typed-strings">
+                                            <span>Привет!<strong> Это jQuery</strong> plugin.</span>
                                         </div>
                                         <div class="main-screen__img-text">
 
