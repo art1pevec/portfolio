@@ -19,7 +19,7 @@ var main = new Vue({
             {id: 8, title: 'Оптимизация сайта Google PageSpeed', message: 'Ваш сайт тормозит и долго прогружает картинки? Есть шанс, что вы захотите доверить это профессионалу!', visible: false}
         ],
         competitionsEn: [
-            {id: 1, title: 'Hello', message: 'У вас есть проблема с 1C-Битрикс? Обращайтесь!', visible: true},
+            {id: 1, title: 'Hello', message: 'hello', visible: true},
             {id: 2, title: 'Сайт с нуля на Wordpress', message: 'Полный цикл разработки, от создания прототипа сайта, до переноса на Ваш хостинг.', visible: false},
             {id: 3, title: 'Интеграция дизайна на CMS', message: 'Есть дизайн сайта? Верстка и интеграция любых Ваших задумок.', visible: false},
             {id: 4, title: 'Создание дизайна сайта', message: '3 этапа. Анализ и прототип, первичная визуализация, завершения проекта. Изи.', visible: false},
@@ -29,7 +29,7 @@ var main = new Vue({
             {id: 8, title: 'Оптимизация сайта Google PageSpeed', message: 'Ваш сайт тормозит и долго прогружает картинки? Есть шанс, что вы захотите доверить это профессионалу!', visible: false}
         ],
         competitionsFr: [
-            {id: 1, title: 'Soutien des sites 1C-Bitrix', message: 'У вас есть проблема с 1C-Битрикс? Обращайтесь!', visible: true},
+            {id: 1, title: 'Soutien des sites 1C-Bitrix', message: 'bonjour', visible: true},
             {id: 2, title: 'Сайт с нуля на Wordpress', message: 'Полный цикл разработки, от создания прототипа сайта, до переноса на Ваш хостинг.', visible: false},
             {id: 3, title: 'Intégration du design sur le CMS', message: 'Есть дизайн сайта? Верстка и интеграция любых Ваших задумок.', visible: false},
             {id: 4, title: 'Création du design de site web', message: '3 этапа. Анализ и прототип, первичная визуализация, завершения проекта. Изи.', visible: false},
@@ -50,28 +50,36 @@ var main = new Vue({
                 var minutes = '';
                 if (this.nowTime.getMinutes() < 10) {
                     minutes = '0' + this.nowTime.getMinutes()
+                } else {
+                    minutes = this.nowTime.getMinutes()
                 }
-                minutes = this.nowTime.getMinutes()
 
-
+                console.log(minutes)
+                console.log(this.nowTime.getMinutes())
             return minutes;
         },
 
         getTimeHours: function() {
             return this.nowTime.getHours();
+        },
+
+        getDateDayWeek: function() {
+            return this.nowTime.getFullYear();
+        },
+
+        getDateMain: function() {
+            return this.nowTime.getDate();
         }
     },
 
-    updated: function(){
-            var typed = new Typed('.main-screen__img-text', {
-                stringsElement: '.typed-strings',
-                typeSpeed: 30,
-                loop: true,
-            });
-    },
 
     mounted: function() {
 
+        var typed = new Typed('.main-screen__img-text', {
+            stringsElement: '.typed-strings',
+            typeSpeed: 30,
+            loop: true,
+        });
 
         if(localStorage.LocaleRu) {
 

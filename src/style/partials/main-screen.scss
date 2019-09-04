@@ -145,14 +145,16 @@
   &__date {
     position: absolute;
     top: 120px;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
 
     &-time {
       position: relative;
     }
 
     &-dots {
-      position: absolute;
-      left: 50px;
+      position: relative;
       top: -5px;
       animation: dotsBlink 3s infinite 1s;
     }
@@ -161,6 +163,12 @@
   &__date-time {
     font-family: SFUI;
     font-size: 56px;
+    color: #fff;
+  }
+
+  &__date-days {
+    font-family: SFUI;
+    font-size: 16px;
     color: #fff;
   }
 
