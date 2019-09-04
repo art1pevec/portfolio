@@ -50,15 +50,25 @@ var main = new Vue({
                 var minutes = '';
                 if (this.nowTime.getMinutes() < 10) {
                     minutes = '0' + this.nowTime.getMinutes()
+                } else {
+                    minutes = this.nowTime.getMinutes()
                 }
-                minutes = this.nowTime.getMinutes()
 
-
+                console.log(minutes)
+                console.log(this.nowTime.getMinutes())
             return minutes;
         },
 
         getTimeHours: function() {
             return this.nowTime.getHours();
+        },
+
+        getDateDayWeek: function() {
+            return this.nowTime.getFullYear();
+        },
+
+        getDateMain: function() {
+            return this.nowTime.getDate();
         }
     },
 
