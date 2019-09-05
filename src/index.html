@@ -8,7 +8,7 @@
 
 <body>
 
-    <div class="wrapper"  id="app">
+    <div class="wrapper"  id="app" >
 
         <!-- FEEDBACK -->
 
@@ -80,6 +80,34 @@
                     <span v-if="localeFr">Compétences</span>
                 </span>
             </div>
+            <div @click="clickContacts()" class="left-menu__link-block">
+                <i class="left-menu__icon fa fa-address-book-o" :class="{ 'active': contacts }"></i>
+                <a v-if="contacts" href="javascript:void(0);" class="left-menu__link" :class="{ 'active': contacts }">
+                    <span class="left-menu__line" :class="{ 'active': contacts }"></span>
+                    <span v-if="localeRu">Контакты</span>
+                    <span v-if="localeEn">Contacts</span>
+                    <span v-if="localeFr">Compétences</span>
+                </a>
+                <span class="left-menu__title" v-else>
+                    <span v-if="localeRu">Контакты</span>
+                    <span v-if="localeEn">Contacts</span>
+                    <span v-if="localeFr">Compétences</span>
+                </span>
+            </div>
+            <div @click="clickAbout()" class="left-menu__link-block">
+                <i class="left-menu__icon fa fa-user-o" :class="{ 'active': about }"></i>
+                <a v-if="about" href="javascript:void(0);" class="left-menu__link" :class="{ 'active': about }">
+                    <span class="left-menu__line" :class="{ 'active': about }"></span>
+                    <span v-if="localeRu">Обо мне</span>
+                    <span v-if="localeEn">About me</span>
+                    <span v-if="localeFr">Compétences</span>
+                </a>
+                <span class="left-menu__title" v-else>
+                    <span v-if="localeRu">Обо мне</span>
+                    <span v-if="localeEn">About me</span>
+                    <span v-if="localeFr">Compétences</span>
+                </span>
+            </div>
         </div>
 
         <!-- HEADER_TOP -->
@@ -92,7 +120,6 @@
             </div>
             <transition name="fade">
                 <div v-if="!main" class="main-menu__not-main-block">
-<!--                    <span class="main-menu__pipeline"></span>-->
                     <i @click="clickMain" class="main-menu__home fa fa-reply"></i>
                 </div>
             </transition>
@@ -104,7 +131,7 @@
             <a href="tel:+79806572472" class="header-top__phone">
 
                 <svg class="phone-svg">
-                    <rect class="phone-svg__line" height="60" width="100%" />
+                    <rect class="phone-svg__line" height="60" width="100%"></rect>
                 </svg>
                 + 7 980-657-24-72
             </a>
@@ -162,7 +189,7 @@
                                                 <span>{{getTimeHours}}<span class="main-screen__date-dots">:</span><span>{{getTimeMinutes}}</span></span>
                                             </div>
                                             <div class="main-screen__date-days">
-                                                Monday, 17.08.2019
+                                                {{getDateDayWeek}}
                                             </div>
                                         </div>
                                         <div class="typed-strings">
@@ -238,6 +265,52 @@
                                     ></competitions>
                                 </template>
                             </div>
+                        </div>
+                    </div>
+                </transition>
+
+                <transition name="slide-fade">
+                    <div v-if="contacts" class="main-screen main-slider__item">
+                        <div class="contacts-screen">
+                            <h2 class="contacts-screen__title">
+                                <span v-if="localeRu">Контакты</span>
+                                <span v-if="localeEn">Contacts</span>
+                                <span v-if="localeFr">Compétences</span>
+                            </h2>
+                            <div class="contacts-screen__block">
+                                <div class="contacts-screen__item">
+                                    <i class="contacts-screen__item-icon fa fa-vk"></i>
+                                    <!--<div class="contacts-screen__item-title">ВК</div>-->
+                                </div>
+                                <div class="contacts-screen__item">
+                                    <i class="contacts-screen__item-icon fa fa-instagram"></i>
+                                </div>
+                                <div class="contacts-screen__item">
+                                    <i class="contacts-screen__item-icon fa fa-facebook"></i>
+                                </div>
+                                <div class="contacts-screen__item">
+                                    <i class="contacts-screen__item-icon fa fa-github"></i>
+                                </div>
+                                <div class="contacts-screen__item">
+                                    <i class="contacts-screen__item-icon fa fa-whatsapp"></i>
+                                </div>
+                                <div class="contacts-screen__item">
+                                    <i class="contacts-screen__item-icon fa fa-telegram"></i>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </transition>
+
+                <transition name="slide-fade">
+                    <div v-if="about" class="main-screen main-slider__item">
+                        <div class="about-screen">
+                            <h2 class="about-screen__title">
+                                <span v-if="localeRu">Обо мне</span>
+                                <span v-if="localeEn">About me</span>
+                                <span v-if="localeFr">Compétences</span>
+                            </h2>
                         </div>
                     </div>
                 </transition>

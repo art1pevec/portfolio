@@ -48,6 +48,18 @@
     cursor: pointer;
     position: relative;
 
+    &.fa-desktop {
+      font-size: 30px !important;
+    }
+
+    &.fa-address-book-o {
+      font-size: 36px !important;
+    }
+
+    &.fa-user-o {
+      margin-right: 17px;
+    }
+
     &.active {
       animation: iconLeftMenu 0.5s forwards;
     }

@@ -1,0 +1,41 @@
+.contacts-screen {
+  width: 70%;
+  margin: 0 auto;
+
+  &__title {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  &__block {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 100px;
+  }
+
+  //&__item {
+  //  display: flex;
+  //  justify-content: flex-start;
+  //  align-items: center;
+  //}
+
+  &__item-icon {
+    font-size: 36px;
+    border-radius: 50px;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    box-shadow: 0 0 5px 0 rgba(0,0,0, 0.1);
+    background-color: #fff;
+    cursor: pointer;
+    transition: .4s all;
+
+    &:hover {
+      color: #fff;
+      background-color: rgba(239, 177, 98, 0.9);
+    }
+  }
+}

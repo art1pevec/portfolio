@@ -1,3 +1,14 @@
+// Vue.directive('scroll', {
+//     inserted: function (el, binding) {
+//         var f = function (evt) {
+//             if (binding.value(evt, el)) {
+//                 window.removeEventListener('scroll', f)
+//             }
+//         }
+//         window.addEventListener('scroll', f)
+//     }
+// });
+
 var main = new Vue({
     el: '#app',
     data: {
@@ -5,8 +16,11 @@ var main = new Vue({
         portfolio: false,
         competition: false,
         social_block: false,
+        contacts: false,
+        about: false,
         dateCopy: new Date(),
         currentTime: 1,
+        count: 0,
         nowTime: new Date(),
         competitions: [
             {id: 1, title: 'Поддержка сайтов на 1С-Битрикс', message: 'У вас есть проблема с 1C-Битрикс? Обращайтесь!', visible: true},
@@ -38,6 +52,14 @@ var main = new Vue({
             {id: 7, title: 'Développement moderne', message: 'HTML5, CSS3, JS, Vue.js, Gulp4 etc.', visible: false},
             {id: 8, title: 'Optimisation d’un site Internet Google PageSpeed', message: 'Ваш сайт тормозит и долго прогружает картинки? Есть шанс, что вы захотите доверить это профессионалу!', visible: false}
         ],
+        dayOfTheWeek: {
+            Ru: ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'],
+            En: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'],
+            Fr: ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche'],
+        },
+        screens: {
+            array: ['main', 'portfolio', 'competitions', 'contacts', 'about']
+        },
         localeRu: true,
         localeEn: false,
         localeFr: false,
@@ -53,9 +75,6 @@ var main = new Vue({
                 } else {
                     minutes = this.nowTime.getMinutes()
                 }
-
-                console.log(minutes)
-                console.log(this.nowTime.getMinutes())
             return minutes;
         },
 
@@ -64,7 +83,33 @@ var main = new Vue({
         },
 
         getDateDayWeek: function() {
-            return this.nowTime.getFullYear();
+            var year = this.nowTime.getFullYear();
+            var month = this.nowTime.getMonth() + 1;
+            var day = this.nowTime.getDate();
+            var weekDay = '';
+
+            if (this.localeRu) {
+                weekDay = this.dayOfTheWeek.Ru[this.nowTime.getDay() - 1]
+            } else if (this.localeEn) {
+                weekDay = this.dayOfTheWeek.En[this.nowTime.getDay() - 1]
+            } else if (this.localeFr) {
+                weekDay = this.dayOfTheWeek.Fr[this.nowTime.getDay() - 1]
+            }
+
+            if (month < 10) {
+                month = '0' + month;
+            }
+
+            if (day < 10) {
+                day = '0' + day;
+            }
+
+
+
+
+            console.log(this.dayOfTheWeek);
+
+            return weekDay + ', ' + day + '.' + month + '.' + year;
         },
 
         getDateMain: function() {
@@ -109,18 +154,42 @@ var main = new Vue({
         clickPortfolio: function() {
             this.main = false
             this.competition = false
+            this.contacts = false
+            this.about = false
             this.portfolio = true
+            this.count = 1
         },
         clickCompetition: function() {
             this.main = false
             this.portfolio = false
+            this.contacts = false
+            this.about = false
             this.competition = true
+            this.count = 2
         },
         clickMain: function() {
-            this.main = true
             this.portfolio = false
             this.competition = false
-
+            this.contacts = false
+            this.about = false
+            this.main = true
+            this.count = 0
+        },
+        clickContacts: function() {
+            this.portfolio = false
+            this.competition = false
+            this.about = false
+            this.main = false
+            this.contacts = true
+            this.count = 3
+        },
+        clickAbout: function() {
+            this.portfolio = false
+            this.competition = false
+            this.contacts = false
+            this.main = false
+            this.about = true
+            this.count = 4;
         },
         clickSocial: function() {
             this.social_block = true
@@ -161,9 +230,64 @@ var main = new Vue({
     },
 
 })
+$(window).bind('mousewheel', function(event){
 
+   var scroll = event.originalEvent.deltaY;
 
+    if (scroll > 0) {
+        if (main.count === 4) {
+            main.count = 4;
+        } else {
+            main.count++;
+        }
 
+    } else {
+        if (main.count === 0) {
+            main.count = 0;
+        } else {
+            main.count--;
+        }
+
+    }
+
+    switch (main.count) {
+        case 0:
+            main.main = true;
+            main.portfolio = false;
+            main.competition = false;
+            main.contacts = false;
+            main.about = false;
+            break;
+        case 1:
+            main.main = false;
+            main.portfolio = true;
+            main.competition = false;
+            main.contacts = false;
+            main.about = false;
+            break;
+        case 2:
+            main.main = false;
+            main.portfolio = false;
+            main.competition = true;
+            main.contacts = false;
+            main.about = false;
+            break;
+        case 3:
+            main.main = false;
+            main.portfolio = false;
+            main.competition = false;
+            main.contacts = true;
+            main.about = false;
+            break;
+        case 4:
+            main.main = false;
+            main.portfolio = false;
+            main.competition = false;
+            main.contacts = false;
+            main.about = true;
+            break;
+    }
+});
 // CLOSE DIVS OUTSIDE THE BLOCKS
 
 $(document).mouseup(function (e) {
