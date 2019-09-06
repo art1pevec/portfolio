@@ -280,7 +280,6 @@
                             <div class="contacts-screen__block">
                                 <div class="contacts-screen__item">
                                     <i class="contacts-screen__item-icon fa fa-vk"></i>
-                                    <!--<div class="contacts-screen__item-title">ВК</div>-->
                                 </div>
                                 <div class="contacts-screen__item">
                                     <i class="contacts-screen__item-icon fa fa-instagram"></i>
@@ -311,6 +310,49 @@
                                 <span v-if="localeEn">About me</span>
                                 <span v-if="localeFr">Compétences</span>
                             </h2>
+                            <div class="about-screen__block">
+                                <div class="about-screen__text">
+                                    <h2>Привет!</h2>
+                                    <div class="about-screen__preview">
+                                        <p>
+                                            Меня зовут Артем, я веб-разработчик и дизайнер. Имею высшее техническое образование.
+                                            С 2017 года работаю в веб индустрии. Разрабатываю адаптивные сайты с удобным пользовательским интерфейсом.
+                                            Работаю удаленно, по всему миру.</p>
+                                            <p>
+                                            Использую современные инструменты в разработке и слежу за трендами в данной сфере.
+                                            Стараюсь совершенствовать свои навыки и не останавливаюсь на достигнутом.
+                                            В работе скрупулезен и каждый сделанный проект - это удовлетворенный клиент и прекрасное портфолио. Готов проконсультировать Вас в любое удобное время.
+                                            </p>
+                                    </div>
+                                </div>
+                                <div class="about-screen__personal-information">
+                                    <img src="img/new-photo.jpg" alt="" class="about-screen__photo">
+
+                                    <a href="" class="about-screen__brief">Скачать бриф</a>
+                                    <a href="" class="about-screen__rules">Правила работы</a>
+                                </div>
+                            </div>
+
+                            <h3 class="about-screen__cooperation-title">Как происходит сотрудничество:</h3>
+
+                            <div class="about-screen__cooperation-block">
+                                <div class="about-screen__cooperation-item">
+                                    <i class="about-screen__cooperation-icon fa fa-file-text-o"></i>
+                                    Вы отправляете мне ТЗ или заполненный бриф
+                                </div>
+                                <div class="about-screen__cooperation-item">
+                                    <i class="about-screen__cooperation-icon fa fa-comments-o"></i>
+                                    Обсуждаем ваш проект, разделяем на этапы, согласовываем сроки и стоимость
+                                </div>
+                                <div class="about-screen__cooperation-item">
+                                    <i class="about-screen__cooperation-icon fa fa-credit-card"></i>
+                                    Вы вносите предоплату - я приступаю к работе. По мере необходимости общаемся, вносим правки
+                                </div>
+                                <div class="about-screen__cooperation-item">
+                                    <i class="about-screen__cooperation-icon fa fa-check"></i>
+                                    После утверждения проекта вы вносите оставшуюся сумму. Я переношу сайт на ваш хостинг
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </transition>
@@ -352,7 +394,7 @@
                 </transition>
 
                 <div class="footer__copyright-block">
-                    &copy; <a class="footer__copyright-link" href="https://brozabro.ru">brozabro.ru</a> / <span class="footer__copyright-date"> {{dateCopy.getFullYear()}}</span>
+                    &copy; <a class="footer__copyright-link" href="https://brozabro.ru">brozabro.ru</a> <i class="fa fa-code"></i> <span class="footer__copyright-date"> {{dateCopy.getFullYear()}}</span>
                 </div>
             </div>
         </footer>

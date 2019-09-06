@@ -1,9 +1,85 @@
 .about-screen {
   width: 70%;
   margin: 0 auto;
+  font-family: Raleway-Regular;
+  font-weight: 500;
+  font-size: 18px;
 
   &__title {
     text-align: center;
     margin-bottom: 50px;
+  }
+
+  &__block {
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+
+  &__text {
+    width: 70%;
+  }
+
+  &__preview {
+
+  }
+
+  &__personal-information {
+    width: 30%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  &__cooperation-block {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  &__cooperation-item {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    flex: 1;
+    margin-right: 20px;
+    padding: 20px 10px;
+    text-align: center;
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover .about-screen__cooperation-icon:after {
+      width: 150%;
+    }
+  }
+
+  &__cooperation-icon {
+    font-size: 42px !important;
+    color: #F2A452;
+    margin-bottom: 30px;
+    position: relative;
+    
+    &:after {
+      content: '';
+      background-color: #7EB9E9;
+      width: 0;
+      height: 3px;
+      position: absolute;
+      transition: .3s all;
+      bottom: -10px;
+      left: -25%;
+    }
+
+
+  }
+
+  &__photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.3);
   }
 }

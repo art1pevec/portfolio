@@ -13,12 +13,6 @@
     grid-gap: 100px;
   }
 
-  //&__item {
-  //  display: flex;
-  //  justify-content: flex-start;
-  //  align-items: center;
-  //}
-
   &__item-icon {
     font-size: 36px;
     border-radius: 50px;
@@ -35,7 +29,7 @@
 
     &:hover {
       color: #fff;
-      background-color: rgba(239, 177, 98, 0.9);
+      background-color: rgba(0,0,0,0.8);
     }
   }
 }

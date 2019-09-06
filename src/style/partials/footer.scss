@@ -2,6 +2,7 @@
   position: fixed;
   bottom: 0;
   width: 100%;
+  font-family: SFUI;
 
   &__wrapper {
     display: flex;
@@ -13,5 +14,17 @@
 
   &__social-block {
     position: relative;
+  }
+
+  &__copyright-block {
+    font-weight: 700;
+  }
+
+  &__copyright-link {
+    text-decoration: none;
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: #000;
+    margin: 0 5px;
   }
 }

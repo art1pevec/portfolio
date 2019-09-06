@@ -1,26 +1,16 @@
-// Vue.directive('scroll', {
-//     inserted: function (el, binding) {
-//         var f = function (evt) {
-//             if (binding.value(evt, el)) {
-//                 window.removeEventListener('scroll', f)
-//             }
-//         }
-//         window.addEventListener('scroll', f)
-//     }
-// });
-
 var main = new Vue({
     el: '#app',
     data: {
-        main: true,
+        main: false,
         portfolio: false,
         competition: false,
         social_block: false,
         contacts: false,
-        about: false,
+        about: true,
         dateCopy: new Date(),
         currentTime: 1,
         count: 0,
+        typed: true,
         nowTime: new Date(),
         competitions: [
             {id: 1, title: 'Поддержка сайтов на 1С-Битрикс', message: 'У вас есть проблема с 1C-Битрикс? Обращайтесь!', visible: true},
@@ -66,6 +56,8 @@ var main = new Vue({
         locale: ''
     },
 
+
+
     computed: {
 
         getTimeMinutes: function() {
@@ -104,11 +96,6 @@ var main = new Vue({
                 day = '0' + day;
             }
 
-
-
-
-            console.log(this.dayOfTheWeek);
-
             return weekDay + ', ' + day + '.' + month + '.' + year;
         },
 
@@ -117,14 +104,22 @@ var main = new Vue({
         }
     },
 
+    updated: function() {
+        if (this.typed) {
+            var typed = new Typed('.main-screen__img-text', {
+                stringsElement: '.typed-strings',
+                typeSpeed: 30,
+                loop: true,
+            });
+        }
+
+        if (this.count < 5) {
+            this.typed = true;
+        }
+    },
+
 
     mounted: function() {
-
-        var typed = new Typed('.main-screen__img-text', {
-            stringsElement: '.typed-strings',
-            typeSpeed: 30,
-            loop: true,
-        });
 
         if(localStorage.LocaleRu) {
 
@@ -146,7 +141,6 @@ var main = new Vue({
             this.localeEn = false;
             this.localeFr = true;
         }
-        console.log(localStorage);
     },
 
     methods: {
@@ -206,6 +200,7 @@ var main = new Vue({
             localStorage.removeItem('LocaleEn')
             localStorage.removeItem('LocaleFr')
             localStorage.setItem('LocaleRu', true);
+            this.typed = false;
         },
 
         clickLocaleEn: function() {
@@ -215,6 +210,7 @@ var main = new Vue({
             localStorage.removeItem('LocaleRu')
             localStorage.removeItem('LocaleFr')
             localStorage.setItem('LocaleEn', true);
+            this.typed = false;
         },
 
         clickLocaleFr: function() {
@@ -224,6 +220,7 @@ var main = new Vue({
             localStorage.removeItem('LocaleRu')
             localStorage.removeItem('LocaleEn')
             localStorage.setItem('LocaleFr', true);
+            this.typed = false;
         },
 
 
