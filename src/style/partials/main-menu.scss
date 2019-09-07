@@ -7,7 +7,12 @@
 
     &.not-active {
       top: 50px;
+
+      @media (max-width: $tablet) {
+        top: 45px;
+      }
     }
+
 
     &.active {
       top: 40px;

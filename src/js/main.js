@@ -13,6 +13,8 @@
 @@include('partials/app.js')
 @@include('partials/feedback.js')
 @@include('partials/phone.js')
+@@include('partials/top-menu.js')
+@@include('partials/scroll.js')
 
 
 

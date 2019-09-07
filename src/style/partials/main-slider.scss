@@ -1,8 +1,12 @@
 .main-slider {
-  background: #666;
+  background: #fff;
   &__item {
     position: absolute;
     width: 100%;
+    
+    @media (max-width: 992px) {
+      position: static;
+    }
 
   }
 }

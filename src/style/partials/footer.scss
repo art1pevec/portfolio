@@ -10,6 +10,10 @@
     align-items: center;
     width: 80%;
     margin: 0 auto;
+
+    @media (max-width: $tablet) {
+      display: none;
+    }
   }
 
   &__social-block {
@@ -26,5 +30,15 @@
     letter-spacing: 1px;
     color: #000;
     margin: 0 5px;
+  }
+
+  &__media-block {
+    display: none;
+
+    @media (max-width: $tablet) {
+      display: flex;
+      height: 1000px;
+      background-color: #000;
+    }
   }
 }

@@ -5,6 +5,10 @@
   font-weight: 500;
   font-size: 18px;
 
+  @media (max-width: $phone-tight) {
+    width: 80%;
+  }
+
   &__title {
     text-align: center;
     margin-bottom: 50px;
@@ -15,10 +19,35 @@
     align-items: center;
     flex-flow: row wrap;
     justify-content: space-around;
+
+    @media (max-width: $tablet) {
+      flex-flow: column wrap;
+    }
+  }
+
+  &__btn-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-flow: column wrap;
+
+    @media (max-width: $tablet) {
+    }
   }
 
   &__text {
     width: 70%;
+
+    @media (max-width: $tablet) {
+      order: 1;
+      width: 100%;
+    }
+  }
+
+  &__text-title {
+    @media (max-width: $tablet) {
+        text-align: center;
+    }
   }
 
   &__preview {
@@ -31,12 +60,23 @@
     flex-flow: column wrap;
     align-items: center;
     justify-content: space-around;
+
+    @media (max-width: $tablet) {
+      order: 0;
+      width: 100%;
+      flex-flow: row wrap;
+    }
   }
 
   &__cooperation-block {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+
+    @media (max-width: $tablet) {
+      flex-flow: column wrap;
+      align-items: center;
+    }
   }
 
   &__cooperation-item {
@@ -47,6 +87,12 @@
     margin-right: 20px;
     padding: 20px 10px;
     text-align: center;
+
+    @media (max-width: $tablet) {
+      margin-right: 0;
+    }
+
+
     &:last-child {
       margin-right: 0;
     }
@@ -61,7 +107,7 @@
     color: #F2A452;
     margin-bottom: 30px;
     position: relative;
-    
+
     &:after {
       content: '';
       background-color: #7EB9E9;
@@ -73,7 +119,12 @@
       left: -25%;
     }
 
+  }
 
+  &__cooperation-title {
+    @media (max-width: $tablet) {
+      text-align: center;
+    }
   }
 
   &__photo {
@@ -81,5 +132,34 @@
     height: 200px;
     border-radius: 50%;
     box-shadow: 0 0 10px 0 rgba(0,0,0,0.3);
+  }
+
+  &__brief {
+    background-color: #7EB9E9;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 10px 0;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: .3s all;
+
+    &:hover {
+      background: rgba(0,0,0,.1);
+      color: #000;
+    }
+  }
+
+  &__rules {
+    background-color: #F4B161;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: .3s all;
+
+    &:hover {
+      background: rgba(0,0,0,.1);
+      color: #000;
+    }
   }
 }

@@ -5,6 +5,10 @@
     margin: 10px 0;
     position: relative;
     font-weight: 500;
+
+    @media (max-width: $phone-wide) {
+      font-size: 46px;
+    }
     &:before {
       content: '';
       width: 50%;
@@ -13,6 +17,10 @@
       position: absolute;
       bottom: -15px;
       left: 5px;
+
+      @media (max-width: $tablet) {
+        width: 100%;
+      }
     }
   }
 
@@ -41,6 +49,12 @@
 
   &__title-block {
     color: #000;
+
+    @media (max-width: $tablet) {
+      order: 1;
+      text-align: center;
+
+    }
   }
 
   &__wrapper-block {
@@ -49,10 +63,28 @@
     align-items: center;
     width: 70%;
     margin: 0 auto;
+
+    @media (max-width: $tablet) {
+      flex-flow: column wrap;
+    }
+  }
+
+  &__img-block {
+    @media (max-width: $tablet) {
+      order: 0;
+    }
+
+    @media (max-width: $phone-wide) {
+      display: none;
+    }
   }
 
   &__btn-block {
     display: flex;
+
+    @media (max-width: $tablet) {
+      display: none;
+    }
   }
 
   &__btn-portfolio {

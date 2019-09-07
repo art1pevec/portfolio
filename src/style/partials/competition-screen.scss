@@ -2,6 +2,10 @@
   width: 70%;
   margin: 0 auto;
 
+  @media (max-width: $phone-tight) {
+    width: 80%;
+  }
+
   &__title {
     text-align: center;
     margin-bottom: 50px;
@@ -38,7 +42,21 @@
   &__block {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-gap: 100px;
+
+    @media (max-width: $tablet) {
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 50px;
+    }
+
+    @media (max-width: 600px) {
+      grid-row-gap: 100px;
+      grid-column-gap: 20px;
+    }
+
+    @media (max-width: $phone) {
+      grid-template-columns: 1fr;
+      grid-gap: 100px;
+    }
   }
 }

@@ -1,5 +1,14 @@
+$tablet: 992px;
+$phone-wide: 768px;
+$phone: 500px;
+$phone-tight: 320px;
+
 body {
   font-family: 'Open Sans';
   overflow: hidden;
+
+  @media (max-width: 992px) {
+    overflow-y: scroll;
+  }
 
 }

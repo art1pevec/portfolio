@@ -1,12 +1,12 @@
 var main = new Vue({
     el: '#app',
     data: {
-        main: false,
+        main: true,
         portfolio: false,
         competition: false,
         social_block: false,
         contacts: false,
-        about: true,
+        about: false,
         dateCopy: new Date(),
         currentTime: 1,
         count: 0,
@@ -119,7 +119,15 @@ var main = new Vue({
     },
 
 
+
     mounted: function() {
+    if ($(window).width() > 992) {
+        var typed = new Typed('.main-screen__img-text', {
+            stringsElement: '.typed-strings',
+            typeSpeed: 30,
+            loop: true,
+        });
+    }
 
         if(localStorage.LocaleRu) {
 
@@ -227,64 +235,75 @@ var main = new Vue({
     },
 
 })
-$(window).bind('mousewheel', function(event){
+if ($(window).width() < 992) {
+    main.main = true;
+    main.portfolio = true;
+    main.competition = true;
+    main.contacts = true;
+    main.about = true;
+}
 
-   var scroll = event.originalEvent.deltaY;
+if ($(window).width() > 992) {
 
-    if (scroll > 0) {
-        if (main.count === 4) {
-            main.count = 4;
+    $(window).bind('mousewheel', function(event){
+
+       var scroll = event.originalEvent.deltaY;
+
+        if (scroll > 0) {
+            if (main.count === 4) {
+                main.count = 4;
+            } else {
+                main.count++;
+            }
+
         } else {
-            main.count++;
+            if (main.count === 0) {
+                main.count = 0;
+            } else {
+                main.count--;
+            }
+
         }
 
-    } else {
-        if (main.count === 0) {
-            main.count = 0;
-        } else {
-            main.count--;
+        switch (main.count) {
+            case 0:
+                main.main = true;
+                main.portfolio = false;
+                main.competition = false;
+                main.contacts = false;
+                main.about = false;
+                break;
+            case 1:
+                main.main = false;
+                main.portfolio = true;
+                main.competition = false;
+                main.contacts = false;
+                main.about = false;
+                break;
+            case 2:
+                main.main = false;
+                main.portfolio = false;
+                main.competition = true;
+                main.contacts = false;
+                main.about = false;
+                break;
+            case 3:
+                main.main = false;
+                main.portfolio = false;
+                main.competition = false;
+                main.contacts = true;
+                main.about = false;
+                break;
+            case 4:
+                main.main = false;
+                main.portfolio = false;
+                main.competition = false;
+                main.contacts = false;
+                main.about = true;
+                break;
         }
-
-    }
-
-    switch (main.count) {
-        case 0:
-            main.main = true;
-            main.portfolio = false;
-            main.competition = false;
-            main.contacts = false;
-            main.about = false;
-            break;
-        case 1:
-            main.main = false;
-            main.portfolio = true;
-            main.competition = false;
-            main.contacts = false;
-            main.about = false;
-            break;
-        case 2:
-            main.main = false;
-            main.portfolio = false;
-            main.competition = true;
-            main.contacts = false;
-            main.about = false;
-            break;
-        case 3:
-            main.main = false;
-            main.portfolio = false;
-            main.competition = false;
-            main.contacts = true;
-            main.about = false;
-            break;
-        case 4:
-            main.main = false;
-            main.portfolio = false;
-            main.competition = false;
-            main.contacts = false;
-            main.about = true;
-            break;
-    }
-});
+    });
+}
 // CLOSE DIVS OUTSIDE THE BLOCKS
 
 $(document).mouseup(function (e) {

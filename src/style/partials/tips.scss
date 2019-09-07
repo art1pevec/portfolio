@@ -11,6 +11,10 @@
     opacity: 0;
     transition: .4s all;
     left: 10px;
+
+    @media (max-width: $tablet) {
+      left: -20px;
+    }
   }
 
   &:before {
@@ -22,5 +26,9 @@
     border-style: solid;
     border-width: 0 10px 10px 10px;
     border-color: transparent transparent #dcdcdc transparent;
+
+    @media (max-width: $tablet) {
+      left: 45px;
+    }
   }
 }

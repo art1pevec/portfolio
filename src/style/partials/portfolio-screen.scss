@@ -2,22 +2,68 @@
   width: 70%;
   margin: 0 auto;
 
+  @media (max-width: $phone-tight) {
+    width: 80%;
+  }
+
   &__title {
     text-align: center;
     margin-bottom: 50px;
   }
 
-  //&__item-title {
-  //  text-align: center;
-  //}
 
   &__item-img {
-    width: auto;
-    height: 200px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    top: 0;
+    position: relative;
+    transition: all .3s ease-in-out;
+  }
+
+  &__item-title {
+    font-weight: 500;
+  }
+
+  &__item-engine {
+    font-family: Raleway-Regular;
+    padding-top: 10px;
+    display: inline-flex;
+    align-self: flex-end;
+    width: fit-content;
+    position: relative;
+    cursor: default;
+
+    &:before {
+      content: '';
+      background-color: #F4B161;
+      width: 2px;
+      height: 100%;
+      position: absolute;
+      left: -10px;
+      top: 5px;
+    }
+  }
+
+  &__item-block {
+    position: relative;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    cursor: default;
+    &:hover .portfolio-screen__item-img {
+      top: -5px;
+      box-shadow: 0 16px 32px 0 rgba(62, 57, 107, .28), 0 0 0 transparent;
+    }
   }
 
   &__block {
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 50px;
+
+    @media (max-width: $tablet) {
+      grid-template-columns: 1fr;
+    }
   }
 }

@@ -25,11 +25,11 @@
 /*
 * Custom
 */
+@import "partials/basic.scss";
 @import "partials/app.scss";
 @import "partials/main-screen.scss";
 @import "partials/wrapper.scss";
 @import "partials/tips.scss";
-@import "partials/basic.scss";
 @import "partials/header-top.scss";
 @import "partials/main-menu.scss";
 @import "partials/animations.scss";
@@ -44,3 +44,5 @@
 @import "partials/main-block.scss";
 @import "partials/phone-svg.scss";
 @import "partials/feedback.scss";
+@import "partials/bottom-menu.scss";
+@import "partials/top-menu.scss";
