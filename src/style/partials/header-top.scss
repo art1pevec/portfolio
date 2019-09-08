@@ -57,6 +57,10 @@
     @media (max-width: $tablet) {
       font-size: 24px;
     }
+
+    @media (max-width: $phone-wide) {
+      display: none;
+    }
   }
 
   &__lang-block {

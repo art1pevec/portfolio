@@ -2,6 +2,11 @@
   position: fixed;
   background-color: #000;
   bottom: 0;
+  display: none;
   width: 100%;
   z-index: 999;
+
+  @media (max-width: $phone-wide) {
+    display: block;
+  }
 }

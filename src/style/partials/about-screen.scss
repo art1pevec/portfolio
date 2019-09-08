@@ -5,6 +5,10 @@
   font-weight: 500;
   font-size: 18px;
 
+  @media (max-width: $tablet) {
+    margin-top: 150px;
+  }
+
   @media (max-width: $phone-tight) {
     width: 80%;
   }

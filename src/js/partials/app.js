@@ -43,9 +43,9 @@ var main = new Vue({
             {id: 8, title: 'Optimisation d’un site Internet Google PageSpeed', message: 'Ваш сайт тормозит и долго прогружает картинки? Есть шанс, что вы захотите доверить это профессионалу!', visible: false}
         ],
         dayOfTheWeek: {
-            Ru: ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'],
-            En: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'],
-            Fr: ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche'],
+            Ru: ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'],
+            En: ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'],
+            Fr: ['Dimanche','Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'],
         },
         screens: {
             array: ['main', 'portfolio', 'competitions', 'contacts', 'about']
@@ -81,11 +81,11 @@ var main = new Vue({
             var weekDay = '';
 
             if (this.localeRu) {
-                weekDay = this.dayOfTheWeek.Ru[this.nowTime.getDay() - 1]
+                weekDay = this.dayOfTheWeek.Ru[this.nowTime.getDay()]
             } else if (this.localeEn) {
-                weekDay = this.dayOfTheWeek.En[this.nowTime.getDay() - 1]
+                weekDay = this.dayOfTheWeek.En[this.nowTime.getDay()]
             } else if (this.localeFr) {
-                weekDay = this.dayOfTheWeek.Fr[this.nowTime.getDay() - 1]
+                weekDay = this.dayOfTheWeek.Fr[this.nowTime.getDay()]
             }
 
             if (month < 10) {

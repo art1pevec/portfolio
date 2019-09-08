@@ -20,6 +20,7 @@
 
       @media (max-width: $tablet) {
         width: 100%;
+        left: 0;
       }
     }
   }
@@ -66,6 +67,17 @@
 
     @media (max-width: $tablet) {
       flex-flow: column wrap;
+    }
+
+    @media (max-width: $phone-wide) {
+      width: 100%;
+      background: url(/img/lines-bg.png);
+      min-height: 760px;
+      background-position: 0 0;
+      background-size: cover;
+      background-repeat: repeat;
+      -webkit-animation: bgMove 120s linear infinite forwards;
+      animation: bgMove 120s linear infinite forwards;
     }
   }
 

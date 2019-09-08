@@ -2,6 +2,14 @@
   width: 70%;
   margin: 0 auto;
 
+  @media (max-width: $tablet) {
+    margin-top: 150px;
+  }
+
+  @media (max-width: $phone-wide) {
+    margin-top: 50px;
+  }
+
   @media (max-width: $phone-tight) {
     width: 80%;
   }

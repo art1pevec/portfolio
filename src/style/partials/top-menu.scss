@@ -33,9 +33,21 @@
     color: #000;
     font-size: 32px;
     text-decoration: none;
+    padding: 20px;
+    width: 30px;
 
     &.active {
-      border-left: 2px solid #fab161;
+      position: relative;
+      &:before {
+        content: '';
+        display: block;
+        width: 3px;
+        height: 100%;
+        top: 0;
+        left: -15px;
+        position: absolute;
+        background-color: #fab161;
+      }
     }
   }
 
