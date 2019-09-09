@@ -29,13 +29,9 @@ $(document).ready(function(){
        $(this).toggleClass('active');
     });
 
-    // $(document).mouseup(function (e) {
-    //     var container = $(".left-menu");
-    //     if (container.has(e.target).length === 0 && e.target !== container[0]){
-    //         $('.main-menu__btn.active').click();
-    //     }
-    //
-    // });
+    $('.main-block').mouseup(function (e) {
+        $('.main-menu__btn.active').click();
+    });
 
 });
 

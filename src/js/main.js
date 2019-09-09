@@ -15,6 +15,7 @@
 @@include('partials/phone.js')
 @@include('partials/top-menu.js')
 @@include('partials/scroll.js')
+@@include('partials/bottom-menu.js')
 
 
 
