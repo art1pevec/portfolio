@@ -13,6 +13,11 @@
   height: 50%;
   box-shadow: 0 0 10px 0px rgba(0,0,0, 0.1);
 
+  @media (max-width: $phone-alm-tight) {
+    width: 80px;
+    height: 60%;
+  }
+
   &__item {
     position: relative;
     display: flex;
@@ -29,12 +34,25 @@
     border-left: 2px solid #fab161;
   }
 
+  &__icon {
+    @media (max-width: $phone-alm-tight) {
+      font-size: 24px !important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
   &__link {
     color: #000;
     font-size: 32px;
     text-decoration: none;
     padding: 20px;
     width: 30px;
+
+    @media (max-width: $phone-alm-tight) {
+      padding: 15px 10px;
+    }
 
     &.active {
       position: relative;
@@ -47,6 +65,10 @@
         left: -15px;
         position: absolute;
         background-color: #fab161;
+
+        @media (max-width: $phone-alm-tight) {
+          left: -15px;
+        }
       }
     }
   }
@@ -67,6 +89,10 @@
       display: flex;
     }
 
+    @media (max-width: $phone-alm-tight) {
+      margin-right: 35px;
+    }
+
     &.active {
       .top-menu__line.first {
         transform: rotate(-45deg) translate(-7px, 5px);
@@ -79,6 +105,7 @@
 
       .top-menu__line.third {
         transform: rotate(45deg) translate(-10px, -10px);
+
       }
     }
 

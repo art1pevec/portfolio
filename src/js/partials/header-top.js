@@ -20,17 +20,17 @@ $(document).ready(function(){
         }
     });
 
-    $(window).scroll(function(){
-       if ($(this).scrollTop() > 0) {
-           $('.header-top').css({
-              position: 'fixed'
-           });
-       } else {
-           $('.header-top').css({
-              position: 'relative'
-           });
-       }
-    });
+    // $(window).scroll(function(){
+    //    if ($(this).scrollTop() > 0) {
+    //        $('.header-top').css({
+    //           position: 'fixed'
+    //        });
+    //    } else {
+    //        $('.header-top').css({
+    //           position: 'relative'
+    //        });
+    //    }
+    // });
 });
 
 $(document).click(function (e){ // событие клика по веб-документу

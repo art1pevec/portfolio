@@ -1,5 +1,10 @@
 .main-slider {
   background: #fff;
+
+  @media (max-width: $tablet) {
+    padding-bottom: 50px;
+    border-bottom: 1px solid #f2f2f2;
+  }
   &__item {
     position: absolute;
     width: 100%;

@@ -37,8 +37,12 @@
 
     @media (max-width: $tablet) {
       display: flex;
-      height: 1000px;
-      background-color: #000;
+      height: 120px;
+      width: 80%;
+      margin: 0 auto;
+      align-items: flex-start;
+      justify-content: center;
+      padding-top: 30px;
     }
   }
 }

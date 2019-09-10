@@ -55,7 +55,13 @@
   }
 
   &__preview {
+    @media (max-height: 800px) {
+      font-size: 14px;
+    }
 
+    @media (min-height: 700px) {
+      font-size: inherit;
+    }
   }
 
   &__personal-information {
@@ -92,8 +98,13 @@
     padding: 20px 10px;
     text-align: center;
 
+    @media (max-width: 1500px) {
+      font-size: 14px;
+    }
+
     @media (max-width: $tablet) {
       margin-right: 0;
+      font-size: inherit;
     }
 
 
@@ -136,6 +147,16 @@
     height: 200px;
     border-radius: 50%;
     box-shadow: 0 0 10px 0 rgba(0,0,0,0.3);
+
+    @media (max-height: 800px) {
+      width: 100px;
+      height: 100px;
+    }
+
+    @media (min-height: 700px) {
+      width: 200px;
+      height: 200px;
+    }
   }
 
   &__brief {

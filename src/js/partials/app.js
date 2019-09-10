@@ -194,9 +194,11 @@ var main = new Vue({
             this.count = 4;
         },
         clickSocial: function() {
+            this.typed = false;
             this.social_block = true
         },
         clickSocialClose: function() {
+            this.typed = false;
             $('.social-icon').click();
             this.social_block = false
         },

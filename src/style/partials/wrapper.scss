@@ -6,4 +6,8 @@
   background-size: cover;
   background-repeat: repeat;
   animation: bgMove 120s linear infinite forwards;
+
+  @media (max-width: $tablet) {
+    width: 100%;
+  }
 }

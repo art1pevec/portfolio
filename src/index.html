@@ -14,34 +14,35 @@
 
         <div class="top-menu">
             <div class="top-menu__item">
-<!--                <span class="top-menu__tip">Главная</span>-->
                 <a href="#main" class="top-menu__link active"><i class="top-menu__icon fa fa-home"></i></a>
             </div>
             <div  class="top-menu__item">
-<!--                <span class="top-menu__tip">Портфолио</span>-->
                 <a href="#portfolio1" class="top-menu__link"><i class="top-menu__icon fa fa-suitcase"></i></a>
             </div>
             <div class="top-menu__item">
-<!--                <span class="top-menu__tip">Компетенции</span>-->
                 <a href="#competition" class="top-menu__link"><i class="top-menu__icon fa fa-desktop"></i></a>
             </div>
             <div class="top-menu__item">
-<!--                <span class="top-menu__tip">Контакты</span>-->
                 <a href="#contacts" class="top-menu__link"><i class="top-menu__icon fa fa-address-book-o"></i></a>
             </div>
             <div class="top-menu__item">
-<!--                <span class="top-menu__tip">О себе</span>-->
                 <a href="#about" class="top-menu__link"><i class="top-menu__icon fa fa-user-o"></i></a>
             </div>
 
-
-
-
+            <div class="top-menu__item header-top__lang-block">
+                <i class="header-top__lang-icon fa fa-globe"></i>
+                <div class="header-top__lang-text-block">
+                    <span @click="clickLocaleRu()" class="header-top__lang-text" :class="{'active': localeRu}">Ru</span>
+                    <span @click="clickLocaleEn()" class="header-top__lang-text" :class="{'active': localeEn}">En</span>
+                    <span @click="clickLocaleFr()" class="header-top__lang-text" :class="{'active': localeFr}">Fr</span>
+                </div>
+            </div>
         </div>
 
         <!-- FIXED MEDIA MENU -->
 
         <div class="bottom-menu">
+            <a href="tel:+79806572472" class="bottom-menu__tip">Позвоните мне</a>
             <div class="bottom-menu__wrapper">
                 <div class="bottom-menu__phone-block">
                     <a href="tel:+79806572472" class="bottom-menu__phone">
@@ -67,7 +68,19 @@
                     </svg>
                 </div>
             </div>
-            <div class="bottom-menu__hidden-block">hello</div>
+            <div class="bottom-menu__hidden-block">
+                <div class="bottom-menu__wrapper-hidden">
+                    <a href="https://vk.com/artembrovkin" target="_blank" class="bottom-menu__social-icon social-icon__popup-block"><i class="social-icon__popup-icon fa fa-vk"></i></a>
+                    <a href="https://www.instagram.com/brovkin_artem/" target="_blank" class="bottom-menu__social-icon social-icon__popup-block"><i class="social-icon__popup-icon fa fa-instagram"></i></a>
+                    <a href="tg://resolve?domain=<brovkin_artem>" target="_blank" class="bottom-menu__social-icon social-icon__popup-block"><i class="social-icon__popup-icon fa fa-telegram"></i></a>
+
+                    <a href="https://www.facebook.com/brovkin.artem" target="_blank" class="bottom-menu__social-icon social-icon__popup-block"><i class="social-icon__popup-icon fa fa-facebook"></i></a>
+                    <a href="https://wa.me/79806572472" target="_blank" class="bottom-menu__social-icon social-icon__popup-block"><i class="social-icon__popup-icon fa fa-whatsapp"></i></a>
+                    <a href="https://github.com/art1pevec" target="_blank" class="bottom-menu__social-icon social-icon__popup-block"><i class="social-icon__popup-icon fa fa-github"></i></a>
+
+                    <a href="javascript:void(0)" class="header-top__envelope bottom-menu__social-icon social-icon__popup-block"><i class="social-icon__popup-icon fa fa-envelope"></i></a>
+                </div>
+            </div>
         </div>
 
         <!-- FEEDBACK -->
@@ -425,7 +438,9 @@
         </main>
 
         <div class="footer__media-block">
-            hello
+            <div class="footer__copyright-block">
+                &copy; <a class="footer__copyright-link" href="https://brozabro.ru">brozabro.ru</a> <i class="fa fa-code"></i> <span class="footer__copyright-date"> {{dateCopy.getFullYear()}}</span>
+            </div>
         </div>
 
         <footer class="footer">

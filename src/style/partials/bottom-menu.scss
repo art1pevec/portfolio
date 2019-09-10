@@ -20,8 +20,25 @@
     border-top: 1px solid #f2f2f2;
   }
 
+  &__wrapper-hidden {
+    display: grid;
+    width: 90%;
+    margin: 0 auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+    justify-items: center;
+  }
+  
+  &__social-icon {
+    text-align: center;
+  }
+
   &__phone {
     color: #000;
+
+    &.active svg {
+      animation: rotatePhone 0.4s linear forwards;
+    }
 
     &:active svg{
       fill: #86B9E9;
@@ -70,7 +87,23 @@
     }
   }
 
-  @media (max-width: $phone-wide) {
+  @media (max-width: $tablet) {
     display: block;
+  }
+
+  &__tip {
+    position: absolute;
+    top: -120px;
+    font-size: 20px;
+    text-decoration: none;
+    left: 40px;
+    box-shadow: 0 0 10px 0 rgba(105, 219, 121, 0.3);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    display: none;
+    z-index: 10;
+    background-color: #69db79;
+
   }
 }

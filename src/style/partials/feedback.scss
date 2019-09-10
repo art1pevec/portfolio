@@ -8,6 +8,10 @@
   align-items: center;
   justify-content: center;
 
+  @media (max-width: $phone) {
+    width: 100%;
+  }
+
 
   &__block {
     background-color: #fff;
@@ -40,6 +44,10 @@
     border: none;
     width: 400px;
     border-bottom: 3px solid #f6f6f6;
+
+    @media (max-width: $phone) {
+      width: 100%;
+    }
 
     &-textarea {
       min-height: 80px;
