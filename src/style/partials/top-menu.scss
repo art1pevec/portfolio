@@ -13,7 +13,7 @@
   height: 50%;
   box-shadow: 0 0 10px 0px rgba(0,0,0, 0.1);
 
-  @media (max-width: $phone-alm-tight) {
+  @media (max-width: $phone) {
     width: 80px;
     height: 60%;
   }
@@ -35,7 +35,7 @@
   }
 
   &__icon {
-    @media (max-width: $phone-alm-tight) {
+    @media (max-width: $phone) {
       font-size: 24px !important;
       display: flex;
       align-items: center;
@@ -50,7 +50,7 @@
     padding: 20px;
     width: 30px;
 
-    @media (max-width: $phone-alm-tight) {
+    @media (max-width: $phone) {
       padding: 15px 10px;
     }
 
@@ -66,7 +66,7 @@
         position: absolute;
         background-color: #fab161;
 
-        @media (max-width: $phone-alm-tight) {
+        @media (max-width: $phone) {
           left: -15px;
         }
       }
@@ -89,7 +89,7 @@
       display: flex;
     }
 
-    @media (max-width: $phone-alm-tight) {
+    @media (max-width: $phone) {
       margin-right: 35px;
     }
 

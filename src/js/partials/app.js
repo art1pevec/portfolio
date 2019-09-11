@@ -10,17 +10,17 @@ var main = new Vue({
         dateCopy: new Date(),
         currentTime: 1,
         count: 0,
-        typed: true,
+        typed: false,
         nowTime: new Date(),
         competitions: [
-            {id: 1, title: 'Поддержка сайтов на 1С-Битрикс', message: 'У вас есть проблема с 1C-Битрикс? Обращайтесь!', visible: true},
+            {id: 1, title: 'Поддержка сайтов на 1С-Битрикс', message: 'Написание компонентов, модулей и интеграция верстки.', visible: true},
             {id: 2, title: 'Сайт с нуля на Wordpress', message: 'Полный цикл разработки, от создания прототипа сайта, до переноса на Ваш хостинг.', visible: false},
-            {id: 3, title: 'Интеграция дизайна на CMS', message: 'Есть дизайн сайта? Верстка и интеграция любых Ваших задумок.', visible: false},
-            {id: 4, title: 'Создание дизайна сайта', message: '3 этапа. Анализ и прототип, первичная визуализация, завершения проекта. Изи.', visible: false},
-            {id: 5, title: 'Редизайн сайта', message: 'Мир не стоит на месте, каждому бизнесу нужно обновляться и дышать свежо. Сделаю красиво.', visible: false},
-            {id: 6, title: 'Перенос сайта на хостинг', message: 'Хотите поменять хостинг? Тогда вы по адресу!', visible: false},
+            {id: 3, title: 'Интеграция дизайна на CMS', message: 'Верстка и интеграция любых Ваших задумок.', visible: false},
+            {id: 4, title: 'Создание дизайна сайта', message: '3 этапа. Анализ и прототип, первичная визуализация, завершение проекта.', visible: false},
+            {id: 5, title: 'Редизайн сайта', message: 'Мир не стоит на месте, каждому бизнесу нужно обновляться и дышать свежо.', visible: false},
+            {id: 6, title: 'Перенос сайта на хостинг', message: 'Быстро и легко', visible: false},
             {id: 7, title: 'Современная разработка', message: 'HTML5, CSS3, JS, Vue.js, Gulp4 etc.', visible: false},
-            {id: 8, title: 'Оптимизация сайта Google PageSpeed', message: 'Ваш сайт тормозит и долго прогружает картинки? Есть шанс, что вы захотите доверить это профессионалу!', visible: false}
+            {id: 8, title: 'Оптимизация сайта Google PageSpeed', message: 'Ваш сайт тормозит и долго прогружает картинки? Нужна оптимизация!', visible: false}
         ],
         competitionsEn: [
             {id: 1, title: 'Hello', message: 'hello', visible: true},
@@ -34,7 +34,7 @@ var main = new Vue({
         ],
         competitionsFr: [
             {id: 1, title: 'Soutien des sites 1C-Bitrix', message: 'bonjour', visible: true},
-            {id: 2, title: 'Сайт с нуля на Wordpress', message: 'Полный цикл разработки, от создания прототипа сайта, до переноса на Ваш хостинг.', visible: false},
+            {id: 2, title: 'Site web à partir de zéro Wordpress', message: 'Полный цикл разработки, от создания прототипа сайта, до переноса на Ваш хостинг.', visible: false},
             {id: 3, title: 'Intégration du design sur le CMS', message: 'Есть дизайн сайта? Верстка и интеграция любых Ваших задумок.', visible: false},
             {id: 4, title: 'Création du design de site web', message: '3 этапа. Анализ и прототип, первичная визуализация, завершения проекта. Изи.', visible: false},
             {id: 5, title: 'Redesign du site web', message: 'Мир не стоит на месте, каждому бизнесу нужно обновляться и дышать свежо. Сделаю красиво.', visible: false},
@@ -154,6 +154,7 @@ var main = new Vue({
     methods: {
 
         clickPortfolio: function() {
+            this.typed = true
             this.main = false
             this.competition = false
             this.contacts = false
@@ -162,6 +163,7 @@ var main = new Vue({
             this.count = 1
         },
         clickCompetition: function() {
+            this.typed = true
             this.main = false
             this.portfolio = false
             this.contacts = false
@@ -170,6 +172,7 @@ var main = new Vue({
             this.count = 2
         },
         clickMain: function() {
+            this.typed = true
             this.portfolio = false
             this.competition = false
             this.contacts = false
@@ -178,6 +181,7 @@ var main = new Vue({
             this.count = 0
         },
         clickContacts: function() {
+            this.typed = true
             this.portfolio = false
             this.competition = false
             this.about = false
@@ -186,6 +190,7 @@ var main = new Vue({
             this.count = 3
         },
         clickAbout: function() {
+            this.typed = true
             this.portfolio = false
             this.competition = false
             this.contacts = false
@@ -238,6 +243,7 @@ var main = new Vue({
 
 })
 if ($(window).width() < 992) {
+    main.typed = true;
     main.main = true;
     main.portfolio = true;
     main.competition = true;
@@ -311,7 +317,9 @@ if ($(window).width() > 992) {
 $(document).mouseup(function (e) {
     var container = $(".social-icon__popup");
     if (container.has(e.target).length === 0){
+        main.typed = false;
         main.social_block = false;
+
     }
 });
 

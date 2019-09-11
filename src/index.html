@@ -97,13 +97,19 @@
                         <input v-if="localeFr" placeholder="Votre nome" type="text" name="name" class="feedback__input feedback__input-name">
                     </label>
                     <label class="feedback__label">
-                        <input placeholder="Ваш телефон" type="text" name="phone" class="feedback__input feedback__input-phone">
+                        <input v-if="localeRu" placeholder="Ваш телефон" type="text" name="phone" class="feedback__input feedback__input-phone">
+                        <input v-if="localeEn" placeholder="Your phone" type="text" name="phone" class="feedback__input feedback__input-phone">
+                        <input v-if="localeFr" placeholder="Votre telephone" type="text" name="phone" class="feedback__input feedback__input-phone">
                     </label>
                     <label class="feedback__label">
-                        <textarea placeholder="Сообщение" type="text" name="textarea" class="feedback__input feedback__input-textarea"></textarea>
+                        <textarea v-if="localeRu" placeholder="Сообщение" type="text" name="textarea" class="feedback__input feedback__input-textarea"></textarea>
+                        <textarea v-if="localeEn" placeholder="Message" type="text" name="textarea" class="feedback__input feedback__input-textarea"></textarea>
+                        <textarea v-if="localeFr" placeholder="Message" type="text" name="textarea" class="feedback__input feedback__input-textarea"></textarea>
                     </label>
 
-                    <input class="feedback__submit-btn" type="submit" value="Отправить">
+                    <input v-if="localeRu" class="feedback__submit-btn" type="submit" value="Отправить">
+                    <input v-if="localeEn" class="feedback__submit-btn" type="submit" value="Send">
+                    <input v-if="localeFr" class="feedback__submit-btn" type="submit" value="Envoyer">
                 </form>
             </div>
         </div>
@@ -159,12 +165,12 @@
                     <span class="left-menu__line" :class="{ 'active': contacts }"></span>
                     <span v-if="localeRu">Контакты</span>
                     <span v-if="localeEn">Contacts</span>
-                    <span v-if="localeFr">Compétences</span>
+                    <span v-if="localeFr">Сontact</span>
                 </a>
                 <span class="left-menu__title" v-else>
                     <span v-if="localeRu">Контакты</span>
                     <span v-if="localeEn">Contacts</span>
-                    <span v-if="localeFr">Compétences</span>
+                    <span v-if="localeFr">Сontact</span>
                 </span>
             </div>
             <div @click="clickAbout()" class="left-menu__link-block">
@@ -173,12 +179,12 @@
                     <span class="left-menu__line" :class="{ 'active': about }"></span>
                     <span v-if="localeRu">Обо мне</span>
                     <span v-if="localeEn">About me</span>
-                    <span v-if="localeFr">Compétences</span>
+                    <span v-if="localeFr">À propos de moi</span>
                 </a>
                 <span class="left-menu__title" v-else>
                     <span v-if="localeRu">Обо мне</span>
                     <span v-if="localeEn">About me</span>
-                    <span v-if="localeFr">Compétences</span>
+                    <span v-if="localeFr">À propos de moi</span>
                 </span>
             </div>
         </div>
@@ -267,7 +273,12 @@
                                             </div>
                                         </div>
                                         <div class="typed-strings">
-                                            <span>Привет!<strong> Это jQuery</strong> plugin.</span>
+                                            <strong>Привет!</strong>
+                                            <span>Сайты на Wordpress</span>
+                                            <span>Поддержка 1С-Битрикс</span>
+                                            <span>Веб-дизайн</span>
+                                            <span>Полный цикл разработки</span>
+                                            <strong>Готов к сотрудничеству!</strong>
                                         </div>
                                         <div class="main-screen__img-text">
 
@@ -289,24 +300,24 @@
                             <div class="portfolio-screen__block">
                                 <div class="portfolio-screen__item-block">
                                     <h3 class="portfolio-screen__item-title">Центр грудничкового плавания <b>"Аквакидс"</b></h3>
-                                    <a data-fancybox="portfolio" href="img/mockup.jpg" class="portfolio-screen__item">
-                                        <img src="img/mockup.jpg" alt="" class="portfolio-screen__item-img">
+                                    <a data-fancybox="portfolio" href="img/mockup-aquakids.jpg" class="portfolio-screen__item">
+                                        <img src="img/mockup-aquakids.jpg" alt="" class="portfolio-screen__item-img">
                                     </a>
                                     <div class="portfolio-screen__item-engine">WordPress</div>
                                 </div>
 
                                 <div class="portfolio-screen__item-block">
                                     <h3 class="portfolio-screen__item-title">Сеть киберспортивных центров в Ярославле <b>"Арена"</b></h3>
-                                    <a data-fancybox="portfolio" href="img/mockup.jpg" class="portfolio-screen__item">
-                                        <img src="img/mockup.jpg" alt="" class="portfolio-screen__item-img">
+                                    <a data-fancybox="portfolio" href="img/mockup-arena.jpg" class="portfolio-screen__item">
+                                        <img src="img/mockup-arena.jpg" alt="" class="portfolio-screen__item-img">
                                     </a>
                                     <div class="portfolio-screen__item-engine">WordPress</div>
                                 </div>
 
                                 <div class="portfolio-screen__item-block">
                                     <h3 class="portfolio-screen__item-title">Строительство деревянных домов <b>"Домик76"</b></h3>
-                                    <a data-fancybox="portfolio" href="img/mockup.jpg" class="portfolio-screen__item">
-                                        <img src="img/mockup.jpg" alt="" class="portfolio-screen__item-img">
+                                    <a data-fancybox="portfolio" href="img/mockup-domik.jpg" class="portfolio-screen__item">
+                                        <img src="img/mockup-domik.jpg" alt="" class="portfolio-screen__item-img">
                                     </a>
                                     <div class="portfolio-screen__item-engine">WordPress</div>
                                 </div>
@@ -352,7 +363,7 @@
                             <h2 class="contacts-screen__title">
                                 <span v-if="localeRu">Контакты</span>
                                 <span v-if="localeEn">Contacts</span>
-                                <span v-if="localeFr">Compétences</span>
+                                <span v-if="localeFr">Contact</span>
                             </h2>
                             <div class="contacts-screen__block">
                                 <div class="contacts-screen__item">
@@ -385,28 +396,63 @@
                             <h2 class="about-screen__title">
                                 <span v-if="localeRu">Обо мне</span>
                                 <span v-if="localeEn">About me</span>
-                                <span v-if="localeFr">Compétences</span>
+                                <span v-if="localeFr">À propos de moi</span>
                             </h2>
                             <div class="about-screen__block">
                                 <div class="about-screen__text">
-                                    <h2 class="about-screen__text-title">Привет!</h2>
-                                    <div class="about-screen__preview">
+                                    <h2 class="about-screen__text-title">
+                                        <span v-if="localeRu">Привет!</span>
+                                        <span v-if="localeEn">Hello!</span>
+                                        <span v-if="localeFr">Salut à tous!</span>
+                                    </h2>
+                                    <div v-if="localeRu" class="about-screen__preview">
                                         <p>
                                             Меня зовут Артем, я веб-разработчик и дизайнер. Имею высшее техническое образование.
                                             С 2017 года работаю в веб индустрии. Разрабатываю адаптивные сайты с удобным пользовательским интерфейсом.
-                                            Работаю удаленно, по всему миру.</p>
-                                            <p>
+                                            Работаю удаленно, по всему миру.
+                                        </p>
+                                        <p>
                                             Использую современные инструменты в разработке и слежу за трендами в данной сфере.
                                             Стараюсь совершенствовать свои навыки и не останавливаюсь на достигнутом.
                                             В работе скрупулезен и каждый сделанный проект - это удовлетворенный клиент и прекрасное портфолио. Готов проконсультировать Вас в любое удобное время.
-                                            </p>
+                                        </p>
+                                    </div>
+                                    <div v-if="localeEn" class="about-screen__preview">
+                                        <p>
+                                            Меня зовут Артем, я веб-разработчик и дизайнер. Имею высшее техническое образование.
+                                            С 2017 года работаю в веб индустрии. Разрабатываю адаптивные сайты с удобным пользовательским интерфейсом.
+                                            Работаю удаленно, по всему миру.
+                                        </p>
+                                        <p>
+                                            Использую современные инструменты в разработке и слежу за трендами в данной сфере.
+                                            Стараюсь совершенствовать свои навыки и не останавливаюсь на достигнутом.
+                                            В работе скрупулезен и каждый сделанный проект - это удовлетворенный клиент и прекрасное портфолио. Готов проконсультировать Вас в любое удобное время.
+                                        </p>
+                                    </div>
+                                    <div v-if="localeFr" class="about-screen__preview">
+                                        <p>
+                                            Je m’appelle Artem, je suis web-développeur et designer. Ayant l’enseignement supérieur technique,
+                                            depuis 2017 je travaille dans le domaine de web-industrie.
+                                        </p>
+                                        <p>
+                                            Je crée des sites adaptifs avec une interface conviviale et facile d’utilisation.
+                                            Je travaille à distance de partout dans le monde.
+                                        </p>
                                     </div>
                                 </div>
                                 <div class="about-screen__personal-information">
                                     <img src="img/new-photo.jpg" alt="" class="about-screen__photo">
                                     <div class="about-screen__btn-block">
-                                        <a href="" class="about-screen__brief">Скачать бриф</a>
-                                        <a href="" class="about-screen__rules">Правила работы</a>
+                                        <a href="" class="about-screen__brief">
+                                            <span v-if="localeRu">Скачать бриф</span>
+                                            <span v-if="localeEn">Скачать бриф</span>
+                                            <span v-if="localeFr">Скачать бриф</span>
+                                        </a>
+                                        <a href="" class="about-screen__rules">
+                                            <span v-if="localeRu">Правила работы</span>
+                                            <span v-if="localeEn">Правила работы</span>
+                                            <span v-if="localeFr">Правила работы</span>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
