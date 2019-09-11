@@ -433,10 +433,14 @@
                                         <p>
                                             Je m’appelle Artem, je suis web-développeur et designer. Ayant l’enseignement supérieur technique,
                                             depuis 2017 je travaille dans le domaine de web-industrie.
-                                        </p>
-                                        <p>
                                             Je crée des sites adaptifs avec une interface conviviale et facile d’utilisation.
                                             Je travaille à distance de partout dans le monde.
+                                        </p>
+                                        <p>
+                                            J’utilise les outils modernes et suis les tendances dans ce domaine.
+                                            J’essaie d’améliorer mes compétences et connaissances en permanence.
+                                            Je suis minutieux dans mon travail et chaque projet est un client satisfait et un portfolio merveilleux.
+                                            Je suis prêt à vous consulter.
                                         </p>
                                     </div>
                                 </div>
@@ -446,35 +450,47 @@
                                         <a href="" class="about-screen__brief">
                                             <span v-if="localeRu">Скачать бриф</span>
                                             <span v-if="localeEn">Скачать бриф</span>
-                                            <span v-if="localeFr">Скачать бриф</span>
+                                            <span v-if="localeFr">Télécharger brief</span>
                                         </a>
                                         <a href="" class="about-screen__rules">
                                             <span v-if="localeRu">Правила работы</span>
                                             <span v-if="localeEn">Правила работы</span>
-                                            <span v-if="localeFr">Правила работы</span>
+                                            <span v-if="localeFr">Les règles du travail</span>
                                         </a>
                                     </div>
                                 </div>
                             </div>
 
-                            <h3 class="about-screen__cooperation-title">Как происходит сотрудничество:</h3>
+                            <h3 class="about-screen__cooperation-title">
+                                <span v-if="localeRu">Как происходит сотрудничество:</span>
+                                <span v-if="localeEn">Как происходит сотрудничество:</span>
+                                <span v-if="localeFr">Comment ça marche:</span>
+                            </h3>
 
                             <div class="about-screen__cooperation-block">
                                 <div class="about-screen__cooperation-item">
                                     <i class="about-screen__cooperation-icon fa fa-file-text-o"></i>
-                                    Вы отправляете мне ТЗ или заполненный бриф
+                                    <span v-if="localeRu">Вы отправляете мне ТЗ или заполненный бриф</span>
+                                    <span v-if="localeEn">Вы отправляете мне ТЗ или заполненный бриф</span>
+                                    <span v-if="localeFr">Vous m’envoyez termes de référence ou brief</span>
                                 </div>
                                 <div class="about-screen__cooperation-item">
                                     <i class="about-screen__cooperation-icon fa fa-comments-o"></i>
-                                    Обсуждаем ваш проект, разделяем на этапы, согласовываем сроки и стоимость
+                                    <span v-if="localeRu">Обсуждаем ваш проект, разделяем на этапы, согласовываем сроки и стоимость</span>
+                                    <span v-if="localeEn">Обсуждаем ваш проект, разделяем на этапы, согласовываем сроки и стоимость</span>
+                                    <span v-if="localeFr">On discute votre projet, on divise en quelques étapes, on accorde le delai et le prix.</span>
                                 </div>
                                 <div class="about-screen__cooperation-item">
                                     <i class="about-screen__cooperation-icon fa fa-credit-card"></i>
-                                    Вы вносите предоплату - я приступаю к работе. По мере необходимости общаемся, вносим правки
+                                    <span v-if="localeRu">Вы вносите предоплату - я приступаю к работе. По мере необходимости общаемся, вносим правки</span>
+                                    <span v-if="localeEn">Вы вносите предоплату - я приступаю к работе. По мере необходимости общаемся, вносим правки</span>
+                                    <span v-if="localeFr">Vous faites le prépaiment et Je commence à travailler. Si c’est necessaire on se connecte à discuter quelque chose, on fait des modifications.</span>
                                 </div>
                                 <div class="about-screen__cooperation-item">
                                     <i class="about-screen__cooperation-icon fa fa-check"></i>
-                                    После утверждения проекта вы вносите оставшуюся сумму. Я переношу сайт на ваш хостинг
+                                    <span v-if="localeRu">После утверждения проекта вы вносите оставшуюся сумму. Я переношу сайт на ваш хостинг</span>
+                                    <span v-if="localeEn">После утверждения проекта вы вносите оставшуюся сумму. Я переношу сайт на ваш хостинг</span>
+                                    <span v-if="localeFr">Après l’adoption du projet, vous payez le reste de la somme et je déplace votre site web vers un hébergeur.</span>
                                 </div>
                             </div>
                         </div>
