@@ -85,8 +85,8 @@
     margin-bottom: 5px;
     cursor: pointer;
 
-    @media (max-width: $phone-alm-tight) {
-      font-size: 24px;
+    @media (max-width: $phone) {
+      font-size: 22px;
     }
 
     &.active:before {
@@ -121,8 +121,9 @@
       font-size: 36px;
     }
 
-    @media (max-width: $phone-alm-tight) {
+    @media (max-width: $phone) {
       font-size: 26px;
+      padding: 5px;
     }
     &:hover {
       animation: rotateGlobe 0.7s forwards;
@@ -150,9 +151,10 @@
       left: 0;
     }
 
-    @media (max-width: $phone-alm-tight) {
-      top: 60px;
-      left: 0px;
+    @media (max-width: $phone) {
+      top: 40px;
+      left: -10px;
+      padding: 10px;
     }
   }
 

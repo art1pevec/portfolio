@@ -105,6 +105,10 @@ var main = new Vue({
     },
 
     updated: function() {
+        if (this.count == 0) {
+            // this.typed = true;
+        }
+
         if (this.typed) {
             var typed = new Typed('.main-screen__img-text', {
                 stringsElement: '.typed-strings',
@@ -113,15 +117,13 @@ var main = new Vue({
             });
         }
 
-        if (this.count < 5) {
-            this.typed = true;
-        }
+
     },
 
 
 
     mounted: function() {
-    if ($(window).width() > 992) {
+    if ($(window).width() > 992 && this.count === 0) {
         var typed = new Typed('.main-screen__img-text', {
             stringsElement: '.typed-strings',
             typeSpeed: 30,
@@ -154,7 +156,7 @@ var main = new Vue({
     methods: {
 
         clickPortfolio: function() {
-            this.typed = true
+            this.typed = false
             this.main = false
             this.competition = false
             this.contacts = false
@@ -163,7 +165,7 @@ var main = new Vue({
             this.count = 1
         },
         clickCompetition: function() {
-            this.typed = true
+            this.typed = false
             this.main = false
             this.portfolio = false
             this.contacts = false
@@ -181,7 +183,7 @@ var main = new Vue({
             this.count = 0
         },
         clickContacts: function() {
-            this.typed = true
+            this.typed = false
             this.portfolio = false
             this.competition = false
             this.about = false
@@ -190,7 +192,7 @@ var main = new Vue({
             this.count = 3
         },
         clickAbout: function() {
-            this.typed = true
+            this.typed = false
             this.portfolio = false
             this.competition = false
             this.contacts = false
@@ -280,6 +282,7 @@ if ($(window).width() > 992) {
                 main.competition = false;
                 main.contacts = false;
                 main.about = false;
+                main.typed = true;
                 break;
             case 1:
                 main.main = false;
@@ -287,6 +290,7 @@ if ($(window).width() > 992) {
                 main.competition = false;
                 main.contacts = false;
                 main.about = false;
+                main.typed = false;
                 break;
             case 2:
                 main.main = false;
@@ -294,6 +298,7 @@ if ($(window).width() > 992) {
                 main.competition = true;
                 main.contacts = false;
                 main.about = false;
+                main.typed = false;
                 break;
             case 3:
                 main.main = false;
@@ -301,6 +306,7 @@ if ($(window).width() > 992) {
                 main.competition = false;
                 main.contacts = true;
                 main.about = false;
+                main.typed = false;
                 break;
             case 4:
                 main.main = false;
@@ -308,6 +314,7 @@ if ($(window).width() > 992) {
                 main.competition = false;
                 main.contacts = false;
                 main.about = true;
+                main.typed = false;
                 break;
         }
     });

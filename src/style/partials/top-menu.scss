@@ -51,7 +51,7 @@
     width: 30px;
 
     @media (max-width: $phone) {
-      padding: 15px 10px;
+      padding: 5px;
     }
 
     &.active {
@@ -67,7 +67,7 @@
         background-color: #fab161;
 
         @media (max-width: $phone) {
-          left: -15px;
+          left: -20px;
         }
       }
     }
@@ -84,13 +84,14 @@
     cursor: pointer;
     width: 50px;
     margin-right: 45px;
+    outline: none;
 
     @media (max-width: $tablet) {
       display: flex;
     }
 
     @media (max-width: $phone) {
-      margin-right: 35px;
+      margin-right: 20px;
     }
 
     &.active {

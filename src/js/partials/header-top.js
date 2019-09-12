@@ -19,18 +19,6 @@ $(document).ready(function(){
             $('.feedback').css({display: 'none'});
         }
     });
-
-    // $(window).scroll(function(){
-    //    if ($(this).scrollTop() > 0) {
-    //        $('.header-top').css({
-    //           position: 'fixed'
-    //        });
-    //    } else {
-    //        $('.header-top').css({
-    //           position: 'relative'
-    //        });
-    //    }
-    // });
 });
 
 $(document).click(function (e){ // событие клика по веб-документу

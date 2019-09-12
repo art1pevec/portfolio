@@ -11,6 +11,8 @@ $(document).ready(function(){
 
    $(window).scroll(function(){
 
+        // MENU
+
        var main = $('#main').offset().top + 70,
            portfolio = $('#portfolio1').offset().top - 270,
            competition = $('#competition').offset().top - 270,
@@ -57,6 +59,11 @@ $(document).ready(function(){
            $('.bottom-menu__phone').removeClass('active');
            $('.bottom-menu__tip').css({display: 'none'});
        }
+
+       // COMPETITION
+
+
+
 
 
    });

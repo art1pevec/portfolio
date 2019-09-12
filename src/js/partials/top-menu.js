@@ -14,4 +14,10 @@ $(document).ready(function(){
         }
 
     });
+
+    $('.main-block').mouseup(function(){
+        $('.top-menu__block.active').addClass('not-active');
+        $('.top-menu__block.active').removeClass('active');
+        $('.top-menu').css({display: 'none'});
+    });
 });
