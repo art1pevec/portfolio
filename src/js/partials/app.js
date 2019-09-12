@@ -321,6 +321,7 @@ if ($(window).width() > 992) {
 }
 // CLOSE DIVS OUTSIDE THE BLOCKS
 
+
 $(document).mouseup(function (e) {
     var container = $(".social-icon__popup");
     if (container.has(e.target).length === 0){
