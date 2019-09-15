@@ -53,6 +53,16 @@
     box-sizing: border-box;
     padding: 20px;
     position: relative;
+
+    @media (min-width: $tablet) {
+
+    @media (max-height: 800px) {
+      height: 340px;
+      border-radius: 10px;
+      background-size: initial;
+    }
+
+    }
   }
 
   &__title-block {
@@ -205,6 +215,11 @@
     display: flex;
     flex-flow: column wrap;
     align-items: center;
+    @media (min-width: $tablet) {
+      @media (max-height: 800px) {
+        top: 40px;
+      }
+    }
 
     &-time {
       position: relative;

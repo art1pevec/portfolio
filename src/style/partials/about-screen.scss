@@ -83,6 +83,12 @@
     align-items: flex-start;
     justify-content: space-between;
 
+    @media (min-width: $tablet) {
+      @media (max-height: 800px) {
+        display: none;
+      }
+    }
+
     @media (max-width: $tablet) {
       flex-flow: column wrap;
       align-items: center;
@@ -112,6 +118,12 @@
       margin-right: 0;
     }
 
+    &.active {
+      .about-screen__cooperation-icon:after {
+        width: 150%;
+      }
+    }
+
     &:hover .about-screen__cooperation-icon:after {
       width: 150%;
     }
@@ -139,6 +151,12 @@
   &__cooperation-title {
     @media (max-width: $tablet) {
       text-align: center;
+    }
+
+    @media (min-width: $tablet) {
+      @media (max-height: 800px) {
+        display: none;
+      }
     }
   }
 

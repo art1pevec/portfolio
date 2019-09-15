@@ -28,13 +28,14 @@
     grid-gap: 30px;
     justify-items: center;
   }
-  
+
   &__social-icon {
     text-align: center;
   }
 
   &__phone {
     color: #000;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
     &.active svg {
       animation: rotatePhone 0.4s linear forwards;
@@ -60,6 +61,7 @@
   &__icon-menu {
     cursor: pointer;
     font-size: 36px;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
     &:active .active-path{
       fill: #86B9E9;
@@ -83,7 +85,7 @@
 
     &.active {
       display: flex;
-      animation: hiddenMenu 0.3s linear forwards;
+      animation: hiddenMenu 0.1s linear forwards;
     }
   }
 

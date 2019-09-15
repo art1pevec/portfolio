@@ -20,6 +20,12 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 100px;
 
+    @media (min-width: $tablet) {
+      @media (max-height: 800px) {
+        grid-gap: 50px;
+      }
+    }
+
     @media (max-width: $tablet) {
       grid-template-columns: 1fr 1fr;
     }

@@ -23,24 +23,24 @@ var main = new Vue({
             {id: 8, title: 'Оптимизация сайта Google PageSpeed', message: 'Ваш сайт тормозит и долго прогружает картинки? Нужна оптимизация!', visible: false}
         ],
         competitionsEn: [
-            {id: 1, title: 'Hello', message: 'hello', visible: true},
-            {id: 2, title: 'Сайт с нуля на Wordpress', message: 'Полный цикл разработки, от создания прототипа сайта, до переноса на Ваш хостинг.', visible: false},
-            {id: 3, title: 'Интеграция дизайна на CMS', message: 'Есть дизайн сайта? Верстка и интеграция любых Ваших задумок.', visible: false},
-            {id: 4, title: 'Создание дизайна сайта', message: '3 этапа. Анализ и прототип, первичная визуализация, завершения проекта. Изи.', visible: false},
-            {id: 5, title: 'Редизайн сайта', message: 'Мир не стоит на месте, каждому бизнесу нужно обновляться и дышать свежо. Сделаю красиво.', visible: false},
-            {id: 6, title: 'Перенос сайта на хостинг', message: 'Хотите поменять хостинг? Тогда вы по адресу!', visible: false},
-            {id: 7, title: 'Современная разработка', message: 'HTML5, CSS3, JS, Vue.js, Gulp4 etc.', visible: false},
-            {id: 8, title: 'Оптимизация сайта Google PageSpeed', message: 'Ваш сайт тормозит и долго прогружает картинки? Есть шанс, что вы захотите доверить это профессионалу!', visible: false}
+            {id: 1, title: 'Maintenance sites on 1C-Bitrix', message: 'Writing components, modules and layout integration.', visible: true},
+            {id: 2, title: 'Website on Wordpress', message: 'The full development cycle, from creating a prototype site, to transferring to your hosting.', visible: false},
+            {id: 3, title: 'Integration design on CMS', message: 'Layout integration all what do you want,', visible: false},
+            {id: 4, title: 'Website design creation', message: '3 stages. Analysis and prototype, initial visualization, completion of the project.', visible: false},
+            {id: 5, title: 'Website redesign', message: 'The world does not stand still, every business needs to be updated and breathe freshly.', visible: false},
+            {id: 6, title: 'Transfer site to hosting', message: 'Fast and simply!', visible: false},
+            {id: 7, title: 'Modern development', message: 'HTML5, CSS3, JS, Vue.js, Gulp4 etc.', visible: false},
+            {id: 8, title: 'Website optimization Google PageSpeed', message: 'Does your site slow down and load images for a long time? Need optimization!', visible: false}
         ],
         competitionsFr: [
-            {id: 1, title: 'Soutien des sites 1C-Bitrix', message: 'bonjour', visible: true},
-            {id: 2, title: 'Site web à partir de zéro Wordpress', message: 'Полный цикл разработки, от создания прототипа сайта, до переноса на Ваш хостинг.', visible: false},
-            {id: 3, title: 'Intégration du design sur le CMS', message: 'Есть дизайн сайта? Верстка и интеграция любых Ваших задумок.', visible: false},
-            {id: 4, title: 'Création du design de site web', message: '3 этапа. Анализ и прототип, первичная визуализация, завершения проекта. Изи.', visible: false},
-            {id: 5, title: 'Redesign du site web', message: 'Мир не стоит на месте, каждому бизнесу нужно обновляться и дышать свежо. Сделаю красиво.', visible: false},
-            {id: 6, title: 'Migration du site sur hosting', message: 'Хотите поменять хостинг? Тогда вы по адресу!', visible: false},
+            {id: 1, title: 'Soutien des sites 1C-Bitrix', message: 'Écriture des composants, modules et intégration votre HTML sur 1C-Bitrix', visible: true},
+            {id: 2, title: 'Site web à partir de zéro Wordpress', message: 'Conception complète: du projet au déplacement vers un hébérgeur.', visible: false},
+            {id: 3, title: 'Intégration du design sur le CMS', message: 'On crée tout ce que vous voulez', visible: false},
+            {id: 4, title: 'Création du design de site web', message: '3 étapes: projet, visualisation primaire, résultat.', visible: false},
+            {id: 5, title: 'Redesign du site web', message: 'Le monde de s’arrête pas, le commercial doit être en capacité de se renouveler', visible: false},
+            {id: 6, title: 'Migration du site sur hosting', message: 'Vite et facile', visible: false},
             {id: 7, title: 'Développement moderne', message: 'HTML5, CSS3, JS, Vue.js, Gulp4 etc.', visible: false},
-            {id: 8, title: 'Optimisation d’un site Internet Google PageSpeed', message: 'Ваш сайт тормозит и долго прогружает картинки? Есть шанс, что вы захотите доверить это профессионалу!', visible: false}
+            {id: 8, title: 'Optimisation d’un site Internet Google PageSpeed', message: 'Votre site ralentit et les images ne s’affichent pas? Il faut l’optimiser!', visible: false}
         ],
         dayOfTheWeek: {
             Ru: ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'],

@@ -59,12 +59,6 @@ $(document).ready(function(){
            $('.bottom-menu__phone').removeClass('active');
            $('.bottom-menu__tip').css({display: 'none'});
        }
-
-       // COMPETITION
-
-
-
-
-
+       
    });
 });

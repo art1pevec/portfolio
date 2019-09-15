@@ -12,10 +12,15 @@ $(function(){
 
       $.ajax({
          type: 'POST',
-         url: form.attr( 'action' ),
+         url: form.attr('action'),
          data: form.serialize(),
          success: function(response) {
-            console.log(response);
+            $('.feedback__block').hide();
+            $('.feedback__access-block').show();
+
+            setTimeout(function(){
+               $('.feedback').hide();
+            }, 1500);
          }
       });
    });

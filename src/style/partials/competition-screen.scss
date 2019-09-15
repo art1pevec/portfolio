@@ -30,6 +30,13 @@
     cursor: pointer;
     padding: 20px;
     font-size: 20px;
+
+    @media (min-width: $tablet) {
+      @media (max-height: 800px) {
+        font-size: 16px;
+      }
+    }
+
   }
 
   &__item-more {
@@ -41,12 +48,25 @@
     padding: 20px;
     left: 0;
     z-index: 10;
+
+    @media (min-width: $tablet) {
+      @media (max-height: 800px) {
+        font-size: 12px;
+      }
+    }
   }
 
   &__block {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 100px;
+
+    @media (min-width: $tablet) {
+      @media (max-height: 800px) {
+        grid-gap: 30px;
+        grid-row-gap: 60px;
+      }
+    }
 
     @media (max-width: 1200px) {
       grid-template-columns: 1fr 1fr 1fr;

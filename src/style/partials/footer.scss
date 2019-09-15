@@ -1,8 +1,15 @@
 .footer {
-  position: fixed;
+  position: absolute;
   bottom: 0;
   width: 100%;
   font-family: SFUI;
+  @media (min-width: $tablet) {
+
+    @media (max-height: 800px) {
+      background-color: #fff;
+    }
+
+  }
 
   &__wrapper {
     display: flex;

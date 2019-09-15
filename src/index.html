@@ -11,7 +11,7 @@
 <body>
 
 <div class="preloader">
-    <i class="fa fa-cog fa-spin fa-3x fa-fw"></i>
+    <img src="img/preloader.gif" alt="">
 </div>
 
     <div class="wrapper" id="app">
@@ -78,7 +78,7 @@
                 <div class="bottom-menu__wrapper-hidden">
                     <a href="https://vk.com/artembrovkin" target="_blank" class="bottom-menu__social-icon social-icon__popup-block"><i class="social-icon__popup-icon fa fa-vk"></i></a>
                     <a href="https://www.instagram.com/brovkin_artem/" target="_blank" class="bottom-menu__social-icon social-icon__popup-block"><i class="social-icon__popup-icon fa fa-instagram"></i></a>
-                    <a href="tg://resolve?domain=<brovkin_artem>" target="_blank" class="bottom-menu__social-icon social-icon__popup-block"><i class="social-icon__popup-icon fa fa-telegram"></i></a>
+<!--                    <a href="tg://resolve?domain=brovkin_artem" target="_blank" class="bottom-menu__social-icon social-icon__popup-block"><i class="social-icon__popup-icon fa fa-telegram"></i></a>-->
 
                     <a href="https://www.facebook.com/brovkin.artem" target="_blank" class="bottom-menu__social-icon social-icon__popup-block"><i class="social-icon__popup-icon fa fa-facebook"></i></a>
                     <a href="https://wa.me/79806572472" target="_blank" class="bottom-menu__social-icon social-icon__popup-block"><i class="social-icon__popup-icon fa fa-whatsapp"></i></a>
@@ -117,6 +117,10 @@
                     <input v-if="localeEn" class="feedback__submit-btn" type="submit" value="Send">
                     <input v-if="localeFr" class="feedback__submit-btn" type="submit" value="Envoyer">
                 </form>
+            </div>
+
+            <div class="feedback__access-block">
+                Спасибо! Я с вами свяжусь.
             </div>
         </div>
 
@@ -305,27 +309,39 @@
                             </h2>
                             <div class="portfolio-screen__block">
                                 <div class="portfolio-screen__item-block">
-                                    <a href="https://аквакидс.рф" class="portfolio-screen__item-title">Центр грудничкового плавания <b>"Аквакидс"</b></a>
+                                    <a href="https://аквакидс.рф" class="portfolio-screen__item-title">
+                                        <span v-if="localeRu">Центр грудничкового плавания</span>
+                                        <span v-if="localeEn">Infant swimming center</span>
+                                        <span v-if="localeFr">Centre de natation bébés</span>
+                                    </a>
                                     <a data-fancybox="portfolio" href="img/mockup-aquakids.jpg" class="portfolio-screen__item">
                                         <img src="img/mockup-aquakids.jpg" alt="" class="portfolio-screen__item-img">
                                     </a>
-                                    <div class="portfolio-screen__item-engine">WordPress</div>
+                                    <div class="portfolio-screen__item-engine">Аквакидс</div>
                                 </div>
 
                                 <div class="portfolio-screen__item-block">
-                                    <a href="https://arena-yar.ru" class="portfolio-screen__item-title">Сеть киберспортивных центров в Ярославле <b>"Арена"</b></a>
+                                    <a href="https://arena-yar.ru" class="portfolio-screen__item-title">
+                                        <span v-if="localeRu">Сеть киберспортивных центров в Ярославле</span>
+                                        <span v-if="localeEn">Network of esports centers in Yaroslavl</span>
+                                        <span v-if="localeFr">Réseau de centres cybersportifs à Iaroslavl</span>
+                                    </a>
                                     <a data-fancybox="portfolio" href="img/mockup-arena.jpg" class="portfolio-screen__item">
                                         <img src="img/mockup-arena.jpg" alt="" class="portfolio-screen__item-img">
                                     </a>
-                                    <div class="portfolio-screen__item-engine">WordPress</div>
+                                    <div class="portfolio-screen__item-engine">Арена</div>
                                 </div>
 
                                 <div class="portfolio-screen__item-block">
-                                    <a href="http://домик76.рф" class="portfolio-screen__item-title">Строительство деревянных домов <b>"Домик76"</b></a>
+                                    <a href="http://домик76.рф" class="portfolio-screen__item-title">
+                                        <span v-if="localeRu">Строительство деревянных домов</span>
+                                        <span v-if="localeEn">Construction of wooden houses</span>
+                                        <span v-if="localeFr">Construction des maisons en bois</span>
+                                    </a>
                                     <a data-fancybox="portfolio" href="img/mockup-domik.jpg" class="portfolio-screen__item">
                                         <img src="img/mockup-domik.jpg" alt="" class="portfolio-screen__item-img">
                                     </a>
-                                    <div class="portfolio-screen__item-engine">WordPress</div>
+                                    <div class="portfolio-screen__item-engine">Домик76</div>
                                 </div>
                             </div>
                         </div>
@@ -387,9 +403,9 @@
                                 <div class="contacts-screen__item">
                                     <a class="contacts-screen__item-link" href="https://wa.me/79806572472" target="_blank" title="whatsapp"><i class="contacts-screen__item-icon fa fa-whatsapp"></i></a>
                                 </div>
-                                <div class="contacts-screen__item">
-                                    <a class="contacts-screen__item-link" href="https://vk.com/artembrovkin" target="_blank" title="telegram"><i class="contacts-screen__item-icon fa fa-telegram"></i></a>
-                                </div>
+<!--                                <div class="contacts-screen__item">-->
+<!--                                    <a class="contacts-screen__item-link" href="https://vk.com/artembrovkin" target="_blank" title="telegram"><i class="contacts-screen__item-icon fa fa-telegram"></i></a>-->
+<!--                                </div>-->
 
                             </div>
                         </div>
@@ -425,14 +441,16 @@
                                     </div>
                                     <div v-if="localeEn" class="about-screen__preview">
                                         <p>
-                                            Меня зовут Артем, я веб-разработчик и дизайнер. Имею высшее техническое образование.
-                                            С 2017 года работаю в веб индустрии. Разрабатываю адаптивные сайты с удобным пользовательским интерфейсом.
-                                            Работаю удаленно, по всему миру.
+                                            My name is Artem, I’m a web-developer and designer.
+                                            I have higher technical education.
+                                            Since 2017 I work in web-industry, make adaptive sites with a modern interface.
+                                            I work remotely all over the world.
                                         </p>
                                         <p>
-                                            Использую современные инструменты в разработке и слежу за трендами в данной сфере.
-                                            Стараюсь совершенствовать свои навыки и не останавливаюсь на достигнутом.
-                                            В работе скрупулезен и каждый сделанный проект - это удовлетворенный клиент и прекрасное портфолио. Готов проконсультировать Вас в любое удобное время.
+                                            I use modern tools in website development and follow the current trends.
+                                            I try to improve my skills and to develop myself.
+                                            I’m scrupulous in work and each project it is satisfied client and amazing portfolio.
+                                            I’m ready advise you by any time you want.
                                         </p>
                                     </div>
                                     <div v-if="localeFr" class="about-screen__preview">
@@ -455,12 +473,12 @@
                                     <div class="about-screen__btn-block">
                                         <a href="" class="about-screen__brief">
                                             <span v-if="localeRu">Скачать бриф</span>
-                                            <span v-if="localeEn">Скачать бриф</span>
+                                            <span v-if="localeEn">Download brief</span>
                                             <span v-if="localeFr">Télécharger brief</span>
                                         </a>
                                         <a href="" class="about-screen__rules">
                                             <span v-if="localeRu">Правила работы</span>
-                                            <span v-if="localeEn">Правила работы</span>
+                                            <span v-if="localeEn">Work rules</span>
                                             <span v-if="localeFr">Les règles du travail</span>
                                         </a>
                                     </div>
@@ -469,34 +487,34 @@
 
                             <h3 class="about-screen__cooperation-title">
                                 <span v-if="localeRu">Как происходит сотрудничество:</span>
-                                <span v-if="localeEn">Как происходит сотрудничество:</span>
+                                <span v-if="localeEn">How does cooperation work:</span>
                                 <span v-if="localeFr">Comment ça marche:</span>
                             </h3>
 
                             <div class="about-screen__cooperation-block">
-                                <div class="about-screen__cooperation-item">
+                                <div data-pos="1" class="about-screen__cooperation-item">
                                     <i class="about-screen__cooperation-icon fa fa-file-text-o"></i>
                                     <span v-if="localeRu">Вы отправляете мне ТЗ или заполненный бриф</span>
-                                    <span v-if="localeEn">Вы отправляете мне ТЗ или заполненный бриф</span>
+                                    <span v-if="localeEn">You send me a TK or a completed brief</span>
                                     <span v-if="localeFr">Vous m’envoyez termes de référence ou brief</span>
                                 </div>
-                                <div class="about-screen__cooperation-item">
+                                <div data-pos="2" class="about-screen__cooperation-item">
                                     <i class="about-screen__cooperation-icon fa fa-comments-o"></i>
                                     <span v-if="localeRu">Обсуждаем ваш проект, разделяем на этапы, согласовываем сроки и стоимость</span>
-                                    <span v-if="localeEn">Обсуждаем ваш проект, разделяем на этапы, согласовываем сроки и стоимость</span>
-                                    <span v-if="localeFr">On discute votre projet, on divise en quelques étapes, on accorde le delai et le prix.</span>
+                                    <span v-if="localeEn">We discuss your project, divide into stages, agree on the timing and cost</span>
+                                    <span v-if="localeFr">On discute votre projet, on divise en quelques étapes, on accorde le delai et le prix</span>
                                 </div>
-                                <div class="about-screen__cooperation-item">
+                                <div data-pos="3" class="about-screen__cooperation-item">
                                     <i class="about-screen__cooperation-icon fa fa-credit-card"></i>
                                     <span v-if="localeRu">Вы вносите предоплату - я приступаю к работе. По мере необходимости общаемся, вносим правки</span>
-                                    <span v-if="localeEn">Вы вносите предоплату - я приступаю к работе. По мере необходимости общаемся, вносим правки</span>
-                                    <span v-if="localeFr">Vous faites le prépaiment et Je commence à travailler. Si c’est necessaire on se connecte à discuter quelque chose, on fait des modifications.</span>
+                                    <span v-if="localeEn">You pay in advance - I get to work. We communicate as necessary, make changes</span>
+                                    <span v-if="localeFr">Vous faites le prépaiment et Je commence à travailler. Si c’est necessaire on se connecte à discuter quelque chose, on fait des modifications</span>
                                 </div>
-                                <div class="about-screen__cooperation-item">
+                                <div data-pos="4" class="about-screen__cooperation-item">
                                     <i class="about-screen__cooperation-icon fa fa-check"></i>
                                     <span v-if="localeRu">После утверждения проекта вы вносите оставшуюся сумму. Я переношу сайт на ваш хостинг</span>
-                                    <span v-if="localeEn">После утверждения проекта вы вносите оставшуюся сумму. Я переношу сайт на ваш хостинг</span>
-                                    <span v-if="localeFr">Après l’adoption du projet, vous payez le reste de la somme et je déplace votre site web vers un hébergeur.</span>
+                                    <span v-if="localeEn">After the approval of the project, you pay the remaining amount. I transfer the site to your hosting</span>
+                                    <span v-if="localeFr">Après l’adoption du projet, vous payez le reste de la somme et je déplace votre site web vers un hébergeur</span>
                                 </div>
                             </div>
                         </div>
@@ -535,7 +553,7 @@
 
                     <a href="https://vk.com/artembrovkin" target="_blank" class="social-icon__popup-block"><i class="social-icon__popup-icon fa fa-vk"></i></a>
                     <a href="https://www.instagram.com/brovkin_artem/" target="_blank" class="social-icon__popup-block"><i class="social-icon__popup-icon fa fa-instagram"></i></a>
-                    <a href="tg://resolve?domain=<brovkin_artem>" target="_blank" class="social-icon__popup-block"><i class="social-icon__popup-icon fa fa-telegram"></i></a>
+<!--                    <a href="tg://resolve?domain=brovkin_artem" target="_blank" class="social-icon__popup-block"><i class="social-icon__popup-icon fa fa-telegram"></i></a>-->
 
                     <a href="https://www.facebook.com/brovkin.artem" target="_blank" class="social-icon__popup-block"><i class="social-icon__popup-icon fa fa-facebook"></i></a>
                     <a href="https://wa.me/79806572472" target="_blank" class="social-icon__popup-block"><i class="social-icon__popup-icon fa fa-whatsapp"></i></a>
