@@ -117,6 +117,7 @@
       align-items: center;
       padding-right: 30px;
       padding-left: 100px;
+      background-color: #fff;
       animation: contactsBlock 0.3s forwards;
     }
   }
@@ -133,7 +134,7 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    transition: border 0.4s ease-in-out;
+    transition: border 0.3s linear;
 
     &:hover {
       border: 2px solid rgba(244, 177, 97, 1);

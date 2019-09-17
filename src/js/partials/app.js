@@ -244,7 +244,8 @@ var main = new Vue({
     },
 
 })
-if ($(window).width() < 992) {
+
+if ($(window).width() < 992 ) {
     main.typed = true;
     main.main = true;
     main.portfolio = true;
