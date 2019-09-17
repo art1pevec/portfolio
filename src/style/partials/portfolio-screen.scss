@@ -47,7 +47,7 @@
     align-self: flex-end;
     width: fit-content;
     position: relative;
-    cursor: default;
+    cursor: pointer;
     color: #000;
     text-decoration: none;
 
@@ -66,11 +66,9 @@
     position: relative;
     display: flex;
     flex-flow: column wrap;
-    justify-content: center;
-    cursor: default;
     &:hover .portfolio-screen__item-img {
       top: -5px;
-      box-shadow: 0 16px 32px 0 rgba(62, 57, 107, .28), 0 0 0 transparent;
+      box-shadow: 0 5px 15px 0 rgba(62, 57, 107, .2);
     }
   }
 
@@ -82,5 +80,33 @@
     @media (max-width: $tablet) {
       grid-template-columns: 1fr;
     }
+  }
+
+  &__info {
+    margin: 10px 0;
+    list-style: none;
+    font-family: Raleway-Regular;
+
+    &-item {
+      padding: 5px 0;
+      position: relative;
+
+      &:before {
+        content: '';
+        width: 5px;
+        height: 5px;
+        display: inline-block;
+        background: #74b9e9;
+        border-radius: 50%;
+        position: absolute;
+        top: 12px;
+        left: -20px;
+      }
+    }
+  }
+
+  &__info-block {
+    display: flex;
+    justify-content: space-between;
   }
 }

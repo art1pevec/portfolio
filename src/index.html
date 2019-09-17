@@ -159,13 +159,13 @@
                 <i class="left-menu__icon fa fa-desktop" :class="{ 'active': competition }"></i>
                 <a v-if="competition" href="javascript:void(0);" class="left-menu__link" :class="{ 'active': competition }">
                     <span class="left-menu__line" :class="{ 'active': competition }"></span>
-                    <span v-if="localeRu">Компетенции</span>
-                    <span v-if="localeEn">Competitions</span>
+                    <span v-if="localeRu">Навыки</span>
+                    <span v-if="localeEn">Skills</span>
                     <span v-if="localeFr">Compétences</span>
                 </a>
                 <span class="left-menu__title" v-else>
-                    <span v-if="localeRu">Компетенции</span>
-                    <span v-if="localeEn">Competitions</span>
+                    <span v-if="localeRu">Навыки</span>
+                    <span v-if="localeEn">Skills</span>
                     <span v-if="localeFr">Compétences</span>
                 </span>
             </div>
@@ -265,8 +265,8 @@
                                         <span v-if="localeFr">Portefeuille</span>
                                     </a>
                                     <a @click="clickCompetition()" href="javascript:void(0);" class="main-screen__btn-competition">
-                                        <span v-if="localeRu">Компетенции</span>
-                                        <span v-if="localeEn">Competitions</span>
+                                        <span v-if="localeRu">Навыки</span>
+                                        <span v-if="localeEn">Skills</span>
                                         <span v-if="localeFr">Compétences</span>
                                     </a>
                                 </div>
@@ -317,7 +317,16 @@
                                     <a data-fancybox="portfolio" href="img/mockup-aquakids.jpg" class="portfolio-screen__item">
                                         <img src="img/mockup-aquakids.jpg" alt="" class="portfolio-screen__item-img">
                                     </a>
-                                    <a href="https://аквакидс.рф" class="portfolio-screen__item-engine">Аквакидс</a>
+                                    <div class="portfolio-screen__info-block">
+                                        <ul class="portfolio-screen__info">
+                                            <li class="portfolio-screen__info-item">Верстка</li>
+                                            <li class="portfolio-screen__info-item">Wordpress</li>
+                                            <li class="portfolio-screen__info-item">Интеграция API sms.ru</li>
+                                        </ul>
+                                        <div>
+                                            <a href="https://аквакидс.рф" class="portfolio-screen__item-engine">Аквакидс</a>
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <div class="portfolio-screen__item-block">
@@ -329,7 +338,15 @@
                                     <a data-fancybox="portfolio" href="img/mockup-arena.jpg" class="portfolio-screen__item">
                                         <img src="img/mockup-arena.jpg" alt="" class="portfolio-screen__item-img">
                                     </a>
-                                    <a href="https://arena-yar.ru" class="portfolio-screen__item-engine">Арена</a>
+                                    <div class="portfolio-screen__info-block">
+                                        <ul class="portfolio-screen__info">
+                                            <li class="portfolio-screen__info-item">Верстка</li>
+                                            <li class="portfolio-screen__info-item">Wordpress</li>
+                                        </ul>
+                                        <div>
+                                            <a href="https://arena-yar.ru" class="portfolio-screen__item-engine">Арена</a>
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <div class="portfolio-screen__item-block">
@@ -341,7 +358,16 @@
                                     <a data-fancybox="portfolio" href="img/mockup-domik.jpg" class="portfolio-screen__item">
                                         <img src="img/mockup-domik.jpg" alt="" class="portfolio-screen__item-img">
                                     </a>
-                                    <a href="http://домик76.рф" class="portfolio-screen__item-engine">Домик76</a>
+                                    <div class="portfolio-screen__info-block">
+                                        <ul class="portfolio-screen__info">
+                                            <li class="portfolio-screen__info-item">Дизайн</li>
+                                            <li class="portfolio-screen__info-item">Верстка</li>
+                                            <li class="portfolio-screen__info-item">Wordpress</li>
+                                        </ul>
+                                        <div>
+                                            <a href="http://домик76.рф" class="portfolio-screen__item-engine">Домик76</a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -351,8 +377,8 @@
                     <div id="competition" v-if="competition" class="main-screen main-slider__item">
                         <div class="competition-screen">
                             <h2 class="competition-screen__title">
-                                <span v-if="localeRu">Компетенции</span>
-                                <span v-if="localeEn">Competitions</span>
+                                <span v-if="localeRu">Навыки</span>
+                                <span v-if="localeEn">Skills</span>
                                 <span v-if="localeFr">Compétences</span>
                             </h2>
                             <div class="competition-screen__block">
@@ -532,19 +558,31 @@
         <footer class="footer">
             <div class="footer__wrapper">
                 <div class="footer__social-block">
-                    <div @click="clickSocial()" class="social-icon not-active">
-                            <span class="social-icon__circle" style="left: 0; top: 20px;"></span>
-                            <span class="social-icon__circle" style="left: 30px; top: 20px;"></span>
-                            <span class="social-icon__circle" style="left: 60px; top: 20px;"></span>
-
-                            <span class="social-icon__circle" style="left: 0; top: 50px;"></span>
-                            <span class="social-icon__circle" style="left: 30px; top: 50px;"></span>
-                            <span class="social-icon__circle" style="left: 60px; top: 50px;"></span>
-
-                            <span class="social-icon__circle" style="left: 0; top: 80px;"></span>
-                            <span class="social-icon__circle" style="left: 30px; top: 80px;"></span>
-                            <span class="social-icon__circle" style="left: 60px; top: 80px;"></span>
+                    <div class="social-icon__icon-block">
+                        <i class="social-icon__icon fa fa-plus"></i>
                     </div>
+                    <div class="social-icon__contacts-block">
+                        <i class="social-icon__hidden-icon fa fa-vk"></i>
+                        <i class="social-icon__hidden-icon fa fa-vk"></i>
+                        <i class="social-icon__hidden-icon fa fa-vk"></i>
+                    </div>
+
+
+
+
+                    <!--<div @click="clickSocial()" class="social-icon not-active">-->
+                            <!--<span class="social-icon__circle" style="left: 0; top: 20px;"></span>-->
+                            <!--<span class="social-icon__circle" style="left: 30px; top: 20px;"></span>-->
+                            <!--<span class="social-icon__circle" style="left: 60px; top: 20px;"></span>-->
+
+                            <!--<span class="social-icon__circle" style="left: 0; top: 50px;"></span>-->
+                            <!--<span class="social-icon__circle" style="left: 30px; top: 50px;"></span>-->
+                            <!--<span class="social-icon__circle" style="left: 60px; top: 50px;"></span>-->
+
+                            <!--<span class="social-icon__circle" style="left: 0; top: 80px;"></span>-->
+                            <!--<span class="social-icon__circle" style="left: 30px; top: 80px;"></span>-->
+                            <!--<span class="social-icon__circle" style="left: 60px; top: 80px;"></span>-->
+                    <!--</div>-->
                 </div>
 
                 <transition name="fade">
@@ -564,7 +602,7 @@
                 </transition>
 
                 <div class="footer__copyright-block">
-                    &copy; <a class="footer__copyright-link" href="https://brozabro.ru">brozabro.ru</a> <i class="fa fa-code"></i> <span class="footer__copyright-date"> {{dateCopy.getFullYear()}}</span>
+                    &copy; <a class="footer__copyright-link" href="https://brozabro.ru">brozabro.ru</a><span class="footer__copyright-date"> {{dateCopy.getFullYear()}}</span>
                 </div>
             </div>
         </footer>

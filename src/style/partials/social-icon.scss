@@ -39,7 +39,7 @@
     padding: 50px;
     z-index: 999;
     border-radius: 20px;
-    box-shadow: 0 0 10px 0 rgba(0,0,0, 0.1);
+    box-shadow: 0 0 10px 0 rgba(0,0,0, 0.15);
 
 
     &-block {
@@ -78,6 +78,60 @@
     &:hover {
       animation: animClose 0.5s ease-in-out forwards;
     }
+  }
+
+  &__icon-block {
+    border-radius: 50%;
+    background: rgba(116, 185, 233, 0.7);
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    transition: .4s all;
+    position: absolute;
+    bottom: 20px;
+    z-index: 100;
+
+    &:hover {
+      background: rgba(116, 185, 233, 1);
+    }
+  }
+
+  &__contacts-block {
+    position: absolute;
+    bottom: 20px;
+    width: 0;
+    height: 70px;
+    background-color: transparent;
+    border-radius: 50px;
+    box-shadow: 0 0 0 2px rgba(157, 206, 239, 0.8);
+    display: none;
+    justify-content: space-between;
+
+    &.active {
+      display: flex;
+      align-items: center;
+      padding-right: 30px;
+      padding-left: 100px;
+      animation: contactsBlock 0.3s forwards;
+    }
+  }
+
+  &__hidden-icon {
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+    border: 2px solid rgba(244, 177, 97, 1);
+    color: #000;
+    font-size: 24px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 

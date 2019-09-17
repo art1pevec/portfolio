@@ -236,3 +236,10 @@ $color: #E94E3D;
   justify-content: center;
   overflow: hidden;
 }
+
+// contactsBlock
+
+@keyframes contactsBlock {
+  0% {width: 0}
+  100% {width: 300px;}
+}
