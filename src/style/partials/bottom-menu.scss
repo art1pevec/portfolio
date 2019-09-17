@@ -31,6 +31,9 @@
 
   &__social-icon {
     text-align: center;
+    &:before {
+      display: none;
+    }
   }
 
   &__phone {

@@ -7,7 +7,14 @@ $(document).ready(function(){
         $(this).toggleClass('active');
         $('.social-icon__contacts-block').toggleClass('active');
 
-        $('.social-icon__icon').toggleClass('fa-plus');
+        $('.social-icon__icon').toggleClass('fa-share-alt');
+        $('.social-icon__icon').toggleClass('fa-times');
+    });
+
+    $('.main-block').mouseup(function () {
+        $('.social-icon__contacts-block').removeClass('active');
+        $('.social-icon__icon-block').removeClass('active');
+        $('.social-icon__icon').toggleClass('fa-share-alt');
         $('.social-icon__icon').toggleClass('fa-times');
     });
 
