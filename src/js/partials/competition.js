@@ -42,13 +42,13 @@ Vue.component('competitions', {
 
 $(window).scroll(function(){
     var competition_1 = $('.competition-screen__item[data-pos=1]').offset().top - 300,
-        competition_2 = $('.competition-screen__item[data-pos=2]').offset().top - 350,
-        competition_3 = $('.competition-screen__item[data-pos=3]').offset().top - 350,
-        competition_4 = $('.competition-screen__item[data-pos=4]').offset().top - 350,
-        competition_5 = $('.competition-screen__item[data-pos=5]').offset().top - 350,
-        competition_6 = $('.competition-screen__item[data-pos=6]').offset().top - 350,
-        competition_7 = $('.competition-screen__item[data-pos=7]').offset().top - 350,
-        competition_8 = $('.competition-screen__item[data-pos=8]').offset().top - 350,
+        competition_2 = $('.competition-screen__item[data-pos=2]').offset().top - 310,
+        competition_3 = $('.competition-screen__item[data-pos=3]').offset().top - 320,
+        competition_4 = $('.competition-screen__item[data-pos=4]').offset().top - 330,
+        competition_5 = $('.competition-screen__item[data-pos=5]').offset().top - 330,
+        competition_6 = $('.competition-screen__item[data-pos=6]').offset().top - 330,
+        competition_7 = $('.competition-screen__item[data-pos=7]').offset().top - 330,
+        competition_8 = $('.competition-screen__item[data-pos=8]').offset().top - 330,
         currentPos = $(this).scrollTop();
 
     if (main.localeRu === true) {

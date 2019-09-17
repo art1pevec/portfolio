@@ -48,6 +48,8 @@
     width: fit-content;
     position: relative;
     cursor: default;
+    color: #000;
+    text-decoration: none;
 
     &:before {
       content: '';

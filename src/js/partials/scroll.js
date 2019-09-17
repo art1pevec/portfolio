@@ -51,7 +51,7 @@ $(document).ready(function(){
         }
 
 
-       if($(window).scrollTop() + $(window).height() == $(document).height()) {
+       if($(window).scrollTop() + $(window).height() >= $(document).height()) {
            $('.bottom-menu__phone').addClass('active');
            $('.bottom-menu__tip').css({display: 'block'});
 
