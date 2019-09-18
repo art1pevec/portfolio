@@ -29,9 +29,6 @@
                 <a href="#competition" class="top-menu__link"><i class="top-menu__icon fa fa-desktop"></i></a>
             </div>
             <div class="top-menu__item">
-                <a href="#contacts" class="top-menu__link"><i class="top-menu__icon fa fa-address-book-o"></i></a>
-            </div>
-            <div class="top-menu__item">
                 <a href="#about" class="top-menu__link"><i class="top-menu__icon fa fa-user-o"></i></a>
             </div>
 
@@ -169,20 +166,6 @@
                     <span v-if="localeFr">Compétences</span>
                 </span>
             </div>
-            <div @click="clickContacts()" class="left-menu__link-block">
-                <i class="left-menu__icon fa fa-address-book-o" :class="{ 'active': contacts }"></i>
-                <a v-if="contacts" href="javascript:void(0);" class="left-menu__link" :class="{ 'active': contacts }">
-                    <span class="left-menu__line" :class="{ 'active': contacts }"></span>
-                    <span v-if="localeRu">Контакты</span>
-                    <span v-if="localeEn">Contacts</span>
-                    <span v-if="localeFr">Сontact</span>
-                </a>
-                <span class="left-menu__title" v-else>
-                    <span v-if="localeRu">Контакты</span>
-                    <span v-if="localeEn">Contacts</span>
-                    <span v-if="localeFr">Сontact</span>
-                </span>
-            </div>
             <div @click="clickAbout()" class="left-menu__link-block">
                 <i class="left-menu__icon fa fa-user-o" :class="{ 'active': about }"></i>
                 <a v-if="about" href="javascript:void(0);" class="left-menu__link" :class="{ 'active': about }">
@@ -315,16 +298,26 @@
                                         <span v-if="localeFr">Centre de natation bébés</span>
                                     </a>
                                     <a data-fancybox="portfolio" href="img/mockup-aquakids.jpg" class="portfolio-screen__item">
+                                        <span class="portfolio-screen__item-main-title">Аквакидс</span>
                                         <img src="img/mockup-aquakids.jpg" alt="" class="portfolio-screen__item-img">
                                     </a>
                                     <div class="portfolio-screen__info-block">
                                         <ul class="portfolio-screen__info">
-                                            <li class="portfolio-screen__info-item">Верстка</li>
+                                            <li class="portfolio-screen__info-item">
+                                                <span v-if="localeRu">Верстка</span>
+                                                <span v-if="localeEn">Layout integration</span>
+                                                <span v-if="localeFr">Mise en page</span>
+                                            </li>
                                             <li class="portfolio-screen__info-item">Wordpress</li>
-                                            <li class="portfolio-screen__info-item">Интеграция API sms.ru</li>
+                                            <li class="portfolio-screen__info-item">
+                                                <span v-if="localeRu">Интеграция</span>
+                                                <span v-if="localeEn">Integration</span>
+                                                <span v-if="localeFr">Intégration</span>
+                                                API sms.ru
+                                            </li>
                                         </ul>
                                         <div>
-                                            <a href="https://аквакидс.рф" class="portfolio-screen__item-engine">Аквакидс</a>
+                                            <a href="https://аквакидс.рф" class="portfolio-screen__item-engine">аквакидс.рф</a>
                                         </div>
                                     </div>
                                 </div>
@@ -336,15 +329,20 @@
                                         <span v-if="localeFr">Réseau de centres cybersportifs à Iaroslavl</span>
                                     </a>
                                     <a data-fancybox="portfolio" href="img/mockup-arena.jpg" class="portfolio-screen__item">
+                                        <span class="portfolio-screen__item-main-title">Арена</span>
                                         <img src="img/mockup-arena.jpg" alt="" class="portfolio-screen__item-img">
                                     </a>
                                     <div class="portfolio-screen__info-block">
                                         <ul class="portfolio-screen__info">
-                                            <li class="portfolio-screen__info-item">Верстка</li>
+                                            <li class="portfolio-screen__info-item">
+                                                <span v-if="localeRu">Верстка</span>
+                                                <span v-if="localeEn">Layout integration</span>
+                                                <span v-if="localeFr">Mise en page</span>
+                                            </li>
                                             <li class="portfolio-screen__info-item">Wordpress</li>
                                         </ul>
                                         <div>
-                                            <a href="https://arena-yar.ru" class="portfolio-screen__item-engine">Арена</a>
+                                            <a href="https://arena-yar.ru" class="portfolio-screen__item-engine">arena-yar.ru</a>
                                         </div>
                                     </div>
                                 </div>
@@ -356,16 +354,25 @@
                                         <span v-if="localeFr">Construction des maisons en bois</span>
                                     </a>
                                     <a data-fancybox="portfolio" href="img/mockup-domik.jpg" class="portfolio-screen__item">
+                                        <span class="portfolio-screen__item-main-title">Домик76</span>
                                         <img src="img/mockup-domik.jpg" alt="" class="portfolio-screen__item-img">
                                     </a>
                                     <div class="portfolio-screen__info-block">
                                         <ul class="portfolio-screen__info">
-                                            <li class="portfolio-screen__info-item">Дизайн</li>
-                                            <li class="portfolio-screen__info-item">Верстка</li>
+                                            <li class="portfolio-screen__info-item">
+                                                <span v-if="localeRu">Дизайн</span>
+                                                <span v-if="localeEn">Design</span>
+                                                <span v-if="localeFr">Design</span>
+                                            </li>
+                                            <li class="portfolio-screen__info-item">
+                                                <span v-if="localeRu">Верстка</span>
+                                                <span v-if="localeEn">Layout integration</span>
+                                                <span v-if="localeFr">Mise en page</span>
+                                            </li>
                                             <li class="portfolio-screen__info-item">Wordpress</li>
                                         </ul>
                                         <div>
-                                            <a href="http://домик76.рф" class="portfolio-screen__item-engine">Домик76</a>
+                                            <a href="http://домик76.рф" class="portfolio-screen__item-engine">домик76.рф</a>
                                         </div>
                                     </div>
                                 </div>
@@ -400,41 +407,6 @@
                                                   v-bind:key="item.id"
                                     ></competitions>
                                 </template>
-
-
-                            </div>
-                        </div>
-                    </div>
-                </transition>
-
-                <transition name="slide-fade">
-                    <div id="contacts" v-if="contacts" class="main-screen main-slider__item">
-                        <div class="contacts-screen">
-                            <h2 class="contacts-screen__title">
-                                <span v-if="localeRu">Контакты</span>
-                                <span v-if="localeEn">Contacts</span>
-                                <span v-if="localeFr">Contact</span>
-                            </h2>
-                            <div class="contacts-screen__block">
-                                <div class="contacts-screen__item">
-                                    <a class="contacts-screen__item-link" href="https://vk.com/artembrovkin" target="_blank" title="vk"><i class="contacts-screen__item-icon fa fa-vk"></i></a>
-                                </div>
-                                <div class="contacts-screen__item">
-                                    <a class="contacts-screen__item-link" href="https://www.instagram.com/brovkin_artem/" target="_blank" title="instagram"><i class="contacts-screen__item-icon fa fa-instagram"></i></a>
-                                </div>
-                                <div class="contacts-screen__item">
-                                    <a class="contacts-screen__item-link" href="https://www.facebook.com/brovkin.artem" target="_blank" title="facebook"><i class="contacts-screen__item-icon fa fa-facebook"></i></a>
-                                </div>
-                                <div class="contacts-screen__item">
-                                    <a class="contacts-screen__item-link" href="https://github.com/art1pevec" target="_blank" title="github"><i class="contacts-screen__item-icon fa fa-github"></i></a>
-                                </div>
-                                <div class="contacts-screen__item">
-                                    <a class="contacts-screen__item-link" href="https://wa.me/79806572472" target="_blank" title="whatsapp"><i class="contacts-screen__item-icon fa fa-whatsapp"></i></a>
-                                </div>
-<!--                                <div class="contacts-screen__item">-->
-<!--                                    <a class="contacts-screen__item-link" href="https://vk.com/artembrovkin" target="_blank" title="telegram"><i class="contacts-screen__item-icon fa fa-telegram"></i></a>-->
-<!--                                </div>-->
-
                             </div>
                         </div>
                     </div>

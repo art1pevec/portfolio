@@ -47,16 +47,10 @@ var main = new Vue({
             En: ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'],
             Fr: ['Dimanche','Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'],
         },
-        screens: {
-            array: ['main', 'portfolio', 'competitions', 'contacts', 'about']
-        },
         localeRu: true,
         localeEn: false,
         localeFr: false,
-        locale: ''
     },
-
-
 
     computed: {
 
@@ -105,9 +99,6 @@ var main = new Vue({
     },
 
     updated: function() {
-        if (this.count == 0) {
-            // this.typed = true;
-        }
 
         if (this.typed) {
             var typed = new Typed('.main-screen__img-text', {
@@ -250,7 +241,6 @@ if ($(window).width() < 992 ) {
     main.main = true;
     main.portfolio = true;
     main.competition = true;
-    main.contacts = true;
     main.about = true;
 }
 
@@ -261,8 +251,8 @@ if ($(window).width() > 992) {
        var scroll = event.originalEvent.deltaY;
 
         if (scroll > 0) {
-            if (main.count === 4) {
-                main.count = 4;
+            if (main.count === 3) {
+                main.count = 3;
             } else {
                 main.count++;
             }
@@ -281,7 +271,6 @@ if ($(window).width() > 992) {
                 main.main = true;
                 main.portfolio = false;
                 main.competition = false;
-                main.contacts = false;
                 main.about = false;
                 main.typed = true;
                 break;
@@ -289,7 +278,6 @@ if ($(window).width() > 992) {
                 main.main = false;
                 main.portfolio = true;
                 main.competition = false;
-                main.contacts = false;
                 main.about = false;
                 main.typed = false;
                 break;
@@ -297,7 +285,6 @@ if ($(window).width() > 992) {
                 main.main = false;
                 main.portfolio = false;
                 main.competition = true;
-                main.contacts = false;
                 main.about = false;
                 main.typed = false;
                 break;
@@ -305,15 +292,6 @@ if ($(window).width() > 992) {
                 main.main = false;
                 main.portfolio = false;
                 main.competition = false;
-                main.contacts = true;
-                main.about = false;
-                main.typed = false;
-                break;
-            case 4:
-                main.main = false;
-                main.portfolio = false;
-                main.competition = false;
-                main.contacts = false;
                 main.about = true;
                 main.typed = false;
                 break;
@@ -321,7 +299,6 @@ if ($(window).width() > 992) {
     });
 }
 // CLOSE DIVS OUTSIDE THE BLOCKS
-
 
 $(document).mouseup(function (e) {
     var container = $(".social-icon__popup");

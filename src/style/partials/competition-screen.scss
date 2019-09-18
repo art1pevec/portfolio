@@ -16,20 +16,63 @@
   }
 
   &__item {
-    box-shadow: 0 0 10px 0 rgba(0,0,0,.15);
-    background-color: #fff;
-    width: 100%;
-    height: auto;
-    text-align: left;
     font-size: 24px;
     position: relative;
-    margin: 0 auto;
+    width: 80%;
+    cursor: default;
+    &:before {
+      background-color: #A4CEEF;
+      content: '';
+      opacity: 0.3;
+      position: absolute;
+      width: 70px;
+      height: 70px;
+      z-index: 10;
+      left: -50px;
+      top: -40px;
+      transition: opacity .3s linear;
+    }
+
+    &:after {
+      background-color: #EFB162;
+      content: '';
+      opacity: 0.3;
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      z-index: 10;
+      left: -10px;
+      top: -10px;
+      transition: opacity .2s linear;
+    }
+
+    &:hover:before {
+      opacity: 0.8;
+    }
+
+    &:hover:after {
+      opacity: 0.5;
+    }
   }
 
   &__item-title {
-    cursor: pointer;
-    padding: 20px;
     font-size: 20px;
+    z-index: 100;
+    padding: 5px 10px;
+    position: relative;
+    background-color: #fff;
+
+    &:before {
+      background-color: #fff;
+      content: '';
+      opacity: 0.5;
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      z-index: 10;
+      left: -20px;
+      top: -20px;
+    }
 
     @media (min-width: $tablet) {
       @media (max-height: 800px) {
@@ -40,14 +83,8 @@
   }
 
   &__item-more {
-    position: absolute;
-    width: 70%;
     font-size: 14px;
-    background-color: #fff;
-    box-shadow: 0 0 10px 0 rgba(0,0,0,.15);
-    padding: 20px;
-    left: 0;
-    z-index: 10;
+    padding: 20px 0;
 
     @media (min-width: $tablet) {
       @media (max-height: 800px) {
@@ -58,19 +95,26 @@
 
   &__block {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 100px;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 50px;
+    grid-column-gap: 20px;
+    justify-items: center;
 
     @media (min-width: $tablet) {
       @media (max-height: 800px) {
+        grid-template-columns: 1fr 1fr 1fr;
         grid-gap: 30px;
-        grid-row-gap: 60px;
+        grid-row-gap: 20px;
       }
     }
 
     @media (max-width: 1200px) {
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
       grid-gap: 50px;
+
+      @media (min-height: 800px) {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
     }
 
     @media (max-width: $tablet) {
