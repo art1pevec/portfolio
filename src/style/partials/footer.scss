@@ -29,8 +29,12 @@
 
   &__copyright-block {
     font-weight: 700;
-    top: 0px;
+    top: -30px;
     position: relative;
+
+    @media (max-width: $tablet) {
+      top: 0;
+    }
   }
 
   &__copyright-link {

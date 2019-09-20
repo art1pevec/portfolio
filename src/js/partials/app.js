@@ -108,10 +108,7 @@ var main = new Vue({
             });
         }
 
-
     },
-
-
 
     mounted: function() {
     if ($(window).width() > 992 && this.count === 0) {
@@ -245,7 +242,6 @@ if ($(window).width() < 992 ) {
 }
 
 if ($(window).width() > 992) {
-
     $(window).bind('mousewheel', function(event){
 
        var scroll = event.originalEvent.deltaY;
