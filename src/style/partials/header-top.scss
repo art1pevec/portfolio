@@ -6,13 +6,14 @@
   width: 80%;
   margin: 0 auto;
   position: relative;
-  background-color: #fff;
+  background-color: transparent;
 
   @media (max-width: $tablet) {
     width: 100vw;
     box-shadow: 0 0 10px 0 rgba(0,0,0, 0.15);
     z-index: 999;
     position: fixed;
+    background-color: #fff;
   }
 
   &__menu-block {
