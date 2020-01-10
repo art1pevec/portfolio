@@ -121,12 +121,16 @@
   }
 
   &__block {
-    display: grid;
+    display: none;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 50px;
 
     @media (max-width: $tablet) {
       grid-template-columns: 1fr;
+    }
+
+    &.active {
+      display: grid;
     }
   }
 
@@ -157,5 +161,37 @@
   &__info-block {
     display: flex;
     justify-content: space-between;
+  }
+
+  &__pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__pagination-item {
+    margin-right: 20px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .4s all;
+    border-radius: 2px;
+
+    &:hover {
+      background-color: #0d95e8;
+      color: #fff;
+    }
+
+    &.active {
+      background-color: #0d95e8;
+      color: #fff;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 }

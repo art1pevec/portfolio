@@ -108,6 +108,25 @@ var main = new Vue({
             });
         }
 
+        if (this.portfolio) {
+
+            $('.portfolio-screen__pagination-item').on('click', function(){
+
+                if ($(this).hasClass('active')) {
+                    return false;
+                } else {
+                    $('.portfolio-screen__pagination-item').removeClass('active');
+                    $(this).addClass('active');
+                }
+
+                var active = $(this).data('block');
+
+                $('.portfolio-screen__block').removeClass('active');
+                $('.portfolio-screen__block[data-block="' + active + '"]').addClass('active');
+
+            });
+        }
+
     },
 
     mounted: function() {
@@ -151,6 +170,7 @@ var main = new Vue({
             this.about = false
             this.portfolio = true
             this.count = 1
+
         },
         clickCompetition: function() {
             this.typed = false
