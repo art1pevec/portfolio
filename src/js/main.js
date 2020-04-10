@@ -4,7 +4,6 @@ $(window).on('load', function() {
         $('.preloader').find('i').fadeOut().end().fadeOut('slow');
 });
 
-@@include('../../bower_components/vue/dist/vue.js')
 @@include('../../bower_components/fancybox/dist/jquery.fancybox.js')
 @@include('../../bower_components/jquery.maskedinput/dist/jquery.maskedinput.js')
 @@include('../../bower_components/typed.js/lib/typed.js')
