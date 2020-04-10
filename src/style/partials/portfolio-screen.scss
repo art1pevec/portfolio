@@ -40,11 +40,25 @@
     @media (max-width: $phone) {
       font-size: 28px;
     }
+
+    @media (max-height: 800px) {
+      font-size: 18px;
+    }
   }
 
   &__item {
     position: relative;
     overflow: hidden;
+
+    @media (max-height: 800px) {
+      max-width: 70%;
+      margin: 0 auto;
+    }
+
+    @media (max-width: $phone) {
+      max-width: 100%;
+    }
+
 
     &:after {
       content: '';
@@ -167,6 +181,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 20px;
   }
 
   &__pagination-item {
